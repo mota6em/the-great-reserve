@@ -23,7 +23,7 @@ public class ShopScript : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= interval)
         {
-            addMoney(1);
+            AddMoney(1);
             timer = 0;
         }
     }
@@ -41,7 +41,7 @@ public class ShopScript : MonoBehaviour
         terrarianPanel.SetActive(panelName == "terrarians");
     }
 
-    public void addMoney(int value)
+    public void AddMoney(int value)
     {
         currentMoney += value;
         money.GetComponent<Text>().text = "Money: "  + currentMoney.ToString();

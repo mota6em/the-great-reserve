@@ -14,12 +14,12 @@ public class MenuLogicScript : MonoBehaviour
         
     }
 
-    public void loadSaveScene()
+    public void LoadSaveScene()
     {
         SceneManager.LoadScene("LoadGameScene");
     }
 
-    public void loadGameScene()
+    public void LoadGameScene()
     {
         SceneManager.LoadScene("GameScene");
     }

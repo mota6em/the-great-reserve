@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadGameLogicScript : MonoBehaviour
+public class SettingsScript : MonoBehaviour
 {
+    public GameObject settingsPanel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,8 +16,13 @@ public class LoadGameLogicScript : MonoBehaviour
         
     }
 
+    public void ToggleSettings()
+    {
+        settingsPanel.SetActive(!settingsPanel.activeSelf);
+    }
+
     public void LoadMenuScene()
     {
         SceneManager.LoadScene("MenuScene");
-    }   
+    }
 }
