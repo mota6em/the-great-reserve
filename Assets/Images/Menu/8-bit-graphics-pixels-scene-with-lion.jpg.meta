@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      8-bit-graphics-pixels-scene-with-lion_0: 7305230302505843712
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
