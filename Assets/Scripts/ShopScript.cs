@@ -13,17 +13,30 @@ public class ShopScript : MonoBehaviour
     private int currentMoney = 0;
     private float timer = 0f;
     private float interval = 1f;
-    private bool isPlacingPlant = false;
-    private GameObject plantPrefab;
-    private int plantCost;
+    private bool isPlacingItem = false;
+    private GameObject itemPrefab;
+    private int itemCost;
 
-    private Dictionary<string, int> plantPrices = new Dictionary<string, int>
+    private Dictionary<string, int> itemPrices = new Dictionary<string, int>
     {
+        //animals
+        { "Leopard", 150 },
+        { "Lion", 200 },
+
+        //plants
         { "Bush", 100 },
         { "Grass", 50 },
+
+        //jeeps
+        { "Jeep2", 50 },
+        { "Jeep4", 150 },
+
+        //terrarian
+        { "River", 200 },
+        { "Mountain", 200 },
     };
 
-    private Dictionary<string, Button> plantButtons = new Dictionary<string, Button>();
+    private Dictionary<string, Button> itemButtons = new Dictionary<string, Button>();
 
     // Update is called once per frame
     void Update()
@@ -35,16 +48,16 @@ public class ShopScript : MonoBehaviour
             timer = 0;
         }
 
-        if (isPlacingPlant && Input.GetMouseButtonDown(0))
+        if (isPlacingItem && Input.GetMouseButtonDown(0))
         {
-            PlacePlant();
+            PlaceItem();
         }
     }
 
     void Start()
     {
         AddMoney(500);
-        InitializePlantButtons();
+        InitializeItemButtons();
         UpdateButtonLabels();
     }
 
@@ -67,63 +80,71 @@ public class ShopScript : MonoBehaviour
         money.GetComponent<Text>().text = "Money: " + currentMoney.ToString();
     }
 
-    public void SetPlantPrefab(GameObject plant)
+    public void SetItemPrefab(GameObject item)
     {
-        plantPrefab = plant;
+        itemPrefab = item;
     }
 
-    public void SelectPlantToPlace(string plantName)
+    public void SelectItemToPlace(string itemName)
     {
-        if (plantPrices.TryGetValue(plantName, out int cost))
+        if (itemPrices.TryGetValue(itemName, out int cost))
         {
             if (currentMoney >= cost)
             {
-                plantCost = cost;
-                isPlacingPlant = true;
+                itemCost = cost;
+                isPlacingItem = true;
             }
             else
             {
-                Debug.Log("Not enough money to buy this plant.");
+                Debug.Log("Not enough money to buy this item.");
             }
         }
         else
         {
-            Debug.Log("Plant not found.");
+            Debug.Log("Item not found.");
         }
     }
 
-    private void PlacePlant()
+    private void PlaceItem()
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
         if (hit.collider != null)
         {
-            Instantiate(plantPrefab, hit.point, Quaternion.identity);
-            currentMoney -= plantCost;
+            Instantiate(itemPrefab, hit.point, Quaternion.identity);
+            currentMoney -= itemCost;
             money.GetComponent<Text>().text = "Money: " + currentMoney.ToString();
-            isPlacingPlant = false;
+            isPlacingItem = false;
         }
         else
         {
-            Debug.Log("No valid position to place plant.");
+            Debug.Log("No valid position to place item.");
         }
     }
 
-    private void InitializePlantButtons()
+    private void InitializeItemButtons()
     {
-        foreach (Transform child in plantsPanel.transform)
+        InitializeButtonsInPanel(plantsPanel);
+        InitializeButtonsInPanel(animalsPanel);
+        InitializeButtonsInPanel(jeepsPanel);
+        InitializeButtonsInPanel(terrarianPanel);
+    }
+
+    private void InitializeButtonsInPanel(GameObject panel)
+    {
+        foreach (Transform child in panel.transform)
         {
             Button button = child.GetComponent<Button>();
             if (button != null)
             {
-                string plantName = button.name;
-                if (plantPrices.ContainsKey(plantName))
+                string itemName = button.name;
+                if (itemPrices.ContainsKey(itemName))
                 {
-                    plantButtons[plantName] = button;
+                    itemButtons[itemName] = button;
                 }
                 else
                 {
-                    Debug.LogWarning("Plant name not found in plantPrices: " + plantName);
+                    Debug.LogWarning("Item name not found in itemPrices: " + itemName);
                 }
             }
             else
@@ -135,11 +156,11 @@ public class ShopScript : MonoBehaviour
 
     private void UpdateButtonLabels()
     {
-        foreach (var plant in plantPrices)
+        foreach (var item in itemPrices)
         {
-            if (plantButtons.TryGetValue(plant.Key, out Button button))
+            if (itemButtons.TryGetValue(item.Key, out Button button))
             {
-                button.GetComponentInChildren<Text>().text = plant.Key + " (" + plant.Value + ")";
+                button.GetComponentInChildren<Text>().text = item.Key + " (" + item.Value + ")";
             }
         }
     }
