@@ -23,7 +23,7 @@ public class Bush : Plant
         }
     }
 
-    //changes 
+    //changes render 
     private void changeRender()
     {
 

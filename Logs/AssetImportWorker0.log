@@ -15,7 +15,7 @@ C:/Programs/Unity/TheGreatReserve
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63870
+63614
 -job-worker-count
 5
 -background-job-worker-count
@@ -59,12 +59,12 @@ C:/Programs/Unity/TheGreatReserve
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [44316]  Target information:
+Player connection [38036]  Target information:
 
-Player connection [44316]  * "[IP] 10.10.6.42 [Port] 0 [Flags] 2 [Guid] 2038654223 [EditorId] 2038654223 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-ULGTH98) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [38036]  * "[IP] 157.181.194.20 [Port] 0 [Flags] 2 [Guid] 1958668588 [EditorId] 1958668588 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-ULGTH98) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [44316] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [44316] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [38036] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [38036] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -76,7 +76,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 10.98 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 386.20 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.41f1 (46e447368a18)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.41f1-x86_64/Editor/Data/Resources/UnitySubsystems
@@ -92,43 +92,43 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.41f1-x86_64/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.41f1-x86_64/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.41f1-x86_64/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56076
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56624
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.41f1-x86_64/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.013828 seconds.
-- Loaded All Assemblies, in  1.863 seconds
+Registered in 0.408703 seconds.
+- Loaded All Assemblies, in 15.519 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.583 seconds
-Domain Reload Profiling: 3436ms
-	BeginReloadAssembly (586ms)
+- Finished resetting the current domain, in  0.650 seconds
+Domain Reload Profiling: 16164ms
+	BeginReloadAssembly (12402ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (3ms)
-	RebuildCommonClasses (182ms)
-	RebuildNativeTypeToScriptingClass (64ms)
-	initialDomainReloadingComplete (244ms)
-	LoadAllAssembliesAndSetupDomain (776ms)
-		LoadAssemblies (574ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (863ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (494ms)
+	LoadAllAssembliesAndSetupDomain (1735ms)
+		LoadAssemblies (12393ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (761ms)
-			TypeCache.Refresh (755ms)
-				TypeCache.ScanAssembly (702ms)
-			BuildScriptInfoCaches (1ms)
-			ResolveRequiredComponents (2ms)
-	FinalizeReload (1584ms)
+		AnalyzeDomain (1729ms)
+			TypeCache.Refresh (1727ms)
+				TypeCache.ScanAssembly (1244ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (650ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1335ms)
+		SetupLoadedEditorAssemblies (562ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (127ms)
-			SetLoadedEditorAssemblies (25ms)
-			BeforeProcessingInitializeOnLoad (262ms)
-			ProcessInitializeOnLoadAttributes (696ms)
-			ProcessInitializeOnLoadMethodAttributes (223ms)
+			InitializePlatformSupportModulesInManaged (39ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (90ms)
+			ProcessInitializeOnLoadAttributes (294ms)
+			ProcessInitializeOnLoadMethodAttributes (130ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -137,1873 +137,264 @@ Domain Reload Profiling: 3436ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.854 seconds
-Refreshing native plugins compatible for Editor in 11.25 ms, found 4 plugins.
+- Loaded All Assemblies, in 14.529 seconds
+Refreshing native plugins compatible for Editor in 2.16 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.408 seconds
-Domain Reload Profiling: 7235ms
-	BeginReloadAssembly (831ms)
+- Finished resetting the current domain, in  2.653 seconds
+Domain Reload Profiling: 17165ms
+	BeginReloadAssembly (256ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (27ms)
+		DisableScriptedObjects (8ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (122ms)
-	RebuildCommonClasses (176ms)
-	RebuildNativeTypeToScriptingClass (54ms)
-	initialDomainReloadingComplete (186ms)
-	LoadAllAssembliesAndSetupDomain (2577ms)
-		LoadAssemblies (1698ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (51ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (58ms)
+	LoadAllAssembliesAndSetupDomain (14127ms)
+		LoadAssemblies (13068ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1375ms)
-			TypeCache.Refresh (1013ms)
-				TypeCache.ScanAssembly (936ms)
-			BuildScriptInfoCaches (312ms)
-			ResolveRequiredComponents (43ms)
-	FinalizeReload (3410ms)
+		AnalyzeDomain (1215ms)
+			TypeCache.Refresh (1086ms)
+				TypeCache.ScanAssembly (957ms)
+			BuildScriptInfoCaches (109ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (2654ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2736ms)
+		SetupLoadedEditorAssemblies (1775ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (17ms)
-			BeforeProcessingInitializeOnLoad (523ms)
-			ProcessInitializeOnLoadAttributes (1616ms)
-			ProcessInitializeOnLoadMethodAttributes (543ms)
-			AfterProcessingInitializeOnLoad (29ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (23ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 9.04 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 220 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6624 unused Assets / (7.0 MB). Loaded Objects now: 7283.
-Memory consumption went from 172.7 MB to 165.7 MB.
-Total: 24.467600 ms (FindLiveObjects: 1.242200 ms CreateObjectMapping: 1.181800 ms MarkObjects: 12.728800 ms  DeleteObjects: 9.313000 ms)
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.279 seconds
-Refreshing native plugins compatible for Editor in 15.35 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.352 seconds
-Domain Reload Profiling: 6619ms
-	BeginReloadAssembly (784ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (60ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (158ms)
-	RebuildCommonClasses (175ms)
-	RebuildNativeTypeToScriptingClass (64ms)
-	initialDomainReloadingComplete (116ms)
-	LoadAllAssembliesAndSetupDomain (2126ms)
-		LoadAssemblies (1537ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (997ms)
-			TypeCache.Refresh (30ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (889ms)
-			ResolveRequiredComponents (65ms)
-	FinalizeReload (3354ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2444ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (13ms)
-			BeforeProcessingInitializeOnLoad (541ms)
-			ProcessInitializeOnLoadAttributes (1548ms)
-			ProcessInitializeOnLoadMethodAttributes (304ms)
-			AfterProcessingInitializeOnLoad (28ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (63ms)
-Refreshing native plugins compatible for Editor in 10.62 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (8.0 MB). Loaded Objects now: 7286.
-Memory consumption went from 148.1 MB to 140.1 MB.
-Total: 37.709400 ms (FindLiveObjects: 1.436300 ms CreateObjectMapping: 2.045300 ms MarkObjects: 18.906800 ms  DeleteObjects: 15.317800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 481053.843888 seconds.
-  path: Assets/Scripts/Plant.cs
-  artifactKey: Guid(305fc694a5d502943b407cc01c1e8d11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Plant.cs using Guid(305fc694a5d502943b407cc01c1e8d11) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '899aaa61e88b532ed927495ac02abf0e') in 0.02224 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.260 seconds
-Refreshing native plugins compatible for Editor in 9.79 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  4.106 seconds
-Domain Reload Profiling: 7353ms
-	BeginReloadAssembly (908ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (81ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (181ms)
-	RebuildCommonClasses (208ms)
-	RebuildNativeTypeToScriptingClass (64ms)
-	initialDomainReloadingComplete (145ms)
-	LoadAllAssembliesAndSetupDomain (1920ms)
-		LoadAssemblies (1506ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (887ms)
-			TypeCache.Refresh (25ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (792ms)
-			ResolveRequiredComponents (55ms)
-	FinalizeReload (4107ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (3101ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (19ms)
-			BeforeProcessingInitializeOnLoad (606ms)
-			ProcessInitializeOnLoadAttributes (1932ms)
-			ProcessInitializeOnLoadMethodAttributes (514ms)
-			AfterProcessingInitializeOnLoad (16ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (67ms)
-Refreshing native plugins compatible for Editor in 8.82 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (8.3 MB). Loaded Objects now: 7290.
-Memory consumption went from 148.7 MB to 140.5 MB.
-Total: 38.496900 ms (FindLiveObjects: 1.891300 ms CreateObjectMapping: 2.172300 ms MarkObjects: 17.421200 ms  DeleteObjects: 17.008800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.530 seconds
-Refreshing native plugins compatible for Editor in 8.34 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.644 seconds
-Domain Reload Profiling: 7151ms
-	BeginReloadAssembly (928ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (73ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (186ms)
-	RebuildCommonClasses (209ms)
-	RebuildNativeTypeToScriptingClass (68ms)
-	initialDomainReloadingComplete (135ms)
-	LoadAllAssembliesAndSetupDomain (2165ms)
-		LoadAssemblies (1641ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1027ms)
-			TypeCache.Refresh (46ms)
-				TypeCache.ScanAssembly (4ms)
-			BuildScriptInfoCaches (908ms)
-			ResolveRequiredComponents (62ms)
-	FinalizeReload (3646ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2726ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (13ms)
-			SetLoadedEditorAssemblies (17ms)
-			BeforeProcessingInitializeOnLoad (618ms)
-			ProcessInitializeOnLoadAttributes (1756ms)
-			ProcessInitializeOnLoadMethodAttributes (296ms)
-			AfterProcessingInitializeOnLoad (24ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (59ms)
-Refreshing native plugins compatible for Editor in 8.77 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (7.5 MB). Loaded Objects now: 7292.
-Memory consumption went from 150.7 MB to 143.2 MB.
-Total: 38.171500 ms (FindLiveObjects: 2.087300 ms CreateObjectMapping: 2.734400 ms MarkObjects: 19.718200 ms  DeleteObjects: 13.627900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.069 seconds
-Refreshing native plugins compatible for Editor in 7.87 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.337 seconds
-Domain Reload Profiling: 6387ms
-	BeginReloadAssembly (876ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (61ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (157ms)
-	RebuildCommonClasses (177ms)
-	RebuildNativeTypeToScriptingClass (68ms)
-	initialDomainReloadingComplete (133ms)
-	LoadAllAssembliesAndSetupDomain (1793ms)
-		LoadAssemblies (1441ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (837ms)
-			TypeCache.Refresh (16ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (781ms)
-			ResolveRequiredComponents (29ms)
-	FinalizeReload (3340ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2452ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (19ms)
-			BeforeProcessingInitializeOnLoad (402ms)
-			ProcessInitializeOnLoadAttributes (1688ms)
-			ProcessInitializeOnLoadMethodAttributes (304ms)
-			AfterProcessingInitializeOnLoad (28ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (57ms)
-Refreshing native plugins compatible for Editor in 8.30 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (6.2 MB). Loaded Objects now: 7294.
-Memory consumption went from 150.7 MB to 144.4 MB.
-Total: 32.967200 ms (FindLiveObjects: 1.401200 ms CreateObjectMapping: 1.302800 ms MarkObjects: 20.091300 ms  DeleteObjects: 10.168200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.053 seconds
-Refreshing native plugins compatible for Editor in 7.09 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.016 seconds
-Domain Reload Profiling: 6057ms
-	BeginReloadAssembly (906ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (53ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (170ms)
-	RebuildCommonClasses (185ms)
-	RebuildNativeTypeToScriptingClass (50ms)
-	initialDomainReloadingComplete (133ms)
-	LoadAllAssembliesAndSetupDomain (1765ms)
-		LoadAssemblies (1355ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (924ms)
-			TypeCache.Refresh (21ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (837ms)
-			ResolveRequiredComponents (55ms)
-	FinalizeReload (3019ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2106ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
-			SetLoadedEditorAssemblies (21ms)
-			BeforeProcessingInitializeOnLoad (379ms)
-			ProcessInitializeOnLoadAttributes (1363ms)
-			ProcessInitializeOnLoadMethodAttributes (303ms)
-			AfterProcessingInitializeOnLoad (28ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (67ms)
-Refreshing native plugins compatible for Editor in 7.11 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (9.0 MB). Loaded Objects now: 7296.
-Memory consumption went from 150.6 MB to 141.6 MB.
-Total: 38.745800 ms (FindLiveObjects: 1.460700 ms CreateObjectMapping: 2.443600 ms MarkObjects: 16.876700 ms  DeleteObjects: 17.960300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.602 seconds
-Refreshing native plugins compatible for Editor in 10.02 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.534 seconds
-Domain Reload Profiling: 7121ms
-	BeginReloadAssembly (906ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (76ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (177ms)
-	RebuildCommonClasses (208ms)
-	RebuildNativeTypeToScriptingClass (65ms)
-	initialDomainReloadingComplete (142ms)
-	LoadAllAssembliesAndSetupDomain (2264ms)
-		LoadAssemblies (1724ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1028ms)
-			TypeCache.Refresh (44ms)
-				TypeCache.ScanAssembly (2ms)
-			BuildScriptInfoCaches (899ms)
-			ResolveRequiredComponents (69ms)
-	FinalizeReload (3536ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2586ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (12ms)
-			BeforeProcessingInitializeOnLoad (578ms)
-			ProcessInitializeOnLoadAttributes (1691ms)
-			ProcessInitializeOnLoadMethodAttributes (272ms)
-			AfterProcessingInitializeOnLoad (24ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (48ms)
-Refreshing native plugins compatible for Editor in 6.95 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (6.5 MB). Loaded Objects now: 7298.
-Memory consumption went from 150.7 MB to 144.2 MB.
-Total: 32.433100 ms (FindLiveObjects: 1.871500 ms CreateObjectMapping: 2.530700 ms MarkObjects: 18.195900 ms  DeleteObjects: 9.829900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.150 seconds
-Refreshing native plugins compatible for Editor in 6.51 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.764 seconds
-Domain Reload Profiling: 5891ms
-	BeginReloadAssembly (871ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (62ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (164ms)
-	RebuildCommonClasses (213ms)
-	RebuildNativeTypeToScriptingClass (80ms)
-	initialDomainReloadingComplete (135ms)
-	LoadAllAssembliesAndSetupDomain (1825ms)
-		LoadAssemblies (1519ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (784ms)
-			TypeCache.Refresh (18ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (707ms)
-			ResolveRequiredComponents (49ms)
-	FinalizeReload (2766ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1975ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (15ms)
-			BeforeProcessingInitializeOnLoad (412ms)
-			ProcessInitializeOnLoadAttributes (1279ms)
-			ProcessInitializeOnLoadMethodAttributes (238ms)
-			AfterProcessingInitializeOnLoad (18ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (47ms)
-Refreshing native plugins compatible for Editor in 7.69 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (7.4 MB). Loaded Objects now: 7300.
-Memory consumption went from 150.7 MB to 143.3 MB.
-Total: 27.778800 ms (FindLiveObjects: 1.286000 ms CreateObjectMapping: 1.409200 ms MarkObjects: 13.729200 ms  DeleteObjects: 11.351700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.941 seconds
-Refreshing native plugins compatible for Editor in 7.51 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.804 seconds
-Domain Reload Profiling: 5723ms
-	BeginReloadAssembly (857ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (54ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (167ms)
-	RebuildCommonClasses (194ms)
-	RebuildNativeTypeToScriptingClass (63ms)
-	initialDomainReloadingComplete (140ms)
-	LoadAllAssembliesAndSetupDomain (1663ms)
-		LoadAssemblies (1442ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (686ms)
-			TypeCache.Refresh (18ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (611ms)
-			ResolveRequiredComponents (48ms)
-	FinalizeReload (2806ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2046ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (18ms)
-			BeforeProcessingInitializeOnLoad (434ms)
-			ProcessInitializeOnLoadAttributes (1321ms)
-			ProcessInitializeOnLoadMethodAttributes (238ms)
-			AfterProcessingInitializeOnLoad (23ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (217ms)
+			ProcessInitializeOnLoadAttributes (660ms)
+			ProcessInitializeOnLoadMethodAttributes (875ms)
+			AfterProcessingInitializeOnLoad (11ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (46ms)
-Refreshing native plugins compatible for Editor in 6.37 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (8ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 2.97 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (6.9 MB). Loaded Objects now: 7302.
-Memory consumption went from 150.7 MB to 143.8 MB.
-Total: 36.438000 ms (FindLiveObjects: 1.700400 ms CreateObjectMapping: 1.187200 ms MarkObjects: 20.317900 ms  DeleteObjects: 13.229000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.089 seconds
-Refreshing native plugins compatible for Editor in 9.75 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.641 seconds
-Domain Reload Profiling: 6718ms
-	BeginReloadAssembly (939ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (71ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (171ms)
-	RebuildCommonClasses (181ms)
-	RebuildNativeTypeToScriptingClass (67ms)
-	initialDomainReloadingComplete (139ms)
-	LoadAllAssembliesAndSetupDomain (1749ms)
-		LoadAssemblies (1463ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (804ms)
-			TypeCache.Refresh (17ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (724ms)
-			ResolveRequiredComponents (51ms)
-	FinalizeReload (3643ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2715ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (14ms)
-			BeforeProcessingInitializeOnLoad (584ms)
-			ProcessInitializeOnLoadAttributes (1763ms)
-			ProcessInitializeOnLoadMethodAttributes (310ms)
-			AfterProcessingInitializeOnLoad (31ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (57ms)
-Refreshing native plugins compatible for Editor in 9.18 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (8.2 MB). Loaded Objects now: 7304.
-Memory consumption went from 150.7 MB to 142.5 MB.
-Total: 39.858500 ms (FindLiveObjects: 1.526100 ms CreateObjectMapping: 1.582700 ms MarkObjects: 21.553400 ms  DeleteObjects: 15.192400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.475 seconds
-Refreshing native plugins compatible for Editor in 7.05 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.485 seconds
-Domain Reload Profiling: 6937ms
-	BeginReloadAssembly (858ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (57ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (167ms)
-	RebuildCommonClasses (207ms)
-	RebuildNativeTypeToScriptingClass (79ms)
-	initialDomainReloadingComplete (131ms)
-	LoadAllAssembliesAndSetupDomain (2176ms)
-		LoadAssemblies (1658ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (996ms)
-			TypeCache.Refresh (42ms)
-				TypeCache.ScanAssembly (3ms)
-			BuildScriptInfoCaches (891ms)
-			ResolveRequiredComponents (53ms)
-	FinalizeReload (3486ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2527ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (13ms)
-			SetLoadedEditorAssemblies (19ms)
-			BeforeProcessingInitializeOnLoad (520ms)
-			ProcessInitializeOnLoadAttributes (1670ms)
-			ProcessInitializeOnLoadMethodAttributes (283ms)
-			AfterProcessingInitializeOnLoad (21ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (61ms)
-Refreshing native plugins compatible for Editor in 6.65 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (7.2 MB). Loaded Objects now: 7306.
-Memory consumption went from 150.7 MB to 143.5 MB.
-Total: 39.551800 ms (FindLiveObjects: 1.223700 ms CreateObjectMapping: 1.413300 ms MarkObjects: 21.528200 ms  DeleteObjects: 15.383400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.838 seconds
-Refreshing native plugins compatible for Editor in 7.62 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.839 seconds
-Domain Reload Profiling: 5653ms
-	BeginReloadAssembly (830ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (66ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (170ms)
-	RebuildCommonClasses (121ms)
-	RebuildNativeTypeToScriptingClass (66ms)
-	initialDomainReloadingComplete (123ms)
-	LoadAllAssembliesAndSetupDomain (1671ms)
-		LoadAssemblies (1269ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (841ms)
-			TypeCache.Refresh (23ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (775ms)
-			ResolveRequiredComponents (35ms)
-	FinalizeReload (2841ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2048ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (13ms)
-			BeforeProcessingInitializeOnLoad (364ms)
-			ProcessInitializeOnLoadAttributes (1375ms)
-			ProcessInitializeOnLoadMethodAttributes (267ms)
-			AfterProcessingInitializeOnLoad (21ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (39ms)
-Refreshing native plugins compatible for Editor in 5.52 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (7.5 MB). Loaded Objects now: 7308.
-Memory consumption went from 150.7 MB to 143.2 MB.
-Total: 23.738600 ms (FindLiveObjects: 1.404100 ms CreateObjectMapping: 1.448300 ms MarkObjects: 11.899900 ms  DeleteObjects: 8.984100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.084 seconds
-Refreshing native plugins compatible for Editor in 6.75 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.524 seconds
-Domain Reload Profiling: 5585ms
-	BeginReloadAssembly (864ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (67ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (174ms)
-	RebuildCommonClasses (169ms)
-	RebuildNativeTypeToScriptingClass (78ms)
-	initialDomainReloadingComplete (131ms)
-	LoadAllAssembliesAndSetupDomain (1819ms)
-		LoadAssemblies (1563ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (712ms)
-			TypeCache.Refresh (22ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (640ms)
-			ResolveRequiredComponents (41ms)
-	FinalizeReload (2525ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1798ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
-			SetLoadedEditorAssemblies (16ms)
-			BeforeProcessingInitializeOnLoad (420ms)
-			ProcessInitializeOnLoadAttributes (1146ms)
-			ProcessInitializeOnLoadMethodAttributes (192ms)
-			AfterProcessingInitializeOnLoad (14ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (35ms)
-Refreshing native plugins compatible for Editor in 4.95 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (7.0 MB). Loaded Objects now: 7310.
-Memory consumption went from 150.7 MB to 143.7 MB.
-Total: 24.723600 ms (FindLiveObjects: 1.517200 ms CreateObjectMapping: 2.086200 ms MarkObjects: 11.480100 ms  DeleteObjects: 9.637300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.630 seconds
-Refreshing native plugins compatible for Editor in 9.17 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.518 seconds
-Domain Reload Profiling: 7136ms
-	BeginReloadAssembly (955ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (80ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (168ms)
-	RebuildCommonClasses (161ms)
-	RebuildNativeTypeToScriptingClass (71ms)
-	initialDomainReloadingComplete (144ms)
-	LoadAllAssembliesAndSetupDomain (2284ms)
-		LoadAssemblies (1754ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1055ms)
-			TypeCache.Refresh (51ms)
-				TypeCache.ScanAssembly (4ms)
-			BuildScriptInfoCaches (921ms)
-			ResolveRequiredComponents (68ms)
-	FinalizeReload (3521ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2608ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (19ms)
-			BeforeProcessingInitializeOnLoad (567ms)
-			ProcessInitializeOnLoadAttributes (1665ms)
-			ProcessInitializeOnLoadMethodAttributes (311ms)
-			AfterProcessingInitializeOnLoad (33ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (65ms)
-Refreshing native plugins compatible for Editor in 8.30 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (8.0 MB). Loaded Objects now: 7312.
-Memory consumption went from 150.7 MB to 142.6 MB.
-Total: 34.545800 ms (FindLiveObjects: 1.596200 ms CreateObjectMapping: 1.342400 ms MarkObjects: 16.876800 ms  DeleteObjects: 14.725300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.544 seconds
-Refreshing native plugins compatible for Editor in 8.23 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.570 seconds
-Domain Reload Profiling: 7096ms
-	BeginReloadAssembly (904ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (71ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (162ms)
-	RebuildCommonClasses (197ms)
-	RebuildNativeTypeToScriptingClass (60ms)
-	initialDomainReloadingComplete (138ms)
-	LoadAllAssembliesAndSetupDomain (2223ms)
-		LoadAssemblies (1673ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1045ms)
-			TypeCache.Refresh (46ms)
-				TypeCache.ScanAssembly (4ms)
-			BuildScriptInfoCaches (922ms)
-			ResolveRequiredComponents (65ms)
-	FinalizeReload (3573ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2628ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (20ms)
-			BeforeProcessingInitializeOnLoad (581ms)
-			ProcessInitializeOnLoadAttributes (1669ms)
-			ProcessInitializeOnLoadMethodAttributes (323ms)
-			AfterProcessingInitializeOnLoad (25ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (56ms)
-Refreshing native plugins compatible for Editor in 8.25 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (7.2 MB). Loaded Objects now: 7314.
-Memory consumption went from 150.7 MB to 143.5 MB.
-Total: 28.518800 ms (FindLiveObjects: 1.722900 ms CreateObjectMapping: 1.205200 ms MarkObjects: 14.126300 ms  DeleteObjects: 11.460700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 1456.546732 seconds.
-  path: Assets/Images/Game/GrownGrass.png
-  artifactKey: Guid(d52b2ec19dd0bfa45a54ad262ac95e3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/Game/GrownGrass.png using Guid(d52b2ec19dd0bfa45a54ad262ac95e3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e6b1fb120efb0a2daf0ef5648ec830f7') in 0.457703 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+Unloading 220 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6625 unused Assets / (7.0 MB). Loaded Objects now: 7284.
+Memory consumption went from 177.1 MB to 170.1 MB.
+Total: 15.474900 ms (FindLiveObjects: 1.464900 ms CreateObjectMapping: 1.519400 ms MarkObjects: 7.142500 ms  DeleteObjects: 5.346300 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 22.176364 seconds.
-  path: Assets/Images/Game/GrownBush.png
-  artifactKey: Guid(94a65047b67e82542b5222b25cec0d4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/Game/GrownBush.png using Guid(94a65047b67e82542b5222b25cec0d4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3dfd414d2039a9a4fa4646c340c7cef1') in 0.0632808 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.401037 seconds.
+  Time since last request: 506536.429997 seconds.
   path: Assets/Prefabs/Bush.prefab
   artifactKey: Guid(d990648603f6376438845a133c1e353a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Bush.prefab using Guid(d990648603f6376438845a133c1e353a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7987a1f70dac1ab4e907f38d894ef446') in 1.7664952 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 67.064268 seconds.
-  path: Assets/Images/LoadGame/background.jpg
-  artifactKey: Guid(8b1e114d060b41749ba946c8f1c760af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/LoadGame/background.jpg using Guid(8b1e114d060b41749ba946c8f1c760af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b1d563a46827583e906c1133c3f34dbc') in 0.1406525 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.242472 seconds.
-  path: Assets/Images/Menu/8-bit-graphics-pixels-scene-with-lion.jpg
-  artifactKey: Guid(874cf4dbcbb67684d8be5e77326bbc94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/Menu/8-bit-graphics-pixels-scene-with-lion.jpg using Guid(874cf4dbcbb67684d8be5e77326bbc94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ac0dc801af881ddf46435c016e4b82c2') in 0.0966323 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 30.821031 seconds.
-  path: Assets/Prefabs/Bush.prefab
-  artifactKey: Guid(d990648603f6376438845a133c1e353a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Bush.prefab using Guid(d990648603f6376438845a133c1e353a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6cd3aa25a3f8dbd7ac35d9f451527201') in 0.052192 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+Start importing Assets/Prefabs/Bush.prefab using Guid(d990648603f6376438845a133c1e353a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a35b8832cd1983177664aadc58be1be4') in 0.6816117 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
 
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.380 seconds
-Refreshing native plugins compatible for Editor in 7.76 ms, found 4 plugins.
+- Loaded All Assemblies, in  1.115 seconds
+Refreshing native plugins compatible for Editor in 1.88 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.791 seconds
-Domain Reload Profiling: 6147ms
-	BeginReloadAssembly (1043ms)
+- Finished resetting the current domain, in  1.311 seconds
+Domain Reload Profiling: 2424ms
+	BeginReloadAssembly (323ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (116ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (224ms)
-	RebuildCommonClasses (174ms)
-	RebuildNativeTypeToScriptingClass (72ms)
-	initialDomainReloadingComplete (144ms)
-	LoadAllAssembliesAndSetupDomain (1921ms)
-		LoadAssemblies (1590ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (871ms)
-			TypeCache.Refresh (26ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (777ms)
-			ResolveRequiredComponents (57ms)
-	FinalizeReload (2792ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1994ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
-			SetLoadedEditorAssemblies (14ms)
-			BeforeProcessingInitializeOnLoad (412ms)
-			ProcessInitializeOnLoadAttributes (1273ms)
-			ProcessInitializeOnLoadMethodAttributes (258ms)
-			AfterProcessingInitializeOnLoad (26ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (49ms)
-Refreshing native plugins compatible for Editor in 4.96 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (7.4 MB). Loaded Objects now: 7357.
-Memory consumption went from 158.0 MB to 150.7 MB.
-Total: 26.317900 ms (FindLiveObjects: 1.360300 ms CreateObjectMapping: 1.860600 ms MarkObjects: 13.680200 ms  DeleteObjects: 9.414400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.237 seconds
-Refreshing native plugins compatible for Editor in 8.14 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.219 seconds
-Domain Reload Profiling: 6429ms
-	BeginReloadAssembly (903ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (73ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (176ms)
-	RebuildCommonClasses (201ms)
-	RebuildNativeTypeToScriptingClass (75ms)
-	initialDomainReloadingComplete (143ms)
-	LoadAllAssembliesAndSetupDomain (1886ms)
-		LoadAssemblies (1574ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (796ms)
-			TypeCache.Refresh (25ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (723ms)
-			ResolveRequiredComponents (39ms)
-	FinalizeReload (3221ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2421ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (12ms)
-			BeforeProcessingInitializeOnLoad (475ms)
-			ProcessInitializeOnLoadAttributes (1598ms)
-			ProcessInitializeOnLoadMethodAttributes (302ms)
-			AfterProcessingInitializeOnLoad (27ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (72ms)
-Refreshing native plugins compatible for Editor in 6.74 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (8.0 MB). Loaded Objects now: 7359.
-Memory consumption went from 157.9 MB to 149.9 MB.
-Total: 33.358400 ms (FindLiveObjects: 1.967100 ms CreateObjectMapping: 1.762600 ms MarkObjects: 16.206500 ms  DeleteObjects: 13.418000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 71.109852 seconds.
-  path: Assets/Prefabs/Bush 1.prefab
-  artifactKey: Guid(8e7ac16413348474a822178d686d9d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Bush 1.prefab using Guid(8e7ac16413348474a822178d686d9d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '99fb71cbead007344de51933bb026249') in 1.7874434 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.424712 seconds.
-  path: Assets/Prefabs/Bush 1.prefab
-  artifactKey: Guid(8e7ac16413348474a822178d686d9d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Bush 1.prefab using Guid(8e7ac16413348474a822178d686d9d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ed4105ac332d0fce962ea5283b796b5a') in 0.0232623 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.946711 seconds.
-  path: Assets/Prefabs/Bush 1.prefab
-  artifactKey: Guid(8e7ac16413348474a822178d686d9d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Bush 1.prefab using Guid(8e7ac16413348474a822178d686d9d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '14a55912fb4b902c4b53ee2e77bb13c8') in 0.0467544 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.887516 seconds.
-  path: Assets/Prefabs/Grass.prefab
-  artifactKey: Guid(8e7ac16413348474a822178d686d9d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Grass.prefab using Guid(8e7ac16413348474a822178d686d9d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bb581921504cdd1f0c20f150f4ed7aa1') in 0.0257264 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.857812 seconds.
-  path: Assets/Prefabs/Bush.prefab
-  artifactKey: Guid(d990648603f6376438845a133c1e353a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Bush.prefab using Guid(d990648603f6376438845a133c1e353a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '28e902b86342cba9e59b0c2171f5200d') in 0.0224348 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.328 seconds
-Refreshing native plugins compatible for Editor in 7.92 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.768 seconds
-Domain Reload Profiling: 6079ms
-	BeginReloadAssembly (940ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (120ms)
+		DisableScriptedObjects (34ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (188ms)
-	RebuildCommonClasses (189ms)
-	RebuildNativeTypeToScriptingClass (66ms)
-	initialDomainReloadingComplete (156ms)
-	LoadAllAssembliesAndSetupDomain (1959ms)
-		LoadAssemblies (1536ms)
+		CreateAndSetChildDomain (87ms)
+	RebuildCommonClasses (70ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (663ms)
+		LoadAssemblies (503ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (913ms)
-			TypeCache.Refresh (24ms)
+		AnalyzeDomain (307ms)
+			TypeCache.Refresh (12ms)
 				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (829ms)
-			ResolveRequiredComponents (47ms)
-	FinalizeReload (2770ms)
+			BuildScriptInfoCaches (276ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (1312ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2059ms)
+		SetupLoadedEditorAssemblies (904ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (12ms)
-			BeforeProcessingInitializeOnLoad (386ms)
-			ProcessInitializeOnLoadAttributes (1364ms)
-			ProcessInitializeOnLoadMethodAttributes (269ms)
-			AfterProcessingInitializeOnLoad (20ms)
-			EditorAssembliesLoaded (1ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (170ms)
+			ProcessInitializeOnLoadAttributes (603ms)
+			ProcessInitializeOnLoadMethodAttributes (110ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (40ms)
-Refreshing native plugins compatible for Editor in 8.35 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (64ms)
+Refreshing native plugins compatible for Editor in 2.50 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (7.1 MB). Loaded Objects now: 7383.
-Memory consumption went from 159.6 MB to 152.5 MB.
-Total: 33.388100 ms (FindLiveObjects: 1.848700 ms CreateObjectMapping: 2.249100 ms MarkObjects: 16.419400 ms  DeleteObjects: 12.866900 ms)
+Unloading 6623 unused Assets / (7.7 MB). Loaded Objects now: 7321.
+Memory consumption went from 158.3 MB to 150.6 MB.
+Total: 16.081400 ms (FindLiveObjects: 0.950100 ms CreateObjectMapping: 0.879500 ms MarkObjects: 7.376900 ms  DeleteObjects: 6.872800 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.050 seconds
-Refreshing native plugins compatible for Editor in 6.52 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.992 seconds
+Refreshing native plugins compatible for Editor in 1.87 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.523 seconds
-Domain Reload Profiling: 5565ms
-	BeginReloadAssembly (858ms)
+- Finished resetting the current domain, in  1.149 seconds
+Domain Reload Profiling: 2138ms
+	BeginReloadAssembly (278ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (66ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (181ms)
-	RebuildCommonClasses (186ms)
-	RebuildNativeTypeToScriptingClass (72ms)
-	initialDomainReloadingComplete (119ms)
-	LoadAllAssembliesAndSetupDomain (1806ms)
-		LoadAssemblies (1459ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (800ms)
-			TypeCache.Refresh (22ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (689ms)
-			ResolveRequiredComponents (77ms)
-	FinalizeReload (2524ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1855ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (13ms)
-			BeforeProcessingInitializeOnLoad (417ms)
-			ProcessInitializeOnLoadAttributes (1162ms)
-			ProcessInitializeOnLoadMethodAttributes (224ms)
-			AfterProcessingInitializeOnLoad (26ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (54ms)
-Refreshing native plugins compatible for Editor in 6.01 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (7.4 MB). Loaded Objects now: 7385.
-Memory consumption went from 159.4 MB to 152.0 MB.
-Total: 26.806600 ms (FindLiveObjects: 1.239100 ms CreateObjectMapping: 1.075100 ms MarkObjects: 13.016300 ms  DeleteObjects: 11.471800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 106.582802 seconds.
-  path: Assets/Prefabs/Grass.prefab
-  artifactKey: Guid(8e7ac16413348474a822178d686d9d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Grass.prefab using Guid(8e7ac16413348474a822178d686d9d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a9b1d7a57e0ebab90275d3b2b2110aa7') in 1.9658707 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.002883 seconds.
-  path: Assets/Prefabs/Grass.prefab
-  artifactKey: Guid(8e7ac16413348474a822178d686d9d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Grass.prefab using Guid(8e7ac16413348474a822178d686d9d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '384add6fe05cc84dbd4bcd9dfd4d5c2d') in 0.0374157 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.270 seconds
-Refreshing native plugins compatible for Editor in 9.51 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.682 seconds
-Domain Reload Profiling: 5934ms
-	BeginReloadAssembly (933ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (121ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (183ms)
-	RebuildCommonClasses (184ms)
-	RebuildNativeTypeToScriptingClass (84ms)
-	initialDomainReloadingComplete (146ms)
-	LoadAllAssembliesAndSetupDomain (1903ms)
-		LoadAssemblies (1590ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (780ms)
-			TypeCache.Refresh (20ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (700ms)
-			ResolveRequiredComponents (53ms)
-	FinalizeReload (2684ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1945ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (10ms)
-			BeforeProcessingInitializeOnLoad (391ms)
-			ProcessInitializeOnLoadAttributes (1289ms)
-			ProcessInitializeOnLoadMethodAttributes (225ms)
-			AfterProcessingInitializeOnLoad (20ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (61ms)
-Refreshing native plugins compatible for Editor in 3.49 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (7.2 MB). Loaded Objects now: 7409.
-Memory consumption went from 161.2 MB to 154.0 MB.
-Total: 25.587900 ms (FindLiveObjects: 1.521900 ms CreateObjectMapping: 1.716400 ms MarkObjects: 12.838100 ms  DeleteObjects: 9.507500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.214 seconds
-Refreshing native plugins compatible for Editor in 6.51 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.439 seconds
-Domain Reload Profiling: 5639ms
-	BeginReloadAssembly (890ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (73ms)
+		DisableScriptedObjects (16ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (145ms)
-	RebuildCommonClasses (189ms)
-	RebuildNativeTypeToScriptingClass (68ms)
-	initialDomainReloadingComplete (139ms)
-	LoadAllAssembliesAndSetupDomain (1912ms)
-		LoadAssemblies (1618ms)
+		CreateAndSetChildDomain (64ms)
+	RebuildCommonClasses (48ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (608ms)
+		LoadAssemblies (473ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (801ms)
-			TypeCache.Refresh (23ms)
+		AnalyzeDomain (274ms)
+			TypeCache.Refresh (13ms)
 				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (710ms)
-			ResolveRequiredComponents (60ms)
-	FinalizeReload (2441ms)
+			BuildScriptInfoCaches (242ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (1149ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1742ms)
+		SetupLoadedEditorAssemblies (871ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (6ms)
-			SetLoadedEditorAssemblies (15ms)
-			BeforeProcessingInitializeOnLoad (319ms)
-			ProcessInitializeOnLoadAttributes (1116ms)
-			ProcessInitializeOnLoadMethodAttributes (261ms)
-			AfterProcessingInitializeOnLoad (24ms)
-			EditorAssembliesLoaded (1ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (162ms)
+			ProcessInitializeOnLoadAttributes (592ms)
+			ProcessInitializeOnLoadMethodAttributes (101ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (47ms)
-Refreshing native plugins compatible for Editor in 7.57 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (25ms)
+Refreshing native plugins compatible for Editor in 2.20 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6622 unused Assets / (7.8 MB). Loaded Objects now: 7411.
-Memory consumption went from 161.1 MB to 153.3 MB.
-Total: 31.016900 ms (FindLiveObjects: 1.630100 ms CreateObjectMapping: 2.427500 ms MarkObjects: 15.259700 ms  DeleteObjects: 11.695500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 9.06 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6612 unused Assets / (7.1 MB). Loaded Objects now: 7412.
-Memory consumption went from 161.2 MB to 154.1 MB.
-Total: 46.511900 ms (FindLiveObjects: 1.565900 ms CreateObjectMapping: 2.606500 ms MarkObjects: 27.263000 ms  DeleteObjects: 15.074200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 74.625508 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1b5b5d4ec2066bb02ac76fc9a382cfb7') in 0.0149272 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.495 seconds
-Refreshing native plugins compatible for Editor in 6.47 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.425 seconds
-Domain Reload Profiling: 6905ms
-	BeginReloadAssembly (868ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (74ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (164ms)
-	RebuildCommonClasses (211ms)
-	RebuildNativeTypeToScriptingClass (78ms)
-	initialDomainReloadingComplete (154ms)
-	LoadAllAssembliesAndSetupDomain (2169ms)
-		LoadAssemblies (1560ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1073ms)
-			TypeCache.Refresh (41ms)
-				TypeCache.ScanAssembly (3ms)
-			BuildScriptInfoCaches (960ms)
-			ResolveRequiredComponents (50ms)
-	FinalizeReload (3426ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2577ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (13ms)
-			SetLoadedEditorAssemblies (17ms)
-			BeforeProcessingInitializeOnLoad (570ms)
-			ProcessInitializeOnLoadAttributes (1666ms)
-			ProcessInitializeOnLoadMethodAttributes (269ms)
-			AfterProcessingInitializeOnLoad (42ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (68ms)
-Refreshing native plugins compatible for Editor in 6.38 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6623 unused Assets / (8.2 MB). Loaded Objects now: 7414.
-Memory consumption went from 161.0 MB to 152.8 MB.
-Total: 32.178300 ms (FindLiveObjects: 1.159900 ms CreateObjectMapping: 1.399600 ms MarkObjects: 15.482300 ms  DeleteObjects: 14.133000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 25.812658 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0107281 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.00145 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0015493 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000060 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0019716 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0014461 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0015038 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000068 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0019799 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0019491 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000058 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0012109 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0013489 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0015366 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0020367 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000054 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0014804 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000063 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0016688 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.001734 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0018404 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0019395 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000063 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0015286 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0018002 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0014156 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000057 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0014145 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0015612 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0013492 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000057 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0012987 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0014634 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0016004 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.001454 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000086 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0014158 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0014164 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0017328 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0013528 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000065 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0019091 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0014676 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0012955 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0009354 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000059 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0015 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0012502 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0029174 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0013759 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0009197 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0011638 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000053 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0013834 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0013835 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0013113 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0015 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000066 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0014738 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0015484 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0018913 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000269 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0019067 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0019499 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0014484 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000053 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0017592 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00000000000000000000000000000000') in 0.0013108 seconds
-Import Error Code:(4)
-Message: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-  ERROR: Build asset version error: assets/scripts/grass.cs in SourceAssetDB has modification time of '2025-03-20T13:34:35.4789299Z' while content on disk has modification time of '2025-03-20T13:35:02.5323928Z'
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Scripts/Grass.cs
-  artifactKey: Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Grass.cs using Guid(db31fab6ff2ba7745aeb053e90314e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1f3361d04069373f074f80285c911d05') in 0.0026301 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.376 seconds
-Refreshing native plugins compatible for Editor in 5.11 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.378 seconds
-Domain Reload Profiling: 6732ms
-	BeginReloadAssembly (848ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (64ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (153ms)
-	RebuildCommonClasses (190ms)
-	RebuildNativeTypeToScriptingClass (78ms)
-	initialDomainReloadingComplete (153ms)
-	LoadAllAssembliesAndSetupDomain (2085ms)
-		LoadAssemblies (1568ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (990ms)
-			TypeCache.Refresh (34ms)
-				TypeCache.ScanAssembly (2ms)
-			BuildScriptInfoCaches (860ms)
-			ResolveRequiredComponents (85ms)
-	FinalizeReload (3378ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2494ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (19ms)
-			BeforeProcessingInitializeOnLoad (502ms)
-			ProcessInitializeOnLoadAttributes (1644ms)
-			ProcessInitializeOnLoadMethodAttributes (295ms)
-			AfterProcessingInitializeOnLoad (25ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (49ms)
-Refreshing native plugins compatible for Editor in 6.23 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6623 unused Assets / (8.0 MB). Loaded Objects now: 7416.
-Memory consumption went from 161.1 MB to 153.1 MB.
-Total: 32.595800 ms (FindLiveObjects: 1.785400 ms CreateObjectMapping: 2.439300 ms MarkObjects: 15.583100 ms  DeleteObjects: 12.785500 ms)
+Unloading 6623 unused Assets / (7.5 MB). Loaded Objects now: 7323.
+Memory consumption went from 158.2 MB to 150.7 MB.
+Total: 17.192800 ms (FindLiveObjects: 1.172700 ms CreateObjectMapping: 1.212600 ms MarkObjects: 7.264500 ms  DeleteObjects: 7.541100 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.915 seconds
-Refreshing native plugins compatible for Editor in 5.65 ms, found 4 plugins.
+- Loaded All Assemblies, in  1.076 seconds
+Refreshing native plugins compatible for Editor in 1.86 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.757 seconds
-Domain Reload Profiling: 5657ms
-	BeginReloadAssembly (860ms)
+- Finished resetting the current domain, in  1.242 seconds
+Domain Reload Profiling: 2314ms
+	BeginReloadAssembly (286ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (57ms)
+		DisableScriptedObjects (17ms)
 		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (173ms)
-	RebuildCommonClasses (186ms)
-	RebuildNativeTypeToScriptingClass (48ms)
-	initialDomainReloadingComplete (115ms)
-	LoadAllAssembliesAndSetupDomain (1689ms)
-		LoadAssemblies (1372ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (66ms)
+	RebuildCommonClasses (58ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (662ms)
+		LoadAssemblies (500ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (803ms)
-			TypeCache.Refresh (17ms)
+		AnalyzeDomain (309ms)
+			TypeCache.Refresh (9ms)
 				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (721ms)
-			ResolveRequiredComponents (54ms)
-	FinalizeReload (2759ms)
+			BuildScriptInfoCaches (278ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (1243ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2064ms)
+		SetupLoadedEditorAssemblies (954ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (18ms)
-			BeforeProcessingInitializeOnLoad (444ms)
-			ProcessInitializeOnLoadAttributes (1319ms)
-			ProcessInitializeOnLoadMethodAttributes (250ms)
-			AfterProcessingInitializeOnLoad (26ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (192ms)
+			ProcessInitializeOnLoadAttributes (631ms)
+			ProcessInitializeOnLoadMethodAttributes (107ms)
+			AfterProcessingInitializeOnLoad (11ms)
 			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (54ms)
-Refreshing native plugins compatible for Editor in 10.34 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (22ms)
+Refreshing native plugins compatible for Editor in 2.40 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6623 unused Assets / (8.1 MB). Loaded Objects now: 7418.
-Memory consumption went from 161.0 MB to 152.9 MB.
-Total: 35.063500 ms (FindLiveObjects: 1.286700 ms CreateObjectMapping: 1.319600 ms MarkObjects: 17.507200 ms  DeleteObjects: 14.946300 ms)
+Unloading 6623 unused Assets / (7.6 MB). Loaded Objects now: 7325.
+Memory consumption went from 158.1 MB to 150.5 MB.
+Total: 15.507500 ms (FindLiveObjects: 0.813200 ms CreateObjectMapping: 0.835200 ms MarkObjects: 6.576600 ms  DeleteObjects: 7.280400 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 539.161699 seconds.
+  path: Assets/Scripts/Animal.cs
+  artifactKey: Guid(29b5c09cbc634ce4697891365465eb9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Animal.cs using Guid(29b5c09cbc634ce4697891365465eb9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c7dd6fc7f66ac3673a8e30f180a8ac31') in 0.0133324 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.851 seconds
+Refreshing native plugins compatible for Editor in 2.11 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.925 seconds
+Domain Reload Profiling: 1772ms
+	BeginReloadAssembly (234ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (14ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (54ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (533ms)
+		LoadAssemblies (412ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (239ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (210ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (925ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (672ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (155ms)
+			ProcessInitializeOnLoadAttributes (416ms)
+			ProcessInitializeOnLoadMethodAttributes (88ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Refreshing native plugins compatible for Editor in 2.03 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6623 unused Assets / (6.6 MB). Loaded Objects now: 7327.
+Memory consumption went from 158.2 MB to 151.6 MB.
+Total: 12.690600 ms (FindLiveObjects: 0.874500 ms CreateObjectMapping: 0.793400 ms MarkObjects: 6.132100 ms  DeleteObjects: 4.888100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 1665.543076 seconds.
+  path: Assets/Scripts/ShopScript.cs
+  artifactKey: Guid(3c42b8782e3a05b4489ceb5b951beedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ShopScript.cs using Guid(3c42b8782e3a05b4489ceb5b951beedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '653656cda36eeb49fb4b32516765b23c') in 0.0084033 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+

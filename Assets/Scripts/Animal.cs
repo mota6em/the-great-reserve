@@ -22,7 +22,12 @@ public abstract class Animal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
+        CheckStatus();
+    }
+
+    protected abstract void CheckStatus();
+    /*
+     * timer += Time.deltaTime;
         if (timer >= changeDirectionInterval)
         {
             SetRandomTargetPosition();
@@ -30,7 +35,8 @@ public abstract class Animal : MonoBehaviour
         }
 
         SetRandomTargetPosition();
-    }
+     */
+
 
     protected abstract void SetRandomTargetPosition();
 }
