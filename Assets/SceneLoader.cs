@@ -2,13 +2,18 @@
 using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
-    public void LoadGameScene()
+    public void LoadLoadGameScene()
     {
         SceneManager.LoadScene("LoadGameScene");
 
     }
-    public void LoadMainMenu()
+    public void LoadMenuScene()
     {
         SceneManager.LoadScene("MenuScene");
+    }
+
+    public void LoadGameScene()
+    {
+        SceneManager.LoadScene("GameScene");
     }
 }

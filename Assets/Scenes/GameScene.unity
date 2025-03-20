@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 304556997}
   - component: {fileID: 304556996}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: AnimalsCategoryButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1317,6 +1317,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533032680}
   m_CullTransparentMesh: 1
+--- !u!1 &548329164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 548329166}
+  - component: {fileID: 548329165}
+  m_Layer: 0
+  m_Name: SceneLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &548329165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548329164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7adfcb869decaca409608e0e8ed57071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &548329166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548329164}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1076.8607, y: 471.9086, z: -3.1300287}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &580533229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,8 +1522,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1412119705}
-        m_TargetAssemblyTypeName: SettingsScript, Assembly-CSharp
+      - m_Target: {fileID: 548329165}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadMenuScene
         m_Mode: 1
         m_Arguments:
@@ -1541,7 +1585,7 @@ GameObject:
   - component: {fileID: 699440957}
   - component: {fileID: 699440956}
   m_Layer: 5
-  m_Name: Button (Legacy) (1)
+  m_Name: PlantsCategoryButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2632,7 +2676,7 @@ GameObject:
   - component: {fileID: 921175367}
   - component: {fileID: 921175366}
   m_Layer: 5
-  m_Name: Button (Legacy) (3)
+  m_Name: TerrariansCategoryButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3757,7 +3801,7 @@ GameObject:
   - component: {fileID: 1308996655}
   - component: {fileID: 1308996654}
   m_Layer: 5
-  m_Name: Button (Legacy) (2)
+  m_Name: JeepsCategoryButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5480,3 +5524,4 @@ SceneRoots:
   - {fileID: 1064439004}
   - {fileID: 135984813}
   - {fileID: 1412119706}
+  - {fileID: 548329166}

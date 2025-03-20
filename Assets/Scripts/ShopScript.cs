@@ -11,11 +11,6 @@ public class ShopScript : MonoBehaviour
     private int currentMoney = 0;
     private float timer = 0f;
     private float interval = 1f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

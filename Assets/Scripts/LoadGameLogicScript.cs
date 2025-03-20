@@ -14,9 +14,4 @@ public class LoadGameLogicScript : MonoBehaviour
     {
         
     }
-
-    public void LoadMenuScene()
-    {
-        SceneManager.LoadScene("MenuScene");
-    }   
 }

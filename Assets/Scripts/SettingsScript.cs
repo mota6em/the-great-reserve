@@ -20,9 +20,4 @@ public class SettingsScript : MonoBehaviour
     {
         settingsPanel.SetActive(!settingsPanel.activeSelf);
     }
-
-    public void LoadMenuScene()
-    {
-        SceneManager.LoadScene("MenuScene");
-    }
 }
