@@ -61,11 +61,13 @@ public class ShopScript : MonoBehaviour
         UpdateButtonLabels();
     }
 
+    //Toggles/hides the shop panel
     public void ToggleShop()
     {
         shopPanel.SetActive(!shopPanel.activeSelf);
     }
 
+    //Switches between category panels
     public void ShowPanel(string panelName)
     {
         plantsPanel.SetActive(panelName == "plants");
@@ -74,17 +76,20 @@ public class ShopScript : MonoBehaviour
         terrarianPanel.SetActive(panelName == "terrarian");
     }
 
+    //Adds "value" amount of money to the players balance
     public void AddMoney(int value)
     {
         currentMoney += value;
         money.GetComponent<Text>().text = "Money: " + currentMoney.ToString();
     }
 
+    //When called, it sets the current itemPrefab to the item in the argument
     public void SetItemPrefab(GameObject item)
     {
         itemPrefab = item;
     }
 
+    //Checks if the item is valid and the player has enought money to buy it
     public void SelectItemToPlace(string itemName)
     {
         if (itemPrices.TryGetValue(itemName, out int cost))
@@ -105,6 +110,7 @@ public class ShopScript : MonoBehaviour
         }
     }
 
+    //Places the current item in the point where the player clicks
     private void PlaceItem()
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -122,6 +128,7 @@ public class ShopScript : MonoBehaviour
         }
     }
 
+    //Calls all the InitialiazeButtonsInPanel for all the items
     private void InitializeItemButtons()
     {
         InitializeButtonsInPanel(plantsPanel);
@@ -130,6 +137,7 @@ public class ShopScript : MonoBehaviour
         InitializeButtonsInPanel(terrarianPanel);
     }
 
+    //Puts all the buttons in the panel to the itemButtons dictionary
     private void InitializeButtonsInPanel(GameObject panel)
     {
         foreach (Transform child in panel.transform)
@@ -154,6 +162,7 @@ public class ShopScript : MonoBehaviour
         }
     }
 
+    //Updates the button texts to show the current price of the items
     private void UpdateButtonLabels()
     {
         foreach (var item in itemPrices)

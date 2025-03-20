@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 94a65047b67e82542b5222b25cec0d4d
+guid: d52b2ec19dd0bfa45a54ad262ac95e3c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4677800105985615134
-    second: GrowthBush_0
+      213: -5904467939007973684
+    second: GrownGrass_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GrowthBush_0
+      name: GrownGrass_0
       rect:
         serializedVersion: 2
         x: 29
-        y: 19
-        width: 232
-        height: 122
+        y: 0
+        width: 367
+        height: 327
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e15ae8f8962eae040800000000000000
-      internalID: 4677800105985615134
+      spriteID: cc63fb351bd1f0ea0800000000000000
+      internalID: -5904467939007973684
       vertices: []
       indices: 
       edges: []
