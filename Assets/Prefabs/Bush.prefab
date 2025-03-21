@@ -9,10 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5687936946982639386}
-  - component: {fileID: 5694693441980896212}
   - component: {fileID: 3512021200426677542}
   - component: {fileID: 7785255644805098660}
-  - component: {fileID: 8908291853366487384}
+  - component: {fileID: 5694693441980896212}
   m_Layer: 0
   m_Name: Bush
   m_TagString: Untagged
@@ -35,23 +34,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5694693441980896212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8199501261112945134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1267c3c2382fee0439ae7a5fd30783a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plantName: 
-  waterRequirement: 0
-  isReadyToConsume: 0
-  regrowthInterval: 0
-  timer: 0
 --- !u!212 &3512021200426677542
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -153,7 +135,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.32, y: 1.22}
   m_EdgeRadius: 0
---- !u!114 &8908291853366487384
+--- !u!114 &5694693441980896212
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,3 +152,5 @@ MonoBehaviour:
   isReadyToConsume: 0
   regrowthInterval: 0
   timer: 0
+  defaultSprite: {fileID: 4677800105985615134, guid: 94a65047b67e82542b5222b25cec0d4d, type: 3}
+  growingSprite: {fileID: -8974809084729980634, guid: 37e221d39cbd74e48904064094ed852d, type: 3}

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5687936946982639386}
-  - component: {fileID: 5694693441980896212}
   - component: {fileID: 3512021200426677542}
   - component: {fileID: 7785255644805098660}
   - component: {fileID: -4169327178338617400}
@@ -35,23 +34,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5694693441980896212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8199501261112945134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1267c3c2382fee0439ae7a5fd30783a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plantName: 
-  waterRequirement: 0
-  isReadyToConsume: 0
-  regrowthInterval: 0
-  timer: 0
 --- !u!212 &3512021200426677542
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -170,3 +152,5 @@ MonoBehaviour:
   isReadyToConsume: 0
   regrowthInterval: 0
   timer: 0
+  defaultSprite: {fileID: -5904467939007973684, guid: d52b2ec19dd0bfa45a54ad262ac95e3c, type: 3}
+  growingSprite: {fileID: 1537797735591417753, guid: 30d69ccdf4930bd479f407faf79449e9, type: 3}
