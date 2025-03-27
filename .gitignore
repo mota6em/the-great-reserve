@@ -39,5 +39,9 @@ sysinfo.txt
 # Crashlytics generated file
 Assets/StreamingAssets/crashlytics-build.properties
 
-"Logs/" 
-"UpgradeLog.htm" 
+# Extra cleanup (added)
+[Bb]in/
+target/
+*.class
+Logs/
+UpgradeLog.htm
