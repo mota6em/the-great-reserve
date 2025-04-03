@@ -10,7 +10,7 @@ public abstract class Animal : MonoBehaviour
     private int maxHealth;
     private int currentHealth;
     private int hunger;
-    protected float moveSpeed;
+    protected float moveSpeed = 2f;
     private float changeDirectionInterval;
     private float timer;
     private Vector2 targetPosition;
@@ -41,35 +41,36 @@ public abstract class Animal : MonoBehaviour
         }
 
         InitializeAnimal();
-        SetRandomTargetPosition();
+
+        noiseOffsetX = Random.Range(0f, 100f);
+        noiseOffsetY = Random.Range(0f, 100f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        MoveTowardsTarget();
+        MoveWithPerlinNoise();
     }
 
-    private void SetRandomTargetPosition()
-    {
-        if (gameAreaCollider != null)
-        {
-            Bounds bounds = gameAreaCollider.bounds;
-            float randomX = Random.Range(bounds.min.x, bounds.max.x);
-            float randomY = Random.Range(bounds.min.y, bounds.max.y);
-            targetPosition = new Vector2(randomX, randomY);
-        }
-    }
-
-    private void MoveTowardsTarget()
+    private void MoveWithPerlinNoise()
     {
         float step = moveSpeed * Time.deltaTime;
-        transform.position = Vector2.MoveTowards(transform.position, targetPosition, step);
 
-        if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
-        {
-            SetRandomTargetPosition();
-        }
+        // Use Perlin noise to generate smooth random movement
+        float noiseX = Mathf.PerlinNoise(Time.time + noiseOffsetX, 0f) * 2 - 1;
+        float noiseY = Mathf.PerlinNoise(Time.time + noiseOffsetY, 0f) * 2 - 1;
+        Vector2 direction = new Vector2(noiseX, noiseY).normalized;
+
+        Vector2 newPosition = (Vector2)transform.position + direction * step;
+       // if (gameAreaCollider.bounds.Contains(newPosition))
+       // {
+            transform.position = newPosition;
+       //     Debug.Log("Moving to new position: " + newPosition);
+        //}
+        //else
+        //{
+        //    Debug.Log("New position out of bounds: " + newPosition);
+        //}
     }
 
     protected abstract void InitializeAnimal();
