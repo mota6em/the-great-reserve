@@ -11,7 +11,7 @@ public abstract class Animal : MonoBehaviour
     protected int currentHealth;
     protected int hunger;
     protected float moveSpeed;
-    private Vector2 targetPosition;
+    protected Vector2 targetPosition;
     protected float noiseOffsetX;
     protected float noiseOffsetY;
 
@@ -23,7 +23,6 @@ public abstract class Animal : MonoBehaviour
     protected float timeBetweenStopsTimer;
     protected float timeBetweenStops;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +30,29 @@ public abstract class Animal : MonoBehaviour
         InitializeAnimal();
     }
 
-    // Update is called once per frame
     void Update()
+    {
+        HandleMovementAndStanding();
+    }
+
+    private void FindGameArea()
+    {
+        GameObject gameArea = GameObject.FindGameObjectWithTag("GameArea");
+        if (gameArea != null)
+        {
+            gameAreaCollider = gameArea.GetComponent<Collider2D>();
+            if (gameAreaCollider == null)
+            {
+                Debug.LogError("The gameArea does not have a Collider2D component.");
+            }
+        }
+        else
+        {
+            Debug.LogError("GameArea object not found.");
+        }
+    }
+
+    protected void HandleMovementAndStanding()
     {
         if (isStanding)
         {
@@ -55,24 +75,7 @@ public abstract class Animal : MonoBehaviour
         }
     }
 
-    private void FindGameArea()
-    {
-        GameObject gameArea = GameObject.FindGameObjectWithTag("GameArea");
-        if (gameArea != null)
-        {
-            gameAreaCollider = gameArea.GetComponent<Collider2D>();
-            if (gameAreaCollider == null)
-            {
-                Debug.LogError("The gameArea does not have a Collider2D component.");
-            }
-        }
-        else
-        {
-            Debug.LogError("GameArea object not found.");
-        }
-    }
-
-    private void MoveWithPerlinNoise()
+    protected void MoveWithPerlinNoise()
     {
         float noiseScale = 0.5f;
         float step = moveSpeed * Time.deltaTime;
@@ -103,10 +106,6 @@ public abstract class Animal : MonoBehaviour
                position.y > bounds.min.y && position.y < bounds.max.y;
     }
 
-    public void StandStill()
-    {
-        isStanding = true;
-        standTimer = 0f;
-    }
     protected abstract void InitializeAnimal();
+
 }
