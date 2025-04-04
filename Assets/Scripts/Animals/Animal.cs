@@ -6,10 +6,14 @@ public abstract class Animal : MonoBehaviour
     protected string animalName;
     protected int age;
     protected int visionRange;
-    protected int thirst;
+
+    //if current thirst is zero, the animal will die
+    protected int maxThirst;
+    protected int currentThirst;
     protected int maxHealth;
     protected int currentHealth;
-    protected int hunger;
+    protected int maxHunger;
+    protected int currentHunger;
     protected float moveSpeed;
     protected Vector2 targetPosition;
     protected float noiseOffsetX;
@@ -69,11 +73,12 @@ public abstract class Animal : MonoBehaviour
         else if (isMovingToTarget)
         {
             MoveToLocation(targetPosition);
-            Debug.Log("Moving to target position: " + targetPosition);
+           //Debug.Log("Moving to target position: " + targetPosition);
             if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
             {
-                Debug.Log("Reached target position: " + targetPosition);
+               Debug.Log("Reached target position: " + targetPosition);
                 isMovingToTarget = false;
+                OnTargetReached();
             }
         }
         else
@@ -134,4 +139,5 @@ public abstract class Animal : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, location, step);
     }
 
+    protected abstract void OnTargetReached();
 }

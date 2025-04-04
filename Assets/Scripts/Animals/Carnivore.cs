@@ -3,4 +3,8 @@ using UnityEngine;
 
 public abstract class Carnivore : Animal
 {
+    protected override void OnTargetReached()
+    {
+
+    }
 }

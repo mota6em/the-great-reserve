@@ -8,10 +8,12 @@ public class Camel : Herbivore
         animalName = "Camel";
         age = 5;
         visionRange = 10;
-        thirst = 100;
+        maxThirst = 150;
+        currentThirst = 150;
         maxHealth = 100;
         currentHealth = 100;
-        hunger = 100;
+        maxHunger = 100;
+        currentHunger = 100;
 
         moveSpeed = 2.0f;
         noiseOffsetX = Random.Range(0f, 100f);

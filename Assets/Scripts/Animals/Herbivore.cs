@@ -43,4 +43,23 @@ public abstract class Herbivore : Animal
         }
     }
 
+    protected override void OnTargetReached()
+    {
+        // Consume the plant
+        GameObject[] plants = GameObject.FindGameObjectsWithTag("Plant");
+        foreach (GameObject plant in plants)
+        {
+            if (Vector2.Distance(transform.position, plant.transform.position) < 0.1f)
+            {
+                Plant plantScript = plant.GetComponent<Plant>();
+                if (plantScript != null && plantScript.isReadyToConsume)
+                {
+                    // Consume the plant
+                    plantScript.Consume();
+                    Debug.Log(animalName + " consumed " + plantScript.plantName);
+                    break;
+                }
+            }
+        }
+    }
 }
