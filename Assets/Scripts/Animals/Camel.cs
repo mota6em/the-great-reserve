@@ -20,5 +20,8 @@ public class Camel : Herbivore
         standDuration = 5f;
         timeBetweenStopsTimer = 0f;
         timeBetweenStops = 7f;
+
+        MoveToClosestConsumablePlant();
+        Debug.Log(FindClosestConsumablePlant());
     }
 }

@@ -20,5 +20,6 @@ public class Lion : Carnivore
         standDuration = 5f;
         timeBetweenStopsTimer = 0f;
         timeBetweenStops = 7f;
+
     }
 }

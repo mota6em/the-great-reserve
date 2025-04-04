@@ -3,6 +3,7 @@ using UnityEngine;
 
 public abstract class Herbivore : Animal
 {
+    //Finds the closest consumable plant in the scene and returns its position
     protected Vector2 FindClosestConsumablePlant()
     {
         GameObject[] plants = GameObject.FindGameObjectsWithTag("Plant");
@@ -32,5 +33,14 @@ public abstract class Herbivore : Animal
         }
     }
 
+    // Moves the animal to the closest consumable plant
+    protected void MoveToClosestConsumablePlant()
+    {
+        Vector2 plantPosition = FindClosestConsumablePlant();
+        if (plantPosition != Vector2.zero)
+        {
+            MoveToLocation(plantPosition);
+        }
+    }
 
 }

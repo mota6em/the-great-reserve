@@ -17,6 +17,7 @@ public abstract class Animal : MonoBehaviour
 
     private Collider2D gameAreaCollider;
 
+    private bool isMovingToTarget = false;
     private bool isStanding = false;
     protected float standTimer;
     protected float standDuration;
@@ -35,6 +36,7 @@ public abstract class Animal : MonoBehaviour
         HandleMovementAndStanding();
     }
 
+    //Finds the GameArea object in the scene and assigns its Collider2D component to gameAreaCollider
     private void FindGameArea()
     {
         GameObject gameArea = GameObject.FindGameObjectWithTag("GameArea");
@@ -52,6 +54,7 @@ public abstract class Animal : MonoBehaviour
         }
     }
 
+    // Handles the movement and standing behavior of the animal
     protected void HandleMovementAndStanding()
     {
         if (isStanding)
@@ -61,6 +64,16 @@ public abstract class Animal : MonoBehaviour
             {
                 isStanding = false;
                 standTimer = 0f;
+            }
+        }
+        else if (isMovingToTarget)
+        {
+            MoveToLocation(targetPosition);
+            Debug.Log("Moving to target position: " + targetPosition);
+            if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
+            {
+                Debug.Log("Reached target position: " + targetPosition);
+                isMovingToTarget = false;
             }
         }
         else
@@ -75,6 +88,7 @@ public abstract class Animal : MonoBehaviour
         }
     }
 
+    // Moves the animal using Perlin noise for smooth movement
     protected void MoveWithPerlinNoise()
     {
         float noiseScale = 0.5f;
@@ -89,16 +103,18 @@ public abstract class Animal : MonoBehaviour
         if (IsPositionInBounds(newPosition))
         {
             transform.position = newPosition;
-         //   Debug.Log("Moving to new position: " + newPosition);
+           //Debug.Log("Moving to new position: " + newPosition);
         }
         else
         {
             direction = -direction;
             newPosition = (Vector2)transform.position + direction * step;
             transform.position = newPosition;
-            Debug.Log("Bounce back from bounds");
+           //Debug.Log("Bounce back from bounds");
         }
     }
+
+    // Checks if the new position is within the bounds of the game area
     private bool IsPositionInBounds(Vector2 position)
     {
         Bounds bounds = gameAreaCollider.bounds;
@@ -106,6 +122,16 @@ public abstract class Animal : MonoBehaviour
                position.y > bounds.min.y && position.y < bounds.max.y;
     }
 
+    //An abstract method that must be implemented by derived classes to initialize the animal's properties
     protected abstract void InitializeAnimal();
+
+    //Moves the animal to a specified location
+    protected void MoveToLocation(Vector2 location)
+    {
+        targetPosition = location;
+        isMovingToTarget = true;
+        float step = moveSpeed * Time.deltaTime;
+        transform.position = Vector2.MoveTowards(transform.position, location, step);
+    }
 
 }

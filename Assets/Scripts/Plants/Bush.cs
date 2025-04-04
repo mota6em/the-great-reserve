@@ -8,7 +8,7 @@ public class Bush : Plant
         waterRequirement = false;
         isReadyToConsume = true;
         //don't change this variable to a number below 10
-        regrowthInterval = 11f;
+        regrowthInterval = 3f;
         timer = 0f;
         if (spriteRenderer != null)
         {
