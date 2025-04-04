@@ -3,16 +3,14 @@ using UnityEngine;
 
 public abstract class Animal : MonoBehaviour
 {
-    private string animalName;
-    private int age;
-    private int visionRange;
-    private int thirst;
-    private int maxHealth;
-    private int currentHealth;
-    private int hunger;
-    protected float moveSpeed = 2f;
-    private float changeDirectionInterval;
-    private float timer;
+    protected string animalName;
+    protected int age;
+    protected int visionRange;
+    protected int thirst;
+    protected int maxHealth;
+    protected int currentHealth;
+    protected int hunger;
+    protected float moveSpeed;
     private Vector2 targetPosition;
     protected float noiseOffsetX;
     protected float noiseOffsetY;
