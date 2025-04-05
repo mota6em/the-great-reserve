@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 141623617278292015}
   m_Layer: 0
   m_Name: Lion
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,4 +147,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27eceb7f35f02714f8a40c783b933662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameArea: {fileID: 0}

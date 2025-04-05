@@ -6,7 +6,7 @@ public class Lion : Carnivore
     protected override void InitializeAnimal()
     {
         animalName = "Lion";
-        age = 5;
+        age = 1;
         visionRange = 10;
         maxThirst = 150;
         currentThirst = 150;

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GameArea
   - Plant
+  - Animal
   layers:
   - Default
   - TransparentFX

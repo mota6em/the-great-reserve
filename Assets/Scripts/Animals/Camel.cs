@@ -6,7 +6,7 @@ public class Camel : Herbivore
     protected override void InitializeAnimal()
     {
         animalName = "Camel";
-        age = 5;
+        age = 1;
         visionRange = 10;
         maxThirst = 150;
         currentThirst = 150;
