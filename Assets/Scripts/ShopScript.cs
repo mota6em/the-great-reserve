@@ -23,6 +23,7 @@ public class ShopScript : MonoBehaviour
         { "Leopard", 150 },
         { "Lion", 200 },
 
+        { "Camel", 100 },
         //plants
         { "Bush", 100 },
         { "Grass", 50 },
@@ -56,7 +57,7 @@ public class ShopScript : MonoBehaviour
 
     void Start()
     {
-        AddMoney(500);
+        AddMoney(5000);
         InitializeItemButtons();
         UpdateButtonLabels();
     }

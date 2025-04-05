@@ -1,11 +1,11 @@
 using TMPro;
 using UnityEngine;
 
-public class Lion : Carnivore
+public class Camel : Herbivore
 {
     protected override void InitializeAnimal()
     {
-        animalName = "Lion";
+        animalName = "Camel";
         age = 5;
         visionRange = 10;
         maxThirst = 150;
@@ -13,7 +13,7 @@ public class Lion : Carnivore
         maxHealth = 100;
         currentHealth = 100;
         maxHunger = 100;
-        currentHunger = 100;
+        currentHunger = 25;
 
         moveSpeed = 2.0f;
         noiseOffsetX = Random.Range(0f, 100f);
@@ -23,5 +23,7 @@ public class Lion : Carnivore
         timeBetweenStopsTimer = 0f;
         timeBetweenStops = 7f;
 
+       // MoveToClosestConsumablePlant();
+       // Debug.Log(FindClosestConsumablePlant());
     }
 }
