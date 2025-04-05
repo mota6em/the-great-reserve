@@ -43,9 +43,9 @@ public abstract class Herbivore : Animal
         }
     }
 
+    // This method is called when the animal reaches its target (the plant)
     protected override void OnTargetReached()
     {
-        // Consume the plant
         GameObject[] plants = GameObject.FindGameObjectsWithTag("Plant");
         foreach (GameObject plant in plants)
         {
@@ -54,11 +54,31 @@ public abstract class Herbivore : Animal
                 Plant plantScript = plant.GetComponent<Plant>();
                 if (plantScript != null && plantScript.isReadyToConsume)
                 {
-                    // Consume the plant
                     plantScript.Consume();
+                    currentHunger = maxHunger;
                     Debug.Log(animalName + " consumed " + plantScript.plantName);
                     break;
                 }
+            }
+        }
+    }
+
+    protected override void HandleHunger()
+    {
+        hungerTimer += Time.deltaTime;
+        if (hungerTimer >= hungerInterval)
+        {
+            hungerTimer = 0f;
+            if (currentHunger < 20)
+            {
+                currentHunger--;
+                Debug.Log(animalName + " hunger: " + currentHunger);
+                MoveToClosestConsumablePlant();
+            }
+            else if (currentHunger > 0)
+            {
+                currentHunger--;
+                Debug.Log(animalName + " hunger: " + currentHunger);
             }
         }
     }

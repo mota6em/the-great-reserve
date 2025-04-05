@@ -13,7 +13,7 @@ public class Camel : Herbivore
         maxHealth = 100;
         currentHealth = 100;
         maxHunger = 100;
-        currentHunger = 100;
+        currentHunger = 25;
 
         moveSpeed = 2.0f;
         noiseOffsetX = Random.Range(0f, 100f);
@@ -23,7 +23,7 @@ public class Camel : Herbivore
         timeBetweenStopsTimer = 0f;
         timeBetweenStops = 7f;
 
-        MoveToClosestConsumablePlant();
-        Debug.Log(FindClosestConsumablePlant());
+       // MoveToClosestConsumablePlant();
+       // Debug.Log(FindClosestConsumablePlant());
     }
 }

@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class Animal : MonoBehaviour
@@ -28,6 +29,8 @@ public abstract class Animal : MonoBehaviour
     protected float timeBetweenStopsTimer;
     protected float timeBetweenStops;
 
+    protected float hungerTimer = 0f;
+    protected float hungerInterval = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +40,7 @@ public abstract class Animal : MonoBehaviour
 
     void Update()
     {
+        HandleHunger();
         HandleMovementAndStanding();
     }
 
@@ -61,24 +65,24 @@ public abstract class Animal : MonoBehaviour
     // Handles the movement and standing behavior of the animal
     protected void HandleMovementAndStanding()
     {
-        if (isStanding)
+        if (isMovingToTarget)
+        {
+            MoveToLocation(targetPosition);
+            //Debug.Log("Moving to target position: " + targetPosition);
+            if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
+            {
+                Debug.Log("Reached target position: " + targetPosition);
+                isMovingToTarget = false;
+                OnTargetReached();
+            }
+        }
+        else if (isStanding)
         {
             standTimer += Time.deltaTime;
             if (standTimer >= standDuration)
             {
                 isStanding = false;
                 standTimer = 0f;
-            }
-        }
-        else if (isMovingToTarget)
-        {
-            MoveToLocation(targetPosition);
-           //Debug.Log("Moving to target position: " + targetPosition);
-            if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
-            {
-               Debug.Log("Reached target position: " + targetPosition);
-                isMovingToTarget = false;
-                OnTargetReached();
             }
         }
         else
@@ -140,4 +144,5 @@ public abstract class Animal : MonoBehaviour
     }
 
     protected abstract void OnTargetReached();
+    protected abstract void HandleHunger();
 }
