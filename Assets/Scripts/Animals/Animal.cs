@@ -1,6 +1,7 @@
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 public abstract class Animal : MonoBehaviour
 {
@@ -31,11 +32,14 @@ public abstract class Animal : MonoBehaviour
 
     protected float hungerTimer = 0f;
     protected float hungerInterval = 1f;
+
+    private UIManager uiManager;
     // Start is called before the first frame update
     void Start()
     {
         FindGameArea();
         InitializeAnimal();
+        FindUIManager();
     }
 
     void Update()
@@ -44,6 +48,14 @@ public abstract class Animal : MonoBehaviour
         HandleMovementAndStanding();
     }
 
+    private void FindUIManager()
+    {
+        uiManager = Object.FindFirstObjectByType<UIManager>();
+        if (uiManager == null)
+        {
+            Debug.LogError("UIManager not found in the scene.");
+        }
+    }
     //Finds the GameArea object in the scene and assigns its Collider2D component to gameAreaCollider
     private void FindGameArea()
     {
@@ -132,7 +144,6 @@ public abstract class Animal : MonoBehaviour
     }
 
     //An abstract method that must be implemented by derived classes to initialize the animal's properties
-    protected abstract void InitializeAnimal();
 
     //Moves the animal to a specified location
     protected void MoveToLocation(Vector2 location)
@@ -143,6 +154,27 @@ public abstract class Animal : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, location, step);
     }
 
+    private void OnMouseDown()
+    {
+        if (uiManager != null)
+        {
+            uiManager.ToggleAnimalDataPanel();
+            uiManager.SelectAnimal(this);
+        }
+    }
+
     protected abstract void OnTargetReached();
     protected abstract void HandleHunger();
+    protected abstract void InitializeAnimal();
+
+    public string GetAnimalName() { return animalName; }
+    public int GetAge() { return age; }
+    public int GetVisionRange() { return visionRange; }
+    public int GetMaxThirst() { return maxThirst; }
+    public int GetCurrentThirst() { return currentThirst; }
+    public int GetMaxHealth() { return maxHealth; }
+    public int GetCurrentHealth() { return currentHealth; }
+    public int GetMaxHunger() { return maxHunger; }
+    public int GetCurrentHunger() { return currentHunger; }
+    public float GetMoveSpeed() { return moveSpeed; }
 }
