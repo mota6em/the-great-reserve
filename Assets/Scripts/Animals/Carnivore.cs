@@ -43,14 +43,40 @@ public abstract class Carnivore : Animal
         if (hungerTimer >= hungerInterval)
         {
             hungerTimer = 0f;
-            if (currentHunger < 20)
+
+            // Éhség csökkentése minden esetben
+            if (currentHunger > 0)
             {
                 currentHunger--;
-                MoveToClosestHerbivoreAnimal();
             }
-            else if (currentHunger > 0)
+
+            // Ha az éhség 0, csökkentsük az életerõt
+            if (currentHunger == 0)
             {
-                currentHunger--;
+                if (currentHealth > 0)
+                {
+                    currentHealth--;
+                    Debug.Log($"{animalName} is starving! Health decreased to {currentHealth}.");
+                }
+                else
+                {
+                    DeleteAnimal();
+                    Debug.Log($"{animalName} died from starvation!");
+                }
+            }
+            // Ha az éhség nagyobb, mint a küszöbérték, növeljük az életerõt
+            else if (currentHunger > hungerThreshold)
+            {
+                if (currentHealth < maxHealth)
+                {
+                    currentHealth++;
+                    Debug.Log($"{animalName} is well-fed! Health increased to {currentHealth}.");
+                }
+            }
+            // Ha az éhség kisebb vagy egyenlõ a küszöbértékkel, keressünk növényevõt
+            if (currentHunger <= hungerThreshold)
+            {
+                MoveToClosestHerbivoreAnimal();
             }
         }
     }

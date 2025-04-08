@@ -14,6 +14,7 @@ public class Camel : Herbivore
         currentHealth = 100;
         maxHunger = 100;
         currentHunger = 25;
+        hungerThreshold = 20;
 
         moveSpeed = 2.0f;
         noiseOffsetX = Random.Range(0f, 100f);

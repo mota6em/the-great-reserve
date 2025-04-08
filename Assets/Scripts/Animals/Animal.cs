@@ -16,6 +16,7 @@ public abstract class Animal : MonoBehaviour
     protected int currentHealth;
     protected int maxHunger;
     protected int currentHunger;
+    protected int hungerThreshold; //is the hunger is below this treshold then they start to search for food
     protected float moveSpeed;
     protected Vector2 targetPosition;
     protected float noiseOffsetX;

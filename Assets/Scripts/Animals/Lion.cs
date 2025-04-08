@@ -13,7 +13,8 @@ public class Lion : Carnivore
         maxHealth = 100;
         currentHealth = 100;
         maxHunger = 100;
-        currentHunger = 20;
+        currentHunger = 22;
+        hungerThreshold = 20;
 
         moveSpeed = 1.0f;
         noiseOffsetX = Random.Range(0f, 100f);
