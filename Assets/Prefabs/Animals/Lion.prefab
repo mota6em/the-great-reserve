@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 141623617278292015}
   m_Layer: 0
   m_Name: Lion
-  m_TagString: Animal
+  m_TagString: Carnivore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -42,7 +42,7 @@ public abstract class Animal : MonoBehaviour
         FindUIManager();
     }
 
-    void Update()
+    protected void Update()
     {
         HandleHunger();
         HandleMovementAndStanding();
@@ -143,8 +143,6 @@ public abstract class Animal : MonoBehaviour
                position.y > bounds.min.y && position.y < bounds.max.y;
     }
 
-    //An abstract method that must be implemented by derived classes to initialize the animal's properties
-
     //Moves the animal to a specified location
     protected void MoveToLocation(Vector2 location)
     {
@@ -152,6 +150,11 @@ public abstract class Animal : MonoBehaviour
         isMovingToTarget = true;
         float step = moveSpeed * Time.deltaTime;
         transform.position = Vector2.MoveTowards(transform.position, location, step);
+    }
+
+    public void DeleteAnimal()
+    {
+        Destroy(gameObject);
     }
 
     private void OnMouseDown()

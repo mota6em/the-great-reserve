@@ -834,7 +834,7 @@ GameObject:
   - component: {fileID: 326811237}
   - component: {fileID: 326811236}
   m_Layer: 5
-  m_Name: AnimalCount
+  m_Name: HerbivoreCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -892,7 +892,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Animals: 0'
+  m_Text: 'Herbivores: 0'
 --- !u!222 &326811237
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1012,7 +1012,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658965b80c7e1b14a927862ea77caca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalCountText: {fileID: 326811236}
+  herbivoreCountText: {fileID: 326811236}
+  carnivoreCountText: {fileID: 867370184}
   plantCountText: {fileID: 735301726}
   animalNameText: {fileID: 1231971933}
   animalAgeText: {fileID: 519016725}
@@ -2361,7 +2362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -89.7, y: 0}
+  m_AnchoredPosition: {x: 146.8, y: 0}
   m_SizeDelta: {x: 247.144, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &735301726
@@ -3204,6 +3205,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 866043551}
+  m_CullTransparentMesh: 1
+--- !u!1 &867370182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 867370183}
+  - component: {fileID: 867370185}
+  - component: {fileID: 867370184}
+  m_Layer: 5
+  m_Name: CarnivoreCount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &867370183
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867370182}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1415832339}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -97, y: 0}
+  m_SizeDelta: {x: 247.144, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &867370184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867370182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.94716984, g: 0.89176935, b: 0.89176935, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Carnivores: 0'
+--- !u!222 &867370185
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867370182}
   m_CullTransparentMesh: 1
 --- !u!1 &892591356
 GameObject:
@@ -5197,6 +5277,7 @@ RectTransform:
   m_Children:
   - {fileID: 727895805}
   - {fileID: 326811235}
+  - {fileID: 867370183}
   - {fileID: 735301725}
   m_Father: {fileID: 1956088877}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

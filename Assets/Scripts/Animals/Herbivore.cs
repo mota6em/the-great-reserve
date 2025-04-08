@@ -72,13 +72,11 @@ public abstract class Herbivore : Animal
             if (currentHunger < 20)
             {
                 currentHunger--;
-                Debug.Log(animalName + " hunger: " + currentHunger);
                 MoveToClosestConsumablePlant();
             }
             else if (currentHunger > 0)
             {
                 currentHunger--;
-                Debug.Log(animalName + " hunger: " + currentHunger);
             }
         }
     }

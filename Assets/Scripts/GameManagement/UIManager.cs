@@ -3,7 +3,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public Text animalCountText;
+    public Text herbivoreCountText;
+    public Text carnivoreCountText;
     public Text plantCountText;
 
     public Text animalNameText;
@@ -29,10 +30,12 @@ public class UIManager : MonoBehaviour
 
     private void UpdateCounts()
     {
-        int animalCount = GameObject.FindGameObjectsWithTag("Animal").Length;
+        int herbivoreCount = GameObject.FindGameObjectsWithTag("Herbivore").Length;
+        int carnivoreCount = GameObject.FindGameObjectsWithTag("Carnivore").Length;
         int plantCount = GameObject.FindGameObjectsWithTag("Plant").Length;
 
-        animalCountText.text = "Animals: " + animalCount;
+        herbivoreCountText.text = "Herbivores: " + herbivoreCount;
+        carnivoreCountText.text = "Carnivores: " + carnivoreCount;
         plantCountText.text = "Plants: " + plantCount;
     }
 
