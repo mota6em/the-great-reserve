@@ -162,7 +162,7 @@ public abstract class Animal : MonoBehaviour
     {
         if (uiManager != null)
         {
-            uiManager.ToggleAnimalDataPanel();
+            uiManager.OpenAnimalDataPanel();
             uiManager.SelectAnimal(this);
         }
     }

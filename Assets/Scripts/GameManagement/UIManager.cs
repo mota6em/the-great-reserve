@@ -55,8 +55,23 @@ public class UIManager : MonoBehaviour
         animalAgeText.text = "Age: " + animal.GetAge(); 
     }
 
-    public void ToggleAnimalDataPanel()
+    public void OpenAnimalDataPanel()
     {
-        animalDataPanel.SetActive(!animalDataPanel.activeSelf);
+        animalDataPanel.SetActive(true);
+    }
+
+    public void CloseAnimalDataPanel()
+    {
+        animalDataPanel.SetActive(false);
+    }
+
+    public void SellAnimal()
+    {
+        if (selectedAnimal != null)
+        {
+            selectedAnimal.DeleteAnimal();
+            selectedAnimal = null;
+            CloseAnimalDataPanel();
+        }
     }
 }
