@@ -4920,8 +4920,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.40224832
-        value: 0.29703617
+        time: 0.37307352
+        value: 0.2315607
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -5000,6 +5000,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 1194017318}
+  zPos: 1
+  startX: -9
+  endX: 9
 --- !u!1 &1231971931
 GameObject:
   m_ObjectHideFlags: 0
