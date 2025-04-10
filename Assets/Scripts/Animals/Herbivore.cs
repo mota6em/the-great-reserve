@@ -56,6 +56,7 @@ public abstract class Herbivore : Animal
                 {
                     plantScript.Consume();
                     currentHunger = maxHunger;
+                    PausePerlinNoiseMovement(standDuration);
                     Debug.Log(animalName + " consumed " + plantScript.plantName);
                     break;
                 }

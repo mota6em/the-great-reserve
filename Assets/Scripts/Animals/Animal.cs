@@ -110,6 +110,13 @@ public abstract class Animal : MonoBehaviour
         }
     }
 
+    public void PausePerlinNoiseMovement(float duration)
+    {
+        isStanding = true;
+        standDuration = duration;
+        standTimer = 0f;
+    }
+
     // Moves the animal using Perlin noise for smooth movement
     protected void MoveWithPerlinNoise()
     {

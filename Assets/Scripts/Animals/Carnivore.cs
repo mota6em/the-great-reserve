@@ -30,7 +30,7 @@ public abstract class Carnivore : Animal
                 herbivoreAnimal.DeleteAnimal();
 
                 currentHunger = maxHunger;
-
+                PausePerlinNoiseMovement(standDuration);
                 Debug.Log($"{animalName} has eaten {herbivoreAnimal.GetAnimalName()} and refilled its hunger.");
             }
             targetHerbivore = null;
