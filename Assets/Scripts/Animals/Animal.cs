@@ -16,6 +16,7 @@ public abstract class Animal : MonoBehaviour
     protected int currentHealth;
     protected int maxHunger;
     protected int currentHunger;
+    protected int hungerThreshold; //is the hunger is below this treshold then they start to search for food
     protected float moveSpeed;
     protected Vector2 targetPosition;
     protected float noiseOffsetX;
@@ -42,7 +43,7 @@ public abstract class Animal : MonoBehaviour
         FindUIManager();
     }
 
-    void Update()
+    protected void Update()
     {
         HandleHunger();
         HandleMovementAndStanding();
@@ -109,6 +110,13 @@ public abstract class Animal : MonoBehaviour
         }
     }
 
+    public void PausePerlinNoiseMovement(float duration)
+    {
+        isStanding = true;
+        standDuration = duration;
+        standTimer = 0f;
+    }
+
     // Moves the animal using Perlin noise for smooth movement
     protected void MoveWithPerlinNoise()
     {
@@ -143,8 +151,6 @@ public abstract class Animal : MonoBehaviour
                position.y > bounds.min.y && position.y < bounds.max.y;
     }
 
-    //An abstract method that must be implemented by derived classes to initialize the animal's properties
-
     //Moves the animal to a specified location
     protected void MoveToLocation(Vector2 location)
     {
@@ -154,11 +160,16 @@ public abstract class Animal : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, location, step);
     }
 
+    public void DeleteAnimal()
+    {
+        Destroy(gameObject);
+    }
+
     private void OnMouseDown()
     {
         if (uiManager != null)
         {
-            uiManager.ToggleAnimalDataPanel();
+            uiManager.OpenAnimalDataPanel();
             uiManager.SelectAnimal(this);
         }
     }
