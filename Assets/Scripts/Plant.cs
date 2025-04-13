@@ -43,12 +43,4 @@ public abstract class Plant : MonoBehaviour
             Debug.LogError("ChangeSprite failed: spriteRenderer or newSprite is null on " + gameObject.name);
         }
     }
-
-    //this is called when something consumes the plant, or you place the plant. It sets the isReadyToConsume to false and changes skin
-    public void Consume()
-    {
-        timer = 0f;
-        isReadyToConsume = false;
-        ChangeSprite(growingSprite, new Vector2(0.2f, 0.2f));
-    }
 }
