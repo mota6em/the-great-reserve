@@ -1,13 +1,18 @@
 using UnityEngine;
 
-public class JeepFollower : MonoBehaviour
+public class Jeep2 : MonoBehaviour
 {
-    public LineRenderer lineRenderer;
+    private LineRenderer lineRenderer;
     public float speed = 0.5f;
-
     private int currentIndex = 0;
     private float t = 0f;
-    private float yOffset = 0.3f;  
+    private float yOffset = 0.3f;
+
+    void Start()
+    {
+        lineRenderer = GameObject.Find("Road").GetComponent<LineRenderer>();
+        transform.localScale = new Vector3(0.125f, 0.125f, 1f); 
+    }
 
     void Update()
     {
@@ -17,11 +22,10 @@ public class JeepFollower : MonoBehaviour
         Vector3 end = lineRenderer.GetPosition(currentIndex + 1);
 
         t += Time.deltaTime * speed / Vector3.Distance(start, end);
-
         Vector3 position = Vector3.Lerp(start, end, t);
-        position.y += yOffset;  
-
+        position.y += yOffset;
         transform.position = position;
+
         Vector3 direction = (end - start).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
