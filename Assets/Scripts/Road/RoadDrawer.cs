@@ -6,8 +6,8 @@ public class RoadDrawer : MonoBehaviour
 
     private int pointCount = 15;
     [SerializeField] private float zPos = 1f;
-    [SerializeField] private float startX = -9f;
-    [SerializeField] private float endX = 9f;
+    [SerializeField] private float startX = -10f;
+      private float endX = 11f;
     float curveHeight = 1.5f;  
 
     private Vector3[] path;

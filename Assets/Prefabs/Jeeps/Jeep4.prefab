@@ -78,12 +78,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 8490125671608733184, guid: 2d8392c9504c0b747a2c97643444e3a9, type: 3}
+  m_Sprite: {fileID: -7549578935818439854, guid: 190ddcc14c4430e47bc663352dba9018, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.19, y: 10.19}
+  m_Size: {x: 10.24, y: 9.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -101,7 +101,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b69997c6883f3f4086ad6ccff4ad582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineRenderer: {fileID: 0}
+  currentIndex: 0
+  t: 0
   speed: 0.5
+  fullJeepSprite: {fileID: -7549578935818439854, guid: 190ddcc14c4430e47bc663352dba9018, type: 3}
+  emptyJeepSprite: {fileID: -8020917337501377467, guid: e7a31c57a3629d84181e5e36c362dc1a, type: 3}
 --- !u!114 &5926349647337155857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,4 +120,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 0}
-  speed: 0.5
+  speed: 2.22
