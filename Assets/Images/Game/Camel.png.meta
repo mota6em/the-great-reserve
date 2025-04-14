@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3132728aab22f0a44b3729b218aff75e
+guid: f85ddb2f6ff62ff40ba7fdfd3b365b6f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1819830194433888264
-    second: Mountain_0
+      213: 8251382267104367013
+    second: Camel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mountain_0
+      name: Camel_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 3
-        width: 91
-        height: 88
+        x: 7
+        y: 15
+        width: 244
+        height: 211
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ffec3d741aaeb6e0800000000000000
-      internalID: -1819830194433888264
+      spriteID: 5a196b8447cc28270800000000000000
+      internalID: 8251382267104367013
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mountain_0: -1819830194433888264
+      Camel_0: 8251382267104367013
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
