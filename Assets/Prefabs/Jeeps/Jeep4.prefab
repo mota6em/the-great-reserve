@@ -105,7 +105,8 @@ MonoBehaviour:
   currentIndex: 0
   t: 0
   speed: 0.5
-  fullJeepSprite: {fileID: -7549578935818439854, guid: 190ddcc14c4430e47bc663352dba9018, type: 3}
+  jeep3TouristsSprite: {fileID: -6122972683070946580, guid: ad8cded9345f7234284a612002b27ad2, type: 3}
+  jeep4TouristsSprite: {fileID: -7549578935818439854, guid: 190ddcc14c4430e47bc663352dba9018, type: 3}
   emptyJeepSprite: {fileID: -8020917337501377467, guid: e7a31c57a3629d84181e5e36c362dc1a, type: 3}
 --- !u!114 &5926349647337155857
 MonoBehaviour:

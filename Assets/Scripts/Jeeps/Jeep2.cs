@@ -10,10 +10,12 @@ public class Jeep2 : MonoBehaviour
     private float yOffset = 0.3f;
     private bool goingForward = true;
 
-    public Sprite fullJeepSprite;
+    public Sprite jeep1TouristSprite;
+    public Sprite jeep2TouristsSprite;
     public Sprite emptyJeepSprite;
 
     private SpriteRenderer sr;
+    private int touristCount;
 
     void Start()
     {
@@ -21,7 +23,7 @@ public class Jeep2 : MonoBehaviour
         lineRenderer = GameObject.Find("Road").GetComponent<LineRenderer>();
         transform.localScale = new Vector3(0.135f, 0.135f, 1f);
 
-        sr.sprite = fullJeepSprite;
+        SetRandomTouristSprite();
         sr.flipX = false;
     }
 
@@ -39,10 +41,9 @@ public class Jeep2 : MonoBehaviour
         Vector3 position = Vector3.Lerp(start, end, t);
         position.y += yOffset;
         transform.position = position;
+
         Vector3 direction = (end - start).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        // This keeps smooth turns based on path
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
         if (t >= 1f)
@@ -50,7 +51,6 @@ public class Jeep2 : MonoBehaviour
             t = 0f;
             currentIndex = nextIndex;
 
-            // Direction change + sprite switch
             if (goingForward && currentIndex >= lineRenderer.positionCount - 1)
             {
                 goingForward = false;
@@ -59,8 +59,14 @@ public class Jeep2 : MonoBehaviour
             else if (!goingForward && currentIndex <= 0)
             {
                 goingForward = true;
-                sr.sprite = fullJeepSprite;
+                SetRandomTouristSprite();
             }
         }
+    }
+
+    void SetRandomTouristSprite()
+    {
+        touristCount = Random.Range(1, 3); // 1 or 2
+        sr.sprite = (touristCount == 1) ? jeep1TouristSprite : jeep2TouristsSprite;
     }
 }

@@ -2369,6 +2369,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5990999011739709492, guid: 8b33d68d63320734f9ee08210a9fb4e6, type: 3}
+      propertyPath: jeep3TouristsSprite
+      value: 
+      objectReference: {fileID: -6122972683070946580, guid: ad8cded9345f7234284a612002b27ad2, type: 3}
+    - target: {fileID: 5990999011739709492, guid: 8b33d68d63320734f9ee08210a9fb4e6, type: 3}
+      propertyPath: jeep4TouristsSprite
+      value: 
+      objectReference: {fileID: -7549578935818439854, guid: 190ddcc14c4430e47bc663352dba9018, type: 3}
     - target: {fileID: 7859132293141028301, guid: 8b33d68d63320734f9ee08210a9fb4e6, type: 3}
       propertyPath: m_Name
       value: Jeep4
