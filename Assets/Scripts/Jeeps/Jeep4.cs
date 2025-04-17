@@ -1,33 +1,44 @@
+
 using UnityEngine;
 
 public class Jeep4 : MonoBehaviour
 {
     [HideInInspector] public LineRenderer lineRenderer;
-    [HideInInspector] public int currentIndex = 0;
+    [HideInInspector] public int currentIndex = -2;
     [HideInInspector] public float t = 0f;
 
     public float speed = 1f;
     private float yOffset = 0.3f;
     private bool goingForward = true;
 
-    public Sprite fullJeepSprite;
+    public Sprite jeep1TouristsSprite;
+    public Sprite jeep2TouristsSprite;
+    public Sprite jeep3TouristsSprite;
+    public Sprite jeep4TouristsSprite;
     public Sprite emptyJeepSprite;
 
     private SpriteRenderer sr;
+    private int touristCount = 0;
+    private bool isWaitingForTourists = false;
+    private bool hasTourists = false;
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         lineRenderer = GameObject.Find("Road").GetComponent<LineRenderer>();
-        transform.localScale = new Vector3(0.11f, 0.11f, 1f);
+        transform.localScale = new Vector3(0.25f, 0.25f, 1f);
 
-        sr.sprite = fullJeepSprite;
+        sr.sprite = emptyJeepSprite;
         sr.flipX = false;
+
+        TryGetTourists();
     }
 
     void Update()
     {
-        if (lineRenderer == null || lineRenderer.positionCount < 2) return;
+        if (isWaitingForTourists || lineRenderer == null || lineRenderer.positionCount < 2)
+            return;
+
 
         int nextIndex = goingForward ? currentIndex + 1 : currentIndex - 1;
         if (nextIndex < 0 || nextIndex >= lineRenderer.positionCount) return;
@@ -39,10 +50,9 @@ public class Jeep4 : MonoBehaviour
         Vector3 position = Vector3.Lerp(start, end, t);
         position.y += yOffset;
         transform.position = position;
+
         Vector3 direction = (end - start).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        // This keeps smooth turns based on path
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
         if (t >= 1f)
@@ -50,17 +60,54 @@ public class Jeep4 : MonoBehaviour
             t = 0f;
             currentIndex = nextIndex;
 
-            // Direction change + sprite switch
             if (goingForward && currentIndex >= lineRenderer.positionCount - 1)
             {
                 goingForward = false;
                 sr.sprite = emptyJeepSprite;
-             }
-            else if (!goingForward && currentIndex <= 0)
+                hasTourists = false;
+            }
+            else if (!goingForward && currentIndex <= 0 && !hasTourists)
             {
                 goingForward = true;
-                sr.sprite = fullJeepSprite;
-             }
+                TryGetTourists();
+            }
         }
+    }
+
+    public void TryGetTourists()
+    {
+        if(hasTourists || currentIndex > 0 ) return;
+        TouristManager tm = FindObjectOfType<TouristManager>();
+        if (tm != null)
+        {
+            touristCount = tm.AssignTourists(4);
+
+            if (touristCount > 0)
+            {
+                SetTouristSprite(touristCount);
+                isWaitingForTourists = false;
+                hasTourists = true;
+            }
+            else
+            {
+                sr.sprite = emptyJeepSprite;
+                isWaitingForTourists = true;
+                hasTourists = false;
+                Debug.Log($"{name} is waiting for tourists...");
+            }
+        }
+    }
+
+    void SetTouristSprite(int count)
+    {
+
+        if(count ==1)
+            sr.sprite = jeep1TouristsSprite;
+        else if (count == 2)
+            sr.sprite = jeep2TouristsSprite;
+        else if (count == 3)
+            sr.sprite = jeep3TouristsSprite;
+        else 
+            sr.sprite = jeep4TouristsSprite;
     }
 }
