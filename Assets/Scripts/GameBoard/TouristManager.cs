@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class TouristManager : MonoBehaviour
@@ -30,7 +31,7 @@ public class TouristManager : MonoBehaviour
         waitingTourists += amount;
         Debug.Log($"Tourists arrived: +{amount}. Total: {waitingTourists}");
 
-        TryWakeJeeps(); 
+        TryWakeJeeps();
     }
 
     public int AssignTourists(int requested)
@@ -49,14 +50,14 @@ public class TouristManager : MonoBehaviour
     {
         foreach (Jeep2 jeep in FindObjectsOfType<Jeep2>())
         {
-            if (!jeep.enabled && HasTouristsFor(2))
-                jeep.enabled = true;
+            if (jeep != null && jeep.enabled && jeep.gameObject.activeInHierarchy)
+                jeep.TryGetTourists();
         }
 
         foreach (Jeep4 jeep in FindObjectsOfType<Jeep4>())
         {
-            if (!jeep.enabled && HasTouristsFor(4))
-                jeep.enabled = true;
+            if (jeep != null && jeep.enabled && jeep.gameObject.activeInHierarchy)
+                jeep.TryGetTourists();
         }
     }
 }

@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class Jeep2 : MonoBehaviour
@@ -15,7 +16,9 @@ public class Jeep2 : MonoBehaviour
     public Sprite emptyJeepSprite;
 
     private SpriteRenderer sr;
-    private int touristCount;
+    private int touristCount = 0;
+    private bool isWaitingForTourists = false;
+    private bool hasTourists = false;
 
     void Start()
     {
@@ -23,13 +26,16 @@ public class Jeep2 : MonoBehaviour
         lineRenderer = GameObject.Find("Road").GetComponent<LineRenderer>();
         transform.localScale = new Vector3(0.135f, 0.135f, 1f);
 
-        SetRandomTouristSprite();
+        sr.sprite = emptyJeepSprite;
         sr.flipX = false;
+
+        TryGetTourists();
     }
 
     void Update()
     {
-        if (lineRenderer == null || lineRenderer.positionCount < 2) return;
+        if (isWaitingForTourists || lineRenderer == null || lineRenderer.positionCount < 2)
+            return;
 
         int nextIndex = goingForward ? currentIndex + 1 : currentIndex - 1;
         if (nextIndex < 0 || nextIndex >= lineRenderer.positionCount) return;
@@ -55,18 +61,45 @@ public class Jeep2 : MonoBehaviour
             {
                 goingForward = false;
                 sr.sprite = emptyJeepSprite;
+                hasTourists = false;
             }
             else if (!goingForward && currentIndex <= 0)
             {
                 goingForward = true;
-                SetRandomTouristSprite();
+                TryGetTourists();
             }
         }
     }
 
-    void SetRandomTouristSprite()
+    public void TryGetTourists()
     {
-        touristCount = Random.Range(1, 3); // 1 or 2
-        sr.sprite = (touristCount == 1) ? jeep1TouristSprite : jeep2TouristsSprite;
+        if (hasTourists || currentIndex > 0) return;
+        TouristManager tm = FindObjectOfType<TouristManager>();
+        if (tm != null)
+        {
+            touristCount = tm.AssignTourists(2);
+
+            if (touristCount > 0)
+            {
+                SetTouristSprite(touristCount);
+                isWaitingForTourists = false;
+                hasTourists = true;
+            }
+            else
+            {
+                sr.sprite = emptyJeepSprite; 
+                isWaitingForTourists = true;
+                hasTourists = false;
+                Debug.Log($"{name} is waiting for tourists...");
+            }
+        }
+    }
+
+    void SetTouristSprite(int count)
+    {
+        if (count == 1)
+            sr.sprite = jeep1TouristSprite;
+        else
+            sr.sprite = jeep2TouristsSprite;
     }
 }

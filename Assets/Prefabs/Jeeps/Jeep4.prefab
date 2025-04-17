@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 7859132293141028301}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.96, y: 0.5, z: 0.011547788}
-  m_LocalScale: {x: 0.20308658, y: 0.20833118, z: 1}
+  m_LocalPosition: {x: -12.88, y: 0.5, z: 0.011547788}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,12 +78,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -7549578935818439854, guid: 190ddcc14c4430e47bc663352dba9018, type: 3}
+  m_Sprite: {fileID: 4523358564995496592, guid: c626348c38c1f2b4a950bad24541b051, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.24, y: 9.31}
+  m_Size: {x: 5, y: 3.33}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -105,9 +105,11 @@ MonoBehaviour:
   currentIndex: 0
   t: 0
   speed: 0.5
-  jeep3TouristsSprite: {fileID: -6122972683070946580, guid: ad8cded9345f7234284a612002b27ad2, type: 3}
-  jeep4TouristsSprite: {fileID: -7549578935818439854, guid: 190ddcc14c4430e47bc663352dba9018, type: 3}
-  emptyJeepSprite: {fileID: -8020917337501377467, guid: e7a31c57a3629d84181e5e36c362dc1a, type: 3}
+  jeep1TouristsSprite: {fileID: 3535226219112865049, guid: 2100246f03feed84e89c10e1aa3d13dc, type: 3}
+  jeep2TouristsSprite: {fileID: -8714600955080930861, guid: 25c33223d52980642ad2870140e11aa6, type: 3}
+  jeep3TouristsSprite: {fileID: -8202198354902689558, guid: 6b46557cdc0440b499f757172e80eff6, type: 3}
+  jeep4TouristsSprite: {fileID: 4523358564995496592, guid: c626348c38c1f2b4a950bad24541b051, type: 3}
+  emptyJeepSprite: {fileID: -5465896906817898388, guid: d76ab29c9813ab44a91306803012e80f, type: 3}
 --- !u!114 &5926349647337155857
 MonoBehaviour:
   m_ObjectHideFlags: 0

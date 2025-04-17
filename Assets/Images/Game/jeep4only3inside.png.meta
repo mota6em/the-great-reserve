@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ad8cded9345f7234284a612002b27ad2
+guid: 6b46557cdc0440b499f757172e80eff6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6122972683070946580
-    second: jeep4only3inside_0
+      213: -8202198354902689558
+    second: jeep4only3inside (2)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jeep4only3inside_0
+      name: jeep4only3inside (2)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 88
-        width: 1024
-        height: 931
+        y: 95
+        width: 500
+        height: 321
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce2c22029c4d60ba0800000000000000
-      internalID: -6122972683070946580
+      spriteID: ae85bb6ad00fb2e80800000000000000
+      internalID: -8202198354902689558
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jeep4only3inside (2)_0: -8202198354902689558
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
