@@ -50,9 +50,11 @@ MonoBehaviour:
   currentIndex: 0
   t: 0
   speed: 0.72
+  returnSpeedMultiplier: 3
   jeep1TouristSprite: {fileID: 958462655187239791, guid: a8a93f2dab069f24fa23057fddc94806, type: 3}
   jeep2TouristsSprite: {fileID: -3715570937170208849, guid: e8776125afbb46842946c63adea7d0c9, type: 3}
   emptyJeepSprite: {fileID: 5273249740352881209, guid: dae05f66d328a5347af1dda9d8855bfd, type: 3}
+  waitingSprite: {fileID: 1578535405363325811, guid: 2df2ada6419ae3548a63b1d2a8c1bf47, type: 3}
 --- !u!114 &7436480222202782728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,7 +112,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: -3715570937170208849, guid: e8776125afbb46842946c63adea7d0c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
