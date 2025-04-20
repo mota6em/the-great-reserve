@@ -119,6 +119,54 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &14802832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 14802834}
+  - component: {fileID: 14802833}
+  m_Layer: 0
+  m_Name: HillSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &14802833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14802832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f9fe0fdcb07cf947a0b813538f940ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hillPrefab: {fileID: 710327710980289529, guid: 80c7af34bd0ac7f4ab42385deeef5919, type: 3}
+  hillCount: 10
+  startX: -10
+  spacing: 3
+--- !u!4 &14802834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14802832}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.667169, y: 0.8795334, z: -0.042830158}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &19999167
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,8 +2585,16 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: -9.37, y: 3.89, z: 0}
+  - {x: -5.84, y: 2.37, z: 1}
+  - {x: -4.04, y: 1.5, z: 1}
+  - {x: -2.48, y: 0.86, z: 1}
+  - {x: -1.31, y: 0.78, z: 1}
+  - {x: 0.08, y: 0.9, z: 1}
+  - {x: 0.75, y: 1.13, z: 1}
+  - {x: 2.61, y: 1.95, z: 1}
+  - {x: 4.81, y: 4.3, z: 1}
+  - {x: 5.78, y: 5.5, z: 1}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -6814,7 +6870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5256364991799191162, guid: 8b33d68d63320734f9ee08210a9fb4e6, type: 3}
       propertyPath: m_SortingOrder
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5990999011739709492, guid: 8b33d68d63320734f9ee08210a9fb4e6, type: 3}
       propertyPath: returnSpeedMultiplier
@@ -7366,7 +7422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2671579508813891606, guid: 0996160045b5b1f44afc884c74604b0e, type: 3}
       propertyPath: m_SortingOrder
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2890518766736011547, guid: 0996160045b5b1f44afc884c74604b0e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8134,3 +8190,4 @@ SceneRoots:
   - {fileID: 1887635218}
   - {fileID: 1328787284}
   - {fileID: 658915341}
+  - {fileID: 14802834}
