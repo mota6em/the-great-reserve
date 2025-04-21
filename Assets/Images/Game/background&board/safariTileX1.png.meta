@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 70b208a4f44eda64da464f6f7e0d59ca
+guid: cce2267d61494a94599fc929370a13df
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2559133652678154477
-    second: hillx_0
+      213: -7320879435017824362
+    second: safariTileX1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hillx_0
+      name: safariTileX1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 8
+        y: 0
         width: 1024
-        height: 1011
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de811ac8f7ed38320800000000000000
-      internalID: 2559133652678154477
+      spriteID: 697dc4801f2076a90800000000000000
+      internalID: -7320879435017824362
       vertices: []
       indices: 
       edges: []

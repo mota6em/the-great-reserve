@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 47e0a07380a9fdd4995480803bf59a44
+guid: 6106f091c5d17af4e99af589ab1708f0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8061919959038570487
-    second: river_0
+      213: -1819830194433888264
+    second: Mountain_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: river_0
+      name: Mountain_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1536
-        height: 1024
+        width: 1024
+        height: 1022
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ff20262d71b1ef60800000000000000
-      internalID: 8061919959038570487
+      spriteID: 8ffec3d741aaeb6e0800000000000000
+      internalID: -1819830194433888264
       vertices: []
       indices: 
       edges: []

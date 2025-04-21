@@ -1,43 +1,19 @@
 fileFormatVersion: 2
-guid: 1d9bf41c32158a34d8902a90ec56a519
+guid: 714c3c21cdf76634294a09438c3b5d11
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1579276288095124783
-    second: Lake_0
+      213: 3956776074418300132
+    second: animatedLake_0
   - first:
-      213: -2756642988610070052
-    second: Lake_1
+      213: -1527197632976860197
+    second: animatedLake_1
   - first:
-      213: 647284691614146643
-    second: Lake_2
+      213: 1149772738179400836
+    second: animatedLake_2
   - first:
-      213: -4584270140210879709
-    second: Lake_3
-  - first:
-      213: -3440923201084453131
-    second: Lake_4
-  - first:
-      213: -8379443639263760728
-    second: Lake_5
-  - first:
-      213: -3184021536860996706
-    second: Lake_6
-  - first:
-      213: 8928375972090632849
-    second: Lake_7
-  - first:
-      213: 2454576949733682523
-    second: Lake_8
-  - first:
-      213: 2909930504778700404
-    second: Lake_9
-  - first:
-      213: -6403731091370447295
-    second: Lake_10
-  - first:
-      213: -3572995156801822857
-    second: Lake_11
+      213: 2291767335121809552
+    second: animatedLake_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -73,15 +49,15 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -133,23 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lake_0
+      name: animatedLake_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 8
-        width: 1016
-        height: 1016
+        x: 56
+        y: 596
+        width: 450
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e7e7fa5a7d4cab94f87ced6f3999a030
-      internalID: -992888103
+      spriteID: 4e4a77330ea49e630800000000000000
+      internalID: 3956776074418300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedLake_1
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 592
+        width: 450
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 162, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdbc89028dd4ecae0800000000000000
+      internalID: -1527197632976860197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedLake_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 72
+        width: 450
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4848c9fa630d4ff00800000000000000
+      internalID: 1149772738179400836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedLake_3
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 72
+        width: 450
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09077cdbf3efdcf10800000000000000
+      internalID: 2291767335121809552
       vertices: []
       indices: 
       edges: []
@@ -158,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 98946b8da866eca47b8666ff7c1195c3
+    spriteID: a427d00e9b60e7d4793ce840775db249
     internalID: 0
     vertices: []
     indices: 
@@ -168,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lake_0: -992888103
+      animatedLake_0: 3956776074418300132
+      animatedLake_1: -1527197632976860197
+      animatedLake_2: 1149772738179400836
+      animatedLake_3: 2291767335121809552
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
