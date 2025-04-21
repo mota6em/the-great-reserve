@@ -8,15 +8,15 @@ public class HillSpawner : MonoBehaviour
     public float startX = -5f;
     public float spacing = 5f;
 
-    private float baseY = 2.6f;
-    private float secondRowOffset = 0.25f;
-    private float thirdRowOffset = 0.5f;
+    private float baseY = 1.5f;
+    private float secondRowOffset = 0.45f;
+    private float thirdRowOffset = 0.75f;
 
     void Start()
     {
         for (int i = 0; i < hillCount; i++)
         {
-            float x = startX + i * spacing;
+            float x = startX + i * spacing + Random.Range(0.1f, 0.3f);
 
             // First row (front)
             Vector3 pos1 = new Vector3(x, baseY, 0);
