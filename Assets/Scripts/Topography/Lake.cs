@@ -4,9 +4,10 @@ public class Lake : Topography
 {
     void Start()
     {
-        objectName = "Lake";
-        size = 3; // can be different
+        topographyName = "Lake";
+        size = 2;  
         affectsMovement = true;
     }
-}
 
+    public override void affectCrossing(){}
+}

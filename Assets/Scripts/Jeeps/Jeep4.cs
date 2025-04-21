@@ -8,6 +8,7 @@ public class Jeep4 : MonoBehaviour
     [HideInInspector] public float t = 0f;
 
     public float speed = 1f;
+    public float returnSpeedMultiplier = 3f;
     private float yOffset = 0.3f;
     private bool goingForward = true;
 
@@ -16,6 +17,7 @@ public class Jeep4 : MonoBehaviour
     public Sprite jeep3TouristsSprite;
     public Sprite jeep4TouristsSprite;
     public Sprite emptyJeepSprite;
+    public Sprite waitingSprite;
 
     private SpriteRenderer sr;
     private int touristCount = 0;
@@ -28,10 +30,23 @@ public class Jeep4 : MonoBehaviour
         lineRenderer = GameObject.Find("Road").GetComponent<LineRenderer>();
         transform.localScale = new Vector3(0.25f, 0.25f, 1f);
 
-        sr.sprite = emptyJeepSprite;
+        sr.sprite = waitingSprite;
         sr.flipX = false;
 
-        TryGetTourists();
+        if (lineRenderer != null && lineRenderer.positionCount > 0)
+        {
+            Vector3 firstPoint = lineRenderer.GetPosition(0);
+            // Move a  left on x (off-screen), keep same y and z
+            Vector3 offsetStart = new Vector3(firstPoint.x - 1f, firstPoint.y, firstPoint.z);
+            transform.position = offsetStart;
+
+            Vector3 nextPoint = lineRenderer.GetPosition(1);
+            Vector3 direction = (nextPoint - firstPoint).normalized;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
+        }
+
+        TryGetTourists();  
     }
 
     void Update()
@@ -46,7 +61,8 @@ public class Jeep4 : MonoBehaviour
         Vector3 start = lineRenderer.GetPosition(currentIndex);
         Vector3 end = lineRenderer.GetPosition(nextIndex);
 
-        t += Time.deltaTime * speed / Vector3.Distance(start, end);
+        float actualSpeed = speed * (goingForward ? 1f : returnSpeedMultiplier);
+        t += Time.deltaTime * actualSpeed / Vector3.Distance(start, end);
         Vector3 position = Vector3.Lerp(start, end, t);
         position.y += yOffset;
         transform.position = position;

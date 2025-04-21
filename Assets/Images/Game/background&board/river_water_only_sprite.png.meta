@@ -1,0 +1,453 @@
+fileFormatVersion: 2
+guid: 0e0deda564b8bae4e86fb66ece35f319
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7479906901883218096
+    second: river_water_only_sprite_0
+  - first:
+      213: -2903333048744362007
+    second: river_water_only_sprite_1
+  - first:
+      213: -2501034560034096098
+    second: river_water_only_sprite_2
+  - first:
+      213: -3078772100026206881
+    second: river_water_only_sprite_3
+  - first:
+      213: -3831030935782100656
+    second: river_water_only_sprite_4
+  - first:
+      213: 7033829769124378175
+    second: river_water_only_sprite_5
+  - first:
+      213: -4959886705548034037
+    second: river_water_only_sprite_6
+  - first:
+      213: -6630071744843180997
+    second: river_water_only_sprite_7
+  - first:
+      213: -7757403121866802757
+    second: river_water_only_sprite_8
+  - first:
+      213: 374747225560588033
+    second: river_water_only_sprite_9
+  - first:
+      213: 6349770657202008409
+    second: river_water_only_sprite_10
+  - first:
+      213: -4380911768915456466
+    second: river_water_only_sprite_11
+  - first:
+      213: -1578435900812360706
+    second: river_water_only_sprite_12
+  - first:
+      213: -3067813979756652610
+    second: river_water_only_sprite_13
+  - first:
+      213: -4061330144338919230
+    second: river_water_only_sprite_14
+  - first:
+      213: -1974897118465973042
+    second: river_water_only_sprite_15
+  - first:
+      213: -6074607733468695124
+    second: river_water_only_sprite_16
+  - first:
+      213: 1513250627679641906
+    second: river_water_only_sprite_17
+  - first:
+      213: -211393239579499442
+    second: river_water_only_sprite_18
+  - first:
+      213: -8932424599561529460
+    second: river_water_only_sprite_19
+  - first:
+      213: -6835654133828127917
+    second: river_water_only_sprite_20
+  - first:
+      213: -101636784334487606
+    second: river_water_only_sprite_21
+  - first:
+      213: 7818862337748377263
+    second: river_water_only_sprite_22
+  - first:
+      213: -2973261343833920665
+    second: river_water_only_sprite_23
+  - first:
+      213: -6061289766567511397
+    second: river_water_only_sprite_24
+  - first:
+      213: -8269678915467958603
+    second: river_water_only_sprite_25
+  - first:
+      213: 952439981139436446
+    second: river_water_only_sprite_26
+  - first:
+      213: -3780000052890049038
+    second: river_water_only_sprite_27
+  - first:
+      213: 3790931316191672041
+    second: river_water_only_sprite_28
+  - first:
+      213: 5481972317925554593
+    second: river_water_only_sprite_29
+  - first:
+      213: -2201897495618787727
+    second: river_water_only_sprite_30
+  - first:
+      213: -3644670456994989619
+    second: river_water_only_sprite_31
+  - first:
+      213: -36031148582700296
+    second: river_water_only_sprite_32
+  - first:
+      213: 692960715178740554
+    second: river_water_only_sprite_33
+  - first:
+      213: -1344590855491546621
+    second: river_water_only_sprite_34
+  - first:
+      213: 8608762991072572888
+    second: river_water_only_sprite_35
+  - first:
+      213: 6462717548237274176
+    second: river_water_only_sprite_36
+  - first:
+      213: -4838591122123961251
+    second: river_water_only_sprite_37
+  - first:
+      213: -997546253744327294
+    second: river_water_only_sprite_38
+  - first:
+      213: -7448501133722859727
+    second: river_water_only_sprite_39
+  - first:
+      213: -719434156876442786
+    second: river_water_only_sprite_40
+  - first:
+      213: -8003761722378245142
+    second: river_water_only_sprite_41
+  - first:
+      213: 5188246541699908262
+    second: river_water_only_sprite_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: river_water_only_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 740
+        width: 341
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05712409d48023890800000000000000
+      internalID: -7479906901883218096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: river_water_only_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 740
+        width: 341
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9efb0f489f945b7d0800000000000000
+      internalID: -2903333048744362007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: river_water_only_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 740
+        width: 341
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1c3136915a8a4dd0800000000000000
+      internalID: -2501034560034096098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: river_water_only_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 456
+        width: 341
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f55fd8946110645d0800000000000000
+      internalID: -3078772100026206881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: river_water_only_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 456
+        width: 341
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051fc2d59a175dac0800000000000000
+      internalID: -3831030935782100656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: river_water_only_sprite_5
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 456
+        width: 341
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f36f93f78ee2d9160800000000000000
+      internalID: 7033829769124378175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: river_water_only_sprite_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 172
+        width: 341
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0080a5e151fa2bb0800000000000000
+      internalID: -4959886705548034037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: river_water_only_sprite_7
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 172
+        width: 341
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b34944d20e04df3a0800000000000000
+      internalID: -6630071744843180997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: river_water_only_sprite_8
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 172
+        width: 341
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb97f9d06fa285490800000000000000
+      internalID: -7757403121866802757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8d3af7f9f66a6674fa4c6ab47f89b956
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      river_water_only_sprite_0: -7479906901883218096
+      river_water_only_sprite_1: -2903333048744362007
+      river_water_only_sprite_2: -2501034560034096098
+      river_water_only_sprite_3: -3078772100026206881
+      river_water_only_sprite_4: -3831030935782100656
+      river_water_only_sprite_5: 7033829769124378175
+      river_water_only_sprite_6: -4959886705548034037
+      river_water_only_sprite_7: -6630071744843180997
+      river_water_only_sprite_8: -7757403121866802757
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
