@@ -17,8 +17,8 @@ public class RoadDrawer : MonoBehaviour
     {
         path = new Vector3[pointCount];
         float step = (endX - startX) / (pointCount - 1);
-        float startY = Random.Range(-2f, 2f);
-        float endY = Random.Range(-2f, 2f);
+        float startY = Random.Range(-2f, 0f);
+        float endY = Random.Range(-2f, 0f);
 
         for (int i = 0; i < pointCount; i++)
         {
