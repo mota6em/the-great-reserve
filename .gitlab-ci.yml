@@ -1,27 +1,42 @@
-image: unityci/editor:2022.3.10f1-windows-mono-0.16.1
-
-variables:
-  UNITY_LICENSE: $UNITY_LICENSE
+image: unityci/editor:ubuntu-2020.3.13f1-base
 
 stages:
   - test
   - build
 
-test-editmode:
+variables:
+  UNITY_LICENSE_FILE: ${CI_PROJECT_DIR}/Unity_License.ulf
+  BUILD_NAME: ZooSimulatorGame
+
+.unity_before_script: &unity_before_script
+  before_script:
+    - echo "Configuring Unity license"
+    - if [ -n "$UNITY_LICENSE" ]; then echo "$UNITY_LICENSE" | base64 -d > $UNITY_LICENSE_FILE; fi
+
+test:
+  <<: *unity_before_script
   stage: test
   script:
-    - unity-editor -batchmode -nographics -quit -projectPath . -runTests -testPlatform editmode -testResults results.xml
+    - echo "Running tests"
+    - unity-editor -batchmode -nographics -projectPath $(pwd) -runTests -testPlatform PlayMode -testResults $(pwd)/TestResults/results.xml -logFile $(pwd)/Logs/test.log -quit
   artifacts:
-    when: always
-    reports:
-      junit: results.xml
     paths:
-      - results.xml
+      - $(pwd)/Logs/
+      - $(pwd)/TestResults/**/*
+    when: always
+    expire_in: 1 week
 
 build-windows:
+  <<: *unity_before_script
   stage: build
   script:
-    - unity-editor -batchmode -nographics -quit -projectPath . -buildWindows64Player build/MyGame.exe
+    - echo "Building for Windows"
+    - mkdir -p $(pwd)/Builds/Windows
+    - unity-editor -batchmode -nographics -projectPath $(pwd) -buildWindowsPlayer "$(pwd)/Builds/Windows/${BUILD_NAME}.exe" -logFile $(pwd)/Logs/build_windows.log -quit
   artifacts:
     paths:
-      - build/
+      - ./Builds/Windows/
+    expire_in: 1 week
+  only:
+    - master
+    - main
