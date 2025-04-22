@@ -1,0 +1,27 @@
+image: unityci/editor:2022.3.10f1-windows-mono-0.16.1
+
+variables:
+  UNITY_LICENSE: $UNITY_LICENSE
+
+stages:
+  - test
+  - build
+
+test-editmode:
+  stage: test
+  script:
+    - unity-editor -batchmode -nographics -quit -projectPath . -runTests -testPlatform editmode -testResults results.xml
+  artifacts:
+    when: always
+    reports:
+      junit: results.xml
+    paths:
+      - results.xml
+
+build-windows:
+  stage: build
+  script:
+    - unity-editor -batchmode -nographics -quit -projectPath . -buildWindows64Player build/MyGame.exe
+  artifacts:
+    paths:
+      - build/
