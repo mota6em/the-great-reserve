@@ -22,28 +22,6 @@ public class Jeep2 : MonoBehaviour
     private bool isWaitingForTourists = false;
     private bool hasTourists = false;
 
-    /**void Start()
-    {
-        sr = GetComponent<SpriteRenderer>();
-        lineRenderer = GameObject.Find("Road").GetComponent<LineRenderer>();
-        transform.localScale = new Vector3(0.135f, 0.135f, 1f);
-
-        sr.flipX = false;
-
-        currentIndex = 0;
-        transform.position = lineRenderer.GetPosition(0);
-        goingForward = true;
-        sr.sprite = waitingSprite;
-
-        if (lineRenderer.positionCount >= 2)
-        {
-            Vector3 dir = (lineRenderer.GetPosition(0) - lineRenderer.GetPosition(1)).normalized;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, angle);
-        }
-
-        TryGetTourists();
-    }**/
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -67,7 +45,7 @@ public class Jeep2 : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, angle);
         }
 
-        TryGetTourists(); // your existing logic
+        TryGetTourists(); 
     }
 
     void Update()
