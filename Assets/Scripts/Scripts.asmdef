@@ -1,0 +1,9 @@
+{
+    "name": "Scripts",
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "references": [
+        "Unity.TextMeshPro",
+        "Unity.InputSystem"
+    ]
+}
