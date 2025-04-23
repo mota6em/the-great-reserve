@@ -175,8 +175,21 @@ public class ShopScript : MonoBehaviour
         {
             if (itemButtons.TryGetValue(item.Key, out Button button))
             {
-                button.GetComponentInChildren<Text>().text = item.Key + " (" + item.Value + ")";
+                var label = button.GetComponentInChildren<Text>();
+                if (label != null)
+                {
+                    label.text = item.Key + " (" + item.Value + ")";
+                }
+                else
+                {
+                    Debug.LogWarning("Missing Text component inside button: " + item.Key);
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Button not found for item: " + item.Key);
             }
         }
+
     }
 }
