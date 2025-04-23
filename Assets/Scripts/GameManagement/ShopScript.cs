@@ -30,6 +30,8 @@ public class ShopScript : MonoBehaviour
         //plants
         { "Bush", 100 },
         { "Grass", 50 },
+        { "Locust", 200 },
+        { "Baobab", 300 },
 
         //jeeps
         { "Jeep2", 50 },

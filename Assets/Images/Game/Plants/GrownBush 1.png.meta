@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 11d69fe2f017ae54dbc32aeb4af03499
+guid: e04e19ff0494ae34abad9631e1a2ac12
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 832877967638892730
-    second: Elephant_0
+      213: 4677800105985615134
+    second: GrowthBush_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Elephant_0
+      name: GrowthBush_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 0
-        width: 1019
-        height: 1024
+        x: 29
+        y: 19
+        width: 232
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab09d5a491afe8b00800000000000000
-      internalID: 832877967638892730
+      spriteID: e15ae8f8962eae040800000000000000
+      internalID: 4677800105985615134
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Elephant_0: 832877967638892730
+      GrowthBush_0: 4677800105985615134
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

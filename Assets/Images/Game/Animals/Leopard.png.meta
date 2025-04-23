@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Leopard_0: -4021954467152211582
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
