@@ -6,6 +6,7 @@ public class TouristManager : MonoBehaviour
     public int waitingTourists = 0;
     public int minTourists = 1;
     public int maxTourists = 4;
+    public ShopScript shopScript;
 
     public float touristInterval = 5f; // seconds between arrivals
     private float timer = 0f;
@@ -38,6 +39,10 @@ public class TouristManager : MonoBehaviour
     {
         int assignable = Mathf.Min(requested, waitingTourists);
         waitingTourists -= assignable;
+        if (shopScript != null)
+        {
+            shopScript.AddMoney(requested * 5);
+        }
         return assignable;
     }
 
