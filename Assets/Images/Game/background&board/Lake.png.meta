@@ -109,89 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: animatedLake_0
+      name: Lake_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 596
-        width: 450
-        height: 400
+        x: 55
+        y: 636
+        width: 445
+        height: 300
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 19, z: 0, w: 12}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4e4a77330ea49e630800000000000000
-      internalID: 3956776074418300132
+      spriteID: 1105fab0d2f10684fa6fb36f0b20e1ce
+      internalID: 989477539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animatedLake_1
+      name: Lake_1
       rect:
         serializedVersion: 2
-        x: 532
-        y: 592
-        width: 450
-        height: 400
+        x: 537
+        y: 636
+        width: 445
+        height: 300
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 162, z: 0, w: 0}
+      border: {x: 0, y: 19, z: 0, w: 12}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bdbc89028dd4ecae0800000000000000
-      internalID: -1527197632976860197
+      spriteID: 09163eaed0b5ec84bb0260bfd919b56b
+      internalID: -1192281849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animatedLake_2
+      name: Lake_2
       rect:
         serializedVersion: 2
-        x: 56
-        y: 72
-        width: 450
-        height: 400
+        x: 57
+        y: 127
+        width: 445
+        height: 300
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 16, z: 0, w: 15}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4848c9fa630d4ff00800000000000000
-      internalID: 1149772738179400836
+      spriteID: 5bfd80dc9a4a2ed439c066e2603d7be5
+      internalID: -1963160023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animatedLake_3
+      name: Lake_3
       rect:
         serializedVersion: 2
         x: 536
-        y: 72
-        width: 450
-        height: 400
+        y: 127
+        width: 445
+        height: 300
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 17, z: 0, w: 14}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 09077cdbf3efdcf10800000000000000
-      internalID: 2291767335121809552
+      spriteID: 170538a022d091c4b955a9090d05ef13
+      internalID: 1676059960
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      animatedLake_0: 3956776074418300132
-      animatedLake_1: -1527197632976860197
-      animatedLake_2: 1149772738179400836
-      animatedLake_3: 2291767335121809552
+      Lake_0: 989477539
+      Lake_1: -1192281849
+      Lake_2: -1963160023
+      Lake_3: 1676059960
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
