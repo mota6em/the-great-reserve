@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2205774707408107991}
   - component: {fileID: 5174207728815575493}
   - component: {fileID: 1954648368300510119}
-  - component: {fileID: 669343272025547525}
+  - component: {fileID: 4386548906606054317}
   m_Layer: 0
-  m_Name: Camel
-  m_TagString: Herbivore
+  m_Name: Leopard
+  m_TagString: Carnivore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -3.69689}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,12 +78,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 8251382267104367013, guid: 250a657c6b52ff648aab06fc1ddedc7c, type: 3}
+  m_Sprite: {fileID: -4021954467152211582, guid: 2986f9bcda2a537498b9511a6e934192, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.44, y: 2.11}
+  m_Size: {x: 10.22, y: 10.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -127,15 +127,15 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.44, y: 2.11}
-    newSize: {x: 2.44, y: 2.11}
+    oldSize: {x: 10.22, y: 10.19}
+    newSize: {x: 10.22, y: 10.19}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 8.75, y: 12}
   m_EdgeRadius: 0
---- !u!114 &669343272025547525
+--- !u!114 &4386548906606054317
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,6 +144,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 812238418581763585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f41e0c5658d5bb46b34352c3e297948, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f301db5b12e950459fe74987bbbfdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

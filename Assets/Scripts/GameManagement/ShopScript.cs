@@ -22,6 +22,9 @@ public class ShopScript : MonoBehaviour
         //animals
         { "Leopard", 150 },
         { "Lion", 200 },
+        { "Elephant", 300 },
+        { "Giraffe", 250 },
+        { "Zebra", 200 },
 
         { "Camel", 100 },
         //plants
