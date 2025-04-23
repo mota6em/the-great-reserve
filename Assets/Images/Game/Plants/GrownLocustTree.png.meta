@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 11d69fe2f017ae54dbc32aeb4af03499
+guid: 16852db85d270784daf80c7c23c4b068
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 832877967638892730
-    second: Elephant_0
+      213: -4140871407028074095
+    second: GrownLocustTree_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Elephant_0
+      name: GrownLocustTree_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 23
         y: 0
-        width: 1019
-        height: 1024
+        width: 970
+        height: 1019
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab09d5a491afe8b00800000000000000
-      internalID: 832877967638892730
+      spriteID: 1990583056ba886c0800000000000000
+      internalID: -4140871407028074095
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Elephant_0: 832877967638892730
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

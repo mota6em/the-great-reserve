@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 11d69fe2f017ae54dbc32aeb4af03499
+guid: c4fc03cbac9a889439d5ffa7ac150fbb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 832877967638892730
-    second: Elephant_0
+      213: 5746975686571917181
+    second: GrownBaobab_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Elephant_0
+      name: GrownBaobab_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 0
-        width: 1019
-        height: 1024
+        width: 959
+        height: 819
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab09d5a491afe8b00800000000000000
-      internalID: 832877967638892730
+      spriteID: d7ffcea20fb51cf40800000000000000
+      internalID: 5746975686571917181
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Elephant_0: 832877967638892730
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
