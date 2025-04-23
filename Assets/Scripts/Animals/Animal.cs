@@ -57,8 +57,7 @@ public abstract class Animal : MonoBehaviour
             Debug.LogError("UIManager not found in the scene.");
         }
     }
-    //Finds the GameArea object in the scene and assigns its Collider2D component to gameAreaCollider
-    private void FindGameArea()
+    protected virtual void FindGameArea()
     {
         GameObject gameArea = GameObject.FindGameObjectWithTag("GameArea");
         if (gameArea != null)
@@ -146,6 +145,12 @@ public abstract class Animal : MonoBehaviour
     // Checks if the new position is within the bounds of the game area
     private bool IsPositionInBounds(Vector2 position)
     {
+        if (gameAreaCollider == null)
+        {
+            Debug.LogWarning("gameAreaCollider is null in " + gameObject.name + ". Position bounds check skipped.");
+            return true;
+        }
+
         Bounds bounds = gameAreaCollider.bounds;
         return position.x > bounds.min.x && position.x < bounds.max.x &&
                position.y > bounds.min.y && position.y < bounds.max.y;
@@ -162,7 +167,10 @@ public abstract class Animal : MonoBehaviour
 
     public void DeleteAnimal()
     {
-        Destroy(gameObject);
+        if (Application.isPlaying)
+            Destroy(gameObject);
+        else
+            DestroyImmediate(gameObject);
     }
 
     private void OnMouseDown()
