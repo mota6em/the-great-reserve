@@ -9,5 +9,4 @@ public class Lake : Topography
         affectsMovement = true;
     }
 
-    public override void affectCrossing(){}
 }

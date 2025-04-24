@@ -1,11 +1,12 @@
 using UnityEngine;
 
 [RequireComponent(typeof(LineRenderer))]
-public class RiverDrawer : MonoBehaviour
+public class RiverDrawer : Topography
 {
     public LineRenderer lineRenderer;
     public Material riverMaterial;
     public float textureScrollSpeed = 0.05f;
+    
 
     [SerializeField] private int pointCount = 40;
     [SerializeField] private float zPos = 0.5f;
@@ -69,5 +70,8 @@ public class RiverDrawer : MonoBehaviour
             textureOffsetX += Time.deltaTime * textureScrollSpeed;
             lineRenderer.material.mainTextureOffset = new Vector2(textureOffsetX, 0f);
         }
+    }
+    public void affectCrossing(){
+        //animals can't cross the river
     }
 }

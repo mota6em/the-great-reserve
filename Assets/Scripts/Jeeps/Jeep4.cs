@@ -1,13 +1,13 @@
 
 using UnityEngine;
 
-public class Jeep4 : MonoBehaviour
+public class Jeep4 : Jeep
 {
     [HideInInspector] public LineRenderer lineRenderer;
-    [HideInInspector] public int currentIndex = -2;
+   
     [HideInInspector] public float t = 0f;
 
-    public float speed = 1f;
+
     public float returnSpeedMultiplier = 3f;
     private float yOffset = 0.3f;
     private bool goingForward = true;
@@ -26,6 +26,7 @@ public class Jeep4 : MonoBehaviour
 
     void Start()
     {
+         
         sr = GetComponent<SpriteRenderer>();
         lineRenderer = GameObject.Find("Road").GetComponent<LineRenderer>();
         transform.localScale = new Vector3(0.25f, 0.25f, 1f);
@@ -90,6 +91,7 @@ public class Jeep4 : MonoBehaviour
         }
     }
 
+    override
     public void TryGetTourists()
     {
         if(hasTourists || currentIndex > 0 ) return;
@@ -125,5 +127,15 @@ public class Jeep4 : MonoBehaviour
             sr.sprite = jeep3TouristsSprite;
         else 
             sr.sprite = jeep4TouristsSprite;
+    }
+    override
+    public void wait()
+    {
+        isWaitingForTourists = true;
+    }
+    override
+    public  void move()
+    {
+        Update();
     }
 }
