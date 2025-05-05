@@ -1,19 +1,14 @@
 using UnityEngine;
 
-public class Hill : Topography
+public class Hill : MonoBehaviour
 {
     public int height;
-
-    void Start()
+    
+    public void SetY(float y)
     {
-        objectName = "Hill";
-        size = 2; // can be different
-        affectsMovement = true;
-        height = 3; // can be different
+        Vector3 pos = transform.position;
+        pos.y = y;
+        transform.position = pos;
     }
-
-    public void AffectVisibility()
-    {
-        // the logic here
-    }
+    public void affectVisibility() {}
 }

@@ -74,4 +74,8 @@ public class UIManager : MonoBehaviour
             CloseAnimalDataPanel();
         }
     }
+    public Animal GetSelectedAnimal()
+    {
+        return selectedAnimal;
+    }
 }

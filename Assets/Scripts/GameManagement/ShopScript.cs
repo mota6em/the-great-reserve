@@ -22,11 +22,16 @@ public class ShopScript : MonoBehaviour
         //animals
         { "Leopard", 150 },
         { "Lion", 200 },
+        { "Elephant", 300 },
+        { "Giraffe", 250 },
+        { "Zebra", 200 },
 
         { "Camel", 100 },
         //plants
         { "Bush", 100 },
         { "Grass", 50 },
+        { "Locust", 200 },
+        { "Baobab", 300 },
 
         //jeeps
         { "Jeep2", 50 },
@@ -170,8 +175,21 @@ public class ShopScript : MonoBehaviour
         {
             if (itemButtons.TryGetValue(item.Key, out Button button))
             {
-                button.GetComponentInChildren<Text>().text = item.Key + " (" + item.Value + ")";
+                var label = button.GetComponentInChildren<Text>();
+                if (label != null)
+                {
+                    label.text = item.Key + " (" + item.Value + ")";
+                }
+                else
+                {
+                    Debug.LogWarning("Missing Text component inside button: " + item.Key);
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Button not found for item: " + item.Key);
             }
         }
+
     }
 }
