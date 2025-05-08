@@ -17,7 +17,6 @@ public class SettingsScript : MonoBehaviour
         {
             Debug.LogWarning("TimeManager not found in scene. Time control functionality may be limited.");
         }
-
     }
 
     public void ToggleSettings()
