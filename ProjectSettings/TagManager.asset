@@ -8,6 +8,8 @@ TagManager:
   - Plant
   - Herbivore
   - Carnivore
+  - Poacher
+  - Ranger
   layers:
   - Default
   - TransparentFX
