@@ -273,9 +273,9 @@ public class AnimalTestMockAnimal : Animal
         // Override Update to prevent base.Update from being called during tests
     }
 
-    protected override void InitializeAnimal()
+    protected override void InitializeCharacter()
     {
-        animalName = "TestAnimal";
+        characterName = "TestAnimal";
         age = 5;
         visionRange = 8;
         maxThirst = 120;
@@ -296,7 +296,7 @@ public class AnimalTestMockAnimal : Animal
     }
 
     // Override FindGameArea to capture the collider for testing
-    protected override void FindGameArea()
+    public override void FindGameArea()
     {
         GameObject gameArea = GameObject.FindGameObjectWithTag("GameArea");
         if (gameArea != null)
@@ -307,7 +307,7 @@ public class AnimalTestMockAnimal : Animal
     public void TestInitializeAnimal()
     {
         // Clear any existing values to ensure clean testing state
-        animalName = null;
+        characterName = null;
         age = 0;
         visionRange = 0;
         maxThirst = 0;
@@ -369,7 +369,7 @@ public class AnimalTestMockAnimal : Animal
     public void SetupMockData(string name, int health, int maxHealth, int hunger, int maxHunger,
                              int thirst, int maxThirst, int vision, int age, float speed)
     {
-        animalName = name;
+        characterName = name;
         currentHealth = health;
         this.maxHealth = maxHealth;
         currentHunger = hunger;
