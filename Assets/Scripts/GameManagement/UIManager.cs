@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     private Animal selectedAnimal;
 
     public GameObject animalDataPanel;
+    public GameObject gameSpeedPanel;
 
     // Update is called once per frame
     void Update()
@@ -65,6 +66,10 @@ public class UIManager : MonoBehaviour
         animalDataPanel.SetActive(false);
     }
 
+    public void ToggleGameSpeedPanel()
+    {
+        gameSpeedPanel.SetActive(!gameSpeedPanel.activeSelf);
+    }
     public void SellAnimal()
     {
         if (selectedAnimal != null)
