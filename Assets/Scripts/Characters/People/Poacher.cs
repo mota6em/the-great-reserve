@@ -20,8 +20,8 @@ public class Poacher : People
     {
         characterName = "Poacher";
         age = 1;
-        shootRange = 4;
-        visionRange = 2;
+        shootRange = 0.5f;
+        visionRange = 5;
         maxThirst = -1;
         currentThirst = -1;
         maxHealth = 100;
@@ -38,10 +38,10 @@ public class Poacher : People
         timeBetweenStopsTimer = 0f;
         timeBetweenStops = 7f;
 
-
+        gameObject.tag = "Poacher";
     }
 
-    private new void Update()
+    private void Update()
     {
         base.Update();
 
@@ -58,34 +58,27 @@ public class Poacher : People
     }
 
 
-    // If a Poacher is not in a range of a Ranger it deactivates itself and hides
+    // If a Poacher is not in a range of a Ranger it hides
     protected void checkVisibility()
     {
-        GameObject[] Rangers = GameObject.FindGameObjectsWithTag("Ranger");
-
-        if (Rangers.Length == 0)
+        Debug.LogWarning("micsoda hhehhehehe em eretetemjol !");
+        bool rangerNearby = false;
+        foreach (var ranger in GameObject.FindGameObjectsWithTag("Ranger"))
         {
-            Debug.LogWarning("No Rangers to in sight");
-            targetHerbivore = null;
-            return;
-        }
-        else
-        {
-            Debug.LogWarning("HIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDE!");
+            Debug.Log($"Distance to ranger: {Vector3.Distance(transform.position, ranger.transform.position)}");
 
-            foreach (var ranger in Rangers)
+            if (TargetInRange(ranger, visionRange))
             {
-                if (TargetInRange(ranger, visionRange))
-                {
-                    Renderer[] renderers = this.GetComponentsInChildren<Renderer>();
-                    foreach (var renderer in renderers)
-                    {
-                        renderer.enabled = false;
-                    }
-                }
+                rangerNearby = true;
+                break;
             }
         }
+
+        var renderers = GetComponentsInChildren<Renderer>();
+        foreach (var r in renderers)
+            r.enabled = rangerNearby;    // show if a Ranger is near, hide otherwise
     }
+
 
     // reloads his wepon 
     private void load()
@@ -101,7 +94,7 @@ public class Poacher : People
     // Tries to shoot at a Herbivore shoots it if he can
     protected void ShootHerbivore()
     {
-        GameObject[] Herbivores = GameObject.FindGameObjectsWithTag("Carnivore");
+        GameObject[] Herbivores = GameObject.FindGameObjectsWithTag("Herbivore");
         GameObject[] Rangers = GameObject.FindGameObjectsWithTag("Ranger");
 
 
@@ -118,12 +111,12 @@ public class Poacher : People
             float closestDistance = float.MaxValue;
 
 
-            foreach (var poacher in Rangers)
+            foreach (var ranger in Rangers)
             {
-                if (TargetInRange(poacher, range))
+                if (TargetInRange(ranger, range))
                 {
                     float delay = UnityEngine.Random.Range(1.2f, 4.0f);
-                    ShootTarget(poacher);
+                    ShootTarget(ranger);
                 }
             }
 
@@ -146,6 +139,7 @@ public class Poacher : People
         if (target != null)
         {
             Characters targetComponent = target.GetComponent<Characters>();
+
             if (targetComponent != null)
             {
                 targetComponent.DeleteCharacter();

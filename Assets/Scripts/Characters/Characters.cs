@@ -7,8 +7,8 @@ public abstract class Characters : MonoBehaviour
 {
     protected string characterName;
     protected int age;
-    protected int visionRange;
-    protected int shootRange;
+    protected float visionRange;
+    protected float shootRange;
 
     //if current thirst is zero, the animal will die
     protected int maxThirst;
@@ -174,7 +174,7 @@ public abstract class Characters : MonoBehaviour
 
     public string GetCharacterName() { return characterName; }
     public int GetAge() { return age; }
-    public int GetVisionRange() { return visionRange; }
+    public float GetVisionRange() { return visionRange; }
     public int GetMaxThirst() { return maxThirst; }
     public int GetCurrentThirst() { return currentThirst; }
     public int GetMaxHealth() { return maxHealth; }

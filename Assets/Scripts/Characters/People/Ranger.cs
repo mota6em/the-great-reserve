@@ -15,9 +15,9 @@ public class Ranger : People
     protected override void InitializeCharacter()
     {
         characterName = "Ranger";
+        gameObject.tag = "Ranger";
         age = 1;
-        shootRange = 4;
-        visionRange =2;
+        shootRange = 0.5f;
         maxThirst = -1;
         currentThirst = -1;
         maxHealth = 100;
@@ -47,34 +47,6 @@ public class Ranger : People
         else
         {
             load();
-        }
-
-        lookAround();
-    }
-
-    // If a Poacher is in vision range it turns visible
-    protected void lookAround()
-    {
-        GameObject[] Poachers = GameObject.FindGameObjectsWithTag("Poacher");
-
-        if (Poachers.Length == 0)
-        {
-            Debug.LogWarning("No Poachers to activate on the scene.");
-            targetHerbivore = null;
-            return;
-        }
-        else
-        {
-            Debug.LogWarning("Poachers on the field!");
-
-            foreach (var poacher in Poachers)
-            {
-                Renderer[] renderers = poacher.GetComponentsInChildren<Renderer>();
-                foreach (var renderer in renderers)
-                {
-                    renderer.enabled = true;
-                }
-            }
         }
     }
 
