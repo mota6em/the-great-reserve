@@ -9,8 +9,13 @@ public class HillSpawner : MonoBehaviour
     public float spacing = 5f;
 
     private float baseY = 1.5f;
+<<<<<<< HEAD
     private float secondRowOffset = 0.25f;
     private float thirdRowOffset = 0.5f;
+=======
+    private float secondRowOffset = 0.45f;
+    private float thirdRowOffset = 0.75f;
+>>>>>>> 324d807 (Refactor: inhance Hill and background view for better UI)
 
     void Start()
     {
