@@ -138,6 +138,10 @@ public class UIManagerTests
         }
     }
 
+    protected virtual void findGameArea() { }
+
+
+
     [UnityTest]
     public IEnumerator UpdateAnimalInfo_ShouldUpdateAllAnimalTextFields()
     {
@@ -210,20 +214,16 @@ public class MockAnimal : Animal
 {
     private new void Start()
     {
-        InitializeAnimal();
+        InitializeCharacter();
     }
 
     protected new void Update()
     {
     }
 
-    protected override void FindGameArea()
-    {
-    }
-
     public void SetupMockData(string name, int health, int maxHealth, int hunger, int maxHunger, int thirst, int vision, float speed)
     {
-        animalName = name;
+        characterName = name;
         currentHealth = health;
         this.maxHealth = maxHealth;
         currentHunger = hunger;
@@ -236,7 +236,7 @@ public class MockAnimal : Animal
 
     protected override void OnTargetReached() { }
     protected override void HandleHunger() { }
-    protected override void InitializeAnimal() { }
+    protected override void InitializeCharacter() { }
 
     protected new void MoveWithPerlinNoise() { }
     protected new void HandleMovementAndStanding() { }

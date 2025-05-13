@@ -3,11 +3,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 
-public abstract class Animal : MonoBehaviour
+public abstract class Characters : MonoBehaviour
 {
-    protected string animalName;
+    protected string characterName;
     protected int age;
-    protected int visionRange;
+    protected float visionRange;
+    protected float shootRange;
 
     //if current thirst is zero, the animal will die
     protected int maxThirst;
@@ -39,7 +40,7 @@ public abstract class Animal : MonoBehaviour
     void Start()
     {
         FindGameArea();
-        InitializeAnimal();
+        InitializeCharacter();
         FindUIManager();
     }
 
@@ -57,7 +58,8 @@ public abstract class Animal : MonoBehaviour
             Debug.LogError("UIManager not found in the scene.");
         }
     }
-    protected virtual void FindGameArea()
+    //Finds the GameArea object in the scene and assigns its Collider2D component to gameAreaCollider
+    public virtual void FindGameArea()
     {
         GameObject gameArea = GameObject.FindGameObjectWithTag("GameArea");
         if (gameArea != null)
@@ -145,12 +147,6 @@ public abstract class Animal : MonoBehaviour
     // Checks if the new position is within the bounds of the game area
     private bool IsPositionInBounds(Vector2 position)
     {
-        if (gameAreaCollider == null)
-        {
-            Debug.LogWarning("gameAreaCollider is null in " + gameObject.name + ". Position bounds check skipped.");
-            return true;
-        }
-
         Bounds bounds = gameAreaCollider.bounds;
         return position.x > bounds.min.x && position.x < bounds.max.x &&
                position.y > bounds.min.y && position.y < bounds.max.y;
@@ -165,30 +161,20 @@ public abstract class Animal : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, location, step);
     }
 
-    public void DeleteAnimal()
+    public void DeleteCharacter()
     {
-        if (Application.isPlaying)
-            Destroy(gameObject);
-        else
-            DestroyImmediate(gameObject);
+        Destroy(gameObject);
     }
 
-    private void OnMouseDown()
-    {
-        if (uiManager != null)
-        {
-            uiManager.OpenAnimalDataPanel();
-            uiManager.SelectAnimal(this);
-        }
-    }
+    
 
     protected abstract void OnTargetReached();
     protected abstract void HandleHunger();
-    protected abstract void InitializeAnimal();
+    protected abstract void InitializeCharacter();
 
-    public string GetAnimalName() { return animalName; }
+    public string GetCharacterName() { return characterName; }
     public int GetAge() { return age; }
-    public int GetVisionRange() { return visionRange; }
+    public float GetVisionRange() { return visionRange; }
     public int GetMaxThirst() { return maxThirst; }
     public int GetCurrentThirst() { return currentThirst; }
     public int GetMaxHealth() { return maxHealth; }
@@ -196,4 +182,5 @@ public abstract class Animal : MonoBehaviour
     public int GetMaxHunger() { return maxHunger; }
     public int GetCurrentHunger() { return currentHunger; }
     public float GetMoveSpeed() { return moveSpeed; }
+    public void deleteCharacter() { Destroy(gameObject); }
 }

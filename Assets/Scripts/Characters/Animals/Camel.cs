@@ -1,11 +1,11 @@
 using TMPro;
 using UnityEngine;
 
-public class Giraffe : Herbivore
+public class Camel : Herbivore
 {
-    protected override void InitializeAnimal()
+    protected override void InitializeCharacter()
     {
-        animalName = "Giraffe";
+        characterName = "Camel";
         age = 1;
         visionRange = 10;
         maxThirst = 150;
@@ -24,7 +24,7 @@ public class Giraffe : Herbivore
         timeBetweenStopsTimer = 0f;
         timeBetweenStops = 7f;
 
-       // MoveToClosestConsumablePlant();
-       // Debug.Log(FindClosestConsumablePlant());
+        // MoveToClosestConsumablePlant();
+        // Debug.Log(FindClosestConsumablePlant());
     }
 }

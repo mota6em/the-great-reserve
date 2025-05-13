@@ -1,14 +1,10 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Images/Game/background&board/safariTileX1.png.meta
-guid: cce2267d61494a94599fc929370a13df
-========
-guid: 9107616961d8e1546986452945652396
->>>>>>>> 324d807 (Refactor: inhance Hill and background view for better UI):Assets/Prefabs/GameBoard/safariTileX1.png.meta
+guid: 70b208a4f44eda64da464f6f7e0d59ca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7320879435017824362
-    second: safariTileX1_0
+      213: 2559133652678154477
+    second: hillx_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -104,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: safariTileX1_0
+      name: hillx_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 8
         width: 1024
-        height: 1024
+        height: 1011
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 697dc4801f2076a90800000000000000
-      internalID: -7320879435017824362
+      spriteID: de811ac8f7ed38320800000000000000
+      internalID: 2559133652678154477
       vertices: []
       indices: 
       edges: []
@@ -138,12 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-<<<<<<<< HEAD:Assets/Images/Game/background&board/safariTileX1.png.meta
-    nameFileIdTable:
-      safariTileX1_0: -7320879435017824362
-========
     nameFileIdTable: {}
->>>>>>>> 324d807 (Refactor: inhance Hill and background view for better UI):Assets/Prefabs/GameBoard/safariTileX1.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

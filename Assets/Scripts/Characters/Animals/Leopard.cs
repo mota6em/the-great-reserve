@@ -1,11 +1,11 @@
 using TMPro;
 using UnityEngine;
 
-public class Lion : Carnivore
+public class Leopard : Carnivore
 {
-    protected override void InitializeAnimal()
+    protected override void InitializeCharacter()
     {
-        animalName = "Lion";
+        characterName = "Leopard";
         age = 1;
         visionRange = 10;
         maxThirst = 150;

@@ -1,11 +1,11 @@
 using TMPro;
 using UnityEngine;
 
-public class Elephant : Herbivore
+public class Lion : Carnivore
 {
-    protected override void InitializeAnimal()
+    protected override void InitializeCharacter()
     {
-        animalName = "Elephant";
+        characterName = "Lion";
         age = 1;
         visionRange = 10;
         maxThirst = 150;
@@ -13,10 +13,10 @@ public class Elephant : Herbivore
         maxHealth = 100;
         currentHealth = 100;
         maxHunger = 100;
-        currentHunger = 25;
+        currentHunger = 22;
         hungerThreshold = 20;
 
-        moveSpeed = 2.0f;
+        moveSpeed = 1.0f;
         noiseOffsetX = Random.Range(0f, 100f);
         noiseOffsetY = Random.Range(0f, 100f);
         standTimer = 0f;
@@ -24,7 +24,5 @@ public class Elephant : Herbivore
         timeBetweenStopsTimer = 0f;
         timeBetweenStops = 7f;
 
-       // MoveToClosestConsumablePlant();
-       // Debug.Log(FindClosestConsumablePlant());
     }
 }
