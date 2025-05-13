@@ -512,6 +512,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84862536}
   m_CullTransparentMesh: 1
+--- !u!1 &109108975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 109108977}
+  - component: {fileID: 109108976}
+  m_Layer: 0
+  m_Name: CelabrityJEEP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &109108976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109108975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7427a1559e1da4b90bbb2288010a33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  speed: 1
+  currentIndex: -2
+  lineRenderer: {fileID: 0}
+  t: 0
+  returnSpeedMultiplier: 3
+  movingSprite: {fileID: 6823877507046486361, guid: 03ce6030e798d1349ab7f291a52213d7, type: 3}
+  takingPicturesSprite: {fileID: 5948356103191107858, guid: 7eb4b3909294b9c45946c0b330e59826, type: 3}
+--- !u!4 &109108977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109108975}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.58831525, y: -0.8466457, z: 0.022674855}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &124073842
 GameObject:
   m_ObjectHideFlags: 0
@@ -4721,6 +4773,7 @@ MonoBehaviour:
   maxTourists: 4
   shopScript: {fileID: 1064439003}
   touristInterval: 5
+  celebrityInterval: 60
 --- !u!4 &937352484
 Transform:
   m_ObjectHideFlags: 0
@@ -9946,10 +9999,11 @@ SceneRoots:
   - {fileID: 737635305}
   - {fileID: 1194017319}
   - {fileID: 913220489}
-  - {fileID: 872417094}
   - {fileID: 1870455484}
   - {fileID: 937352484}
   - {fileID: 1328787284}
   - {fileID: 1085778792}
   - {fileID: 2037859934}
   - {fileID: 915889835}
+  - {fileID: 872417094}
+  - {fileID: 109108977}
