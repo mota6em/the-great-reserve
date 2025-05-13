@@ -28,11 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.2826533, y: -3.5293188, z: -0.028779408}
-<<<<<<< HEAD
-  m_LocalScale: {x: 2, y: 0.15, z: 1}
-=======
   m_LocalScale: {x: 0.75, y: 0.15, z: 1}
->>>>>>> 324d807 (Refactor: inhance Hill and background view for better UI)
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

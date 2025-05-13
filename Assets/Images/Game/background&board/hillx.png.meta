@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 70b208a4f44eda64da464f6f7e0d59ca
+guid: d1e0d3a6795487c478fe82b325af2dab
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hillx_0: 2559133652678154477
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

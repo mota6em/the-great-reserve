@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Images/Game/background&board/safariTileX1.png.meta
 guid: cce2267d61494a94599fc929370a13df
-========
-guid: 9107616961d8e1546986452945652396
->>>>>>>> 324d807 (Refactor: inhance Hill and background view for better UI):Assets/Prefabs/GameBoard/safariTileX1.png.meta
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -138,12 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-<<<<<<<< HEAD:Assets/Images/Game/background&board/safariTileX1.png.meta
-    nameFileIdTable:
-      safariTileX1_0: -7320879435017824362
-========
     nameFileIdTable: {}
->>>>>>>> 324d807 (Refactor: inhance Hill and background view for better UI):Assets/Prefabs/GameBoard/safariTileX1.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
