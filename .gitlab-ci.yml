@@ -1,22 +1,18 @@
 stages:
   - test
+  - build
 
-dummy_test:
+fake_test:
   stage: test
-  tags:
-    - shell
   script:
-    - echo "====================================================="
-    - echo "CI/CD pipeline elindult"
-    - echo "Projektnév: The Great Reserve"
-    - echo "Ellenőrzés kezdete..."
-    - echo "Teszt fájlok ellenőrzése... OK"
-    - echo "Kód struktúra ellenőrzése... OK"
-    - echo "Unity projekt validálása... OK"
-    - echo "---------------------------------------------------"
-    - echo "Minden ellenőrzés sikeres!"
-    - echo "CI/CD pipeline sikeresen lefutott!"
-    - echo "====================================================="
-    - exit 0  # Sikeres kilépési kód
-  only:
-    - branches
+    - echo "Running tests..."
+    - sleep 2
+    - echo "All tests passed!"
+
+fake_build:
+  stage: build
+  script:
+    - echo "Building project..."
+    - sleep 3
+    - echo "Build successful!"
+
