@@ -53,7 +53,7 @@ public class CelebrityJeepFollower : MonoBehaviour
     private float yOffset = 0.3f;
 
     private float stopTimer = 0f;
-    private float stopInterval = 5f;
+    private float stopInterval = 10f;
     private float stopDuration = 6f;
     private float pauseDuration = 0f;
     private bool isPaused = false;
