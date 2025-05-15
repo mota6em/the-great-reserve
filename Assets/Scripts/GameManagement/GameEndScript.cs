@@ -3,9 +3,10 @@ using UnityEngine;
 public class GameEndScript : MonoBehaviour
 {
     public ShopScript shopScript;
-
+    public GameObject gameEndPanel;
     private int requiredMoney;
     private int requiredAnimals;
+    private TimeManager timeManager;
 
     void Start()
     {
@@ -14,12 +15,12 @@ public class GameEndScript : MonoBehaviour
         switch (difficulty)
         {
             case 0: // Easy
-                requiredMoney = 3000;
+                requiredMoney = 7000;
                 requiredAnimals = 3;
                 break;
             case 1: // Medium
-                requiredMoney = 3200;
-                requiredAnimals = 2;
+                requiredMoney = 9000;
+                requiredAnimals = 10;
                 break;
             case 2: // Hard
                 requiredMoney = 30000;
@@ -35,6 +36,8 @@ public class GameEndScript : MonoBehaviour
         {
             shopScript = Object.FindFirstObjectByType<ShopScript>();
         }
+
+        timeManager = Object.FindFirstObjectByType<TimeManager>();
     }
 
     void Update()
@@ -43,10 +46,18 @@ public class GameEndScript : MonoBehaviour
         int animalCount = GameObject.FindGameObjectsWithTag("Herbivore").Length +
                           GameObject.FindGameObjectsWithTag("Carnivore").Length;
 
-        Debug.Log("Current Money: " + currentMoney + "Animal count: " + animalCount);
+        Debug.Log("Current Money: " + currentMoney + " Animal count: " + animalCount);
         if (currentMoney >= requiredMoney && animalCount >= requiredAnimals)
         {
             Debug.Log("You win! Game over.");
+
+            if (gameEndPanel != null)
+                gameEndPanel.SetActive(true);
+
+            if (timeManager != null)
+                timeManager.PauseGame();
+
+            enabled = false;
         }
     }
 }
