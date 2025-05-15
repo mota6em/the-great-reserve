@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cce2267d61494a94599fc929370a13df
+guid: 03ce6030e798d1349ab7f291a52213d7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7320879435017824362
-    second: safariTileX1_0
+      213: 6823877507046486361
+    second: calabrityJeep_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: safariTileX1_0
+      name: calabrityJeep_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 500
+        height: 222
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 697dc4801f2076a90800000000000000
-      internalID: -7320879435017824362
+      spriteID: 951b84e207843be50800000000000000
+      internalID: 6823877507046486361
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      safariTileX1_0: -7320879435017824362
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

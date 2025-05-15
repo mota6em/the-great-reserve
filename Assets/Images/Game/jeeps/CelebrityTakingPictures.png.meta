@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cce2267d61494a94599fc929370a13df
+guid: 7eb4b3909294b9c45946c0b330e59826
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7320879435017824362
-    second: safariTileX1_0
+      213: 5948356103191107858
+    second: CelebrityTakingPictures_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: safariTileX1_0
+      name: CelebrityTakingPictures_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 500
+        height: 245
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 697dc4801f2076a90800000000000000
-      internalID: -7320879435017824362
+      spriteID: 2199b303c5ecc8250800000000000000
+      internalID: 5948356103191107858
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      safariTileX1_0: -7320879435017824362
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
