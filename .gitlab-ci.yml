@@ -1,18 +1,11 @@
+image: unityci/editor:6000.0.4f1-base-0
+
 stages:
   - test
-  - build
 
-fake_test:
+unit_tests:
   stage: test
-  script:
-    - echo "Running tests..."
-    - sleep 2
-    - echo "All tests passed!"
 
-fake_build:
-  stage: build
   script:
-    - echo "Building project..."
-    - sleep 3
-    - echo "Build successful!"
-
+    - unity-editor -batchmode -nographics -projectPath . -runTests -testPlatform EditMode -logFile test-results.log
+    - cat test-results.log
