@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5888144127687046146}
   - component: {fileID: 1591531481300625800}
   - component: {fileID: 5298835054345532927}
-  - component: {fileID: 8475487944550405747}
+  - component: {fileID: 881462889526044660}
   m_Layer: 0
   m_Name: CelabrityJEEP
   m_TagString: Untagged
@@ -49,11 +49,6 @@ MonoBehaviour:
   id: 0
   speed: 1
   currentIndex: -2
-  lineRenderer: {fileID: 0}
-  t: 0
-  returnSpeedMultiplier: 3
-  movingSprite: {fileID: 6823877507046486361, guid: 03ce6030e798d1349ab7f291a52213d7, type: 3}
-  takingPicturesSprite: {fileID: 5948356103191107858, guid: 7eb4b3909294b9c45946c0b330e59826, type: 3}
 --- !u!212 &5298835054345532927
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -109,7 +104,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8475487944550405747
+--- !u!114 &881462889526044660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,8 +113,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 569577363532284778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e13b3359fac16c4391945ade8b5b354, type: 3}
+  m_Script: {fileID: 11500000, guid: 07f5c1f169ae8ce4895215d1b97d84fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touristManager: {fileID: 0}
   lineRenderer: {fileID: 0}
-  speed: 0.5
+  speed: 0.35
+  movingSprite: {fileID: 6823877507046486361, guid: 03ce6030e798d1349ab7f291a52213d7, type: 3}
+  takingPicturesSprite: {fileID: 5948356103191107858, guid: 7eb4b3909294b9c45946c0b330e59826, type: 3}
