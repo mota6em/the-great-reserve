@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CelebrityTakingPictures_0: 5948356103191107858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

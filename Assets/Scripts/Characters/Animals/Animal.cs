@@ -11,4 +11,14 @@ public abstract class Animal : Characters
     }
 
     public string GetAnimalName() { return characterName; }
+
+    private void OnMouseDown()
+    {
+        if (uiManager != null)
+        {
+            uiManager.OpenAnimalDataPanel();
+            uiManager.SelectAnimal(this);
+        }
+    }
+
 }
