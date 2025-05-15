@@ -9,7 +9,7 @@ public class Elephant : Herbivore
         age = 1;
         visionRange = 10;
         maxThirst = 150;
-        currentThirst = 150;
+        currentThirst = 20;
         maxHealth = 100;
         currentHealth = 100;
         maxHunger = 100;

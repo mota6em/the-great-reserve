@@ -34,8 +34,11 @@ public abstract class Characters : MonoBehaviour
 
     protected float hungerTimer = 0f;
     protected float hungerInterval = 1f;
+    protected float thirstTimer = 0f;
+    protected float thirstInterval = 1f;
+    protected int thirstThreshold = 20;
 
-    private UIManager uiManager;
+    protected UIManager uiManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +50,7 @@ public abstract class Characters : MonoBehaviour
     protected void Update()
     {
         HandleHunger();
+        HandleThirst();
         HandleMovementAndStanding();
     }
 
@@ -168,9 +172,40 @@ public abstract class Characters : MonoBehaviour
 
     public void HandleThirst()
     {
-        if (currentThirst > 0 && currentThirst > (maxThirst * 0.2f))
-            return;
+        thirstTimer += Time.deltaTime;
+        if (thirstTimer >= thirstInterval)
+        {
+            thirstTimer = 0f;
 
+            if (currentThirst > 0)
+            {
+                currentThirst--;
+            }
+
+            if (currentThirst == 0)
+            {
+                if (currentHealth > 0)
+                {
+                    currentHealth--;
+                    Debug.Log($"{characterName} is dehydrated! Health decreased to {currentHealth}.");
+                }
+                else
+                {
+                    DeleteCharacter();
+                    Debug.Log($"{characterName} died from dehydration!");
+                    return;
+                }
+            }
+
+            if (currentThirst <= thirstThreshold)
+            {
+                MoveToClosestLakeAndDrink();
+            }
+        }
+    }
+
+    private void MoveToClosestLakeAndDrink()
+    {
         GameObject[] lakes = GameObject.FindGameObjectsWithTag("Lake");
         if (lakes.Length == 0)
             return;
@@ -192,19 +227,30 @@ public abstract class Characters : MonoBehaviour
         if (closestLake != null)
         {
             Collider2D lakeCollider = closestLake.GetComponent<Collider2D>();
+            Vector2 targetPoint;
             if (lakeCollider != null)
             {
                 Vector2 lakeCenter = lakeCollider.bounds.center;
                 Vector2 direction = (lakeCenter - myPosition).normalized;
-                Vector2 edgePoint = lakeCenter - direction * (lakeCollider.bounds.extents.magnitude - 0.1f);
-                MoveToLocation(edgePoint);
+                targetPoint = lakeCenter - direction * (lakeCollider.bounds.extents.magnitude - 0.1f);
             }
             else
             {
-                MoveToLocation(closestLake.transform.position);
+                targetPoint = closestLake.transform.position;
+            }
+
+            if (Vector2.Distance(myPosition, targetPoint) < 0.1f)
+            {
+                currentThirst = maxThirst;
+                Debug.Log($"{characterName} drank water and replenished thirst!");
+            }
+            else
+            {
+                MoveToLocation(targetPoint);
             }
         }
     }
+
     protected abstract void OnTargetReached();
     protected abstract void HandleHunger();
     protected abstract void InitializeCharacter();
