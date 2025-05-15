@@ -10,6 +10,7 @@ TagManager:
   - Carnivore
   - Poacher
   - Ranger
+  - Lake
   layers:
   - Default
   - TransparentFX
