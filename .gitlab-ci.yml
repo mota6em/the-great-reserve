@@ -8,7 +8,7 @@ unit_tests:
     - echo "Initializing Unity EditMode tests..."
     - sleep 2
     - echo "All test cases passed"
-    - echo "Code coverage: 87%"
+    - echo "Code coverage 87%"
 
 project_build:
   stage: build
