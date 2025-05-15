@@ -104,7 +104,7 @@ public class Poacher : People
         }
         else
         {
-            Debug.LogWarning("Herbivore(s)/Ranger(s) on the field!");
+           // Debug.LogWarning("Herbivore(s)/Ranger(s) on the field!");
 
             GameObject closestCarnivores = null;
             float closestDistance = float.MaxValue;
