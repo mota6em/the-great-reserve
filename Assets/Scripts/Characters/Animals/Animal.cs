@@ -11,4 +11,5 @@ public abstract class Animal : Characters
     }
 
     public string GetAnimalName() { return characterName; }
+
 }

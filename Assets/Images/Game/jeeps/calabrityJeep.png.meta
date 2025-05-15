@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      calabrityJeep_0: 6823877507046486361
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

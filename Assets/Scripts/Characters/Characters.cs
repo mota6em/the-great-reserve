@@ -166,8 +166,45 @@ public abstract class Characters : MonoBehaviour
         Destroy(gameObject);
     }
 
-    
+    public void HandleThirst()
+    {
+        if (currentThirst > 0 && currentThirst > (maxThirst * 0.2f))
+            return;
 
+        GameObject[] lakes = GameObject.FindGameObjectsWithTag("Lake");
+        if (lakes.Length == 0)
+            return;
+
+        GameObject closestLake = null;
+        float minDistance = float.MaxValue;
+        Vector2 myPosition = transform.position;
+
+        foreach (GameObject lake in lakes)
+        {
+            float dist = Vector2.Distance(myPosition, lake.transform.position);
+            if (dist < minDistance)
+            {
+                minDistance = dist;
+                closestLake = lake;
+            }
+        }
+
+        if (closestLake != null)
+        {
+            Collider2D lakeCollider = closestLake.GetComponent<Collider2D>();
+            if (lakeCollider != null)
+            {
+                Vector2 lakeCenter = lakeCollider.bounds.center;
+                Vector2 direction = (lakeCenter - myPosition).normalized;
+                Vector2 edgePoint = lakeCenter - direction * (lakeCollider.bounds.extents.magnitude - 0.1f);
+                MoveToLocation(edgePoint);
+            }
+            else
+            {
+                MoveToLocation(closestLake.transform.position);
+            }
+        }
+    }
     protected abstract void OnTargetReached();
     protected abstract void HandleHunger();
     protected abstract void InitializeCharacter();
