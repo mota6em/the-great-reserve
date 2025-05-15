@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HomeScreenUIManager : MonoBehaviour
 {
@@ -6,13 +7,11 @@ public class HomeScreenUIManager : MonoBehaviour
 
     public void toggleDifficultySelector()
     {
-        if (difficultySelectorPanel.activeSelf)
-        {
-            difficultySelectorPanel.SetActive(false);
-        }
-        else
-        {
-            difficultySelectorPanel.SetActive(true);
-        }
+        difficultySelectorPanel.SetActive(!difficultySelectorPanel.activeSelf);
+    }
+
+    public void DifficultySelector(int difficulty)
+    {
+        PlayerPrefs.SetInt("SelectedDifficulty", difficulty); // 0 = Easy, 1 = Medium, 2 = Hard
     }
 }

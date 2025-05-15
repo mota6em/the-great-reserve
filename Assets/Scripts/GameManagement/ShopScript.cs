@@ -192,4 +192,9 @@ public class ShopScript : MonoBehaviour
         }
 
     }
+
+    public int GetMoney()
+    {
+        return currentMoney;
+    }
 }

@@ -55,7 +55,7 @@ public class Ranger : People
     private void load()
     {
         reloadTimer += Time.deltaTime;
-        Debug.LogWarning(reloadTimer);
+       // Debug.LogWarning(reloadTimer);
         if (reloadTimer > timeToReload)
         {
             isLoaded = true;
@@ -70,13 +70,13 @@ public class Ranger : People
 
         if (Carnivores.Length == 0 && Poachers.Length == 0)
         {
-            Debug.LogWarning("No Carnivore(s)/Poacher(s) to shoot at in the scene.");
+            //Debug.LogWarning("No Carnivore(s)/Poacher(s) to shoot at in the scene.");
             targetHerbivore = null;
             return;
         }
         else
         {
-            Debug.LogWarning("Carnivore(s)/Poacher(s) on the field!");
+           // Debug.LogWarning("Carnivore(s)/Poacher(s) on the field!");
 
             GameObject closestCarnivores = null;
             float closestDistance = float.MaxValue;
