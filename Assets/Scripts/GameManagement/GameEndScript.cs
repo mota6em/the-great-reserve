@@ -14,12 +14,12 @@ public class GameEndScript : MonoBehaviour
         switch (difficulty)
         {
             case 0: // Easy
-                requiredMoney = 10000;
-                requiredAnimals = 10;
+                requiredMoney = 3000;
+                requiredAnimals = 3;
                 break;
             case 1: // Medium
-                requiredMoney = 20000;
-                requiredAnimals = 20;
+                requiredMoney = 3200;
+                requiredAnimals = 2;
                 break;
             case 2: // Hard
                 requiredMoney = 30000;
@@ -43,6 +43,7 @@ public class GameEndScript : MonoBehaviour
         int animalCount = GameObject.FindGameObjectsWithTag("Herbivore").Length +
                           GameObject.FindGameObjectsWithTag("Carnivore").Length;
 
+        Debug.Log("Current Money: " + currentMoney + "Animal count: " + animalCount);
         if (currentMoney >= requiredMoney && animalCount >= requiredAnimals)
         {
             Debug.Log("You win! Game over.");
