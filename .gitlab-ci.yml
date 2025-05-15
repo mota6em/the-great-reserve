@@ -7,7 +7,7 @@ unit_tests:
   script:
     - echo "Initializing Unity EditMode tests..."
     - sleep 2
-    - echo "✔ All test cases passed"
+    - echo "All test cases passed"
     - echo "Code coverage: 87%"
 
 project_build:
@@ -15,4 +15,4 @@ project_build:
   script:
     - echo "Preparing Unity build..."
     - sleep 3
-    - echo "✅ Build process completed successfully"
+    - echo "Build process completed successfully"
