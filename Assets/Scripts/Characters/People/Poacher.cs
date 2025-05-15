@@ -61,7 +61,6 @@ public class Poacher : People
     // If a Poacher is not in a range of a Ranger it hides
     protected void checkVisibility()
     {
-        Debug.LogWarning("micsoda hhehhehehe em eretetemjol !");
         bool rangerNearby = false;
         foreach (var ranger in GameObject.FindGameObjectsWithTag("Ranger"))
         {
@@ -84,7 +83,7 @@ public class Poacher : People
     private void load()
     {
         reloadTimer += Time.deltaTime;
-        Debug.LogWarning(reloadTimer);
+        //Debug.LogWarning(reloadTimer);
         if (reloadTimer > timeToReload)
         {
             isLoaded = true;
