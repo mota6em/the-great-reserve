@@ -24,6 +24,7 @@ public class CelebrityJeepFollower : MonoBehaviour
         "Beastie James",
         "Hasan Savanna"
     };
+
     private int SafeCountByTag(string tag)
     {
         try
@@ -31,7 +32,7 @@ public class CelebrityJeepFollower : MonoBehaviour
             return GameObject.FindGameObjectsWithTag(tag).Length;
         }
         catch
-        { 
+        {
             return 0;
         }
     }
@@ -57,6 +58,12 @@ public class CelebrityJeepFollower : MonoBehaviour
     private float pauseDuration = 0f;
     private bool isPaused = false;
 
+    private float startDelay = 5f;
+    private float endDelay = 10f;
+    private bool isStarting = true;
+    private bool isRestarting = false;
+    private float delayTimer = 0f;
+
     void Start()
     {
         currentCelebrity = celebrityNames[Random.Range(0, celebrityNames.Length)];
@@ -75,11 +82,34 @@ public class CelebrityJeepFollower : MonoBehaviour
         }
 
         sr.sprite = movingSprite;
+        delayTimer = startDelay;
     }
 
     void Update()
     {
         if (lineRenderer == null || lineRenderer.positionCount < 2) return;
+
+        if (isStarting)
+        {
+            delayTimer -= Time.deltaTime;
+            if (delayTimer <= 0f)
+            {
+                isStarting = false;
+            }
+            return;
+        }
+
+        if (isRestarting)
+        {
+            delayTimer -= Time.deltaTime;
+            if (delayTimer <= 0f)
+            {
+                isRestarting = false;
+                currentIndex = 0;
+                Debug.Log("Celebrity tour restarted after break");
+            }
+            return;
+        }
 
         if (isPaused)
         {
@@ -88,7 +118,7 @@ public class CelebrityJeepFollower : MonoBehaviour
             {
                 isPaused = false;
                 sr.sprite = movingSprite;
-                Debug.Log(" Finished photo stop");
+                Debug.Log("Finished photo stop");
             }
             return;
         }
@@ -100,8 +130,8 @@ public class CelebrityJeepFollower : MonoBehaviour
             isPaused = true;
             pauseDuration = stopDuration;
             sr.sprite = takingPicturesSprite;
-            OnPhotoTaken();
-            Debug.Log("  Celebrity taking photo");
+            OnPhotoTaken(); // Leave as-is
+            Debug.Log("Celebrity taking photo");
             return;
         }
 
@@ -124,11 +154,14 @@ public class CelebrityJeepFollower : MonoBehaviour
             currentIndex++;
             if (currentIndex >= lineRenderer.positionCount - 1)
             {
-                currentIndex = 0;
-                Debug.Log(" Celebrity tour restarted");
+                isRestarting = true;
+                delayTimer = endDelay;
+                Debug.Log("Celebrity tour completed. Taking a break...");
+                return;
             }
         }
     }
+
     void OnPhotoTaken()
     {
         if (touristManager == null || touristManager.shopScript == null)
@@ -150,20 +183,20 @@ public class CelebrityJeepFollower : MonoBehaviour
         if (totalAnimals == 0)
         {
             string[] ghostTown = {
-                "I’d rather be home listening to my wife’s book club recap than be here.",
-                "Honestly, traffic was more exciting than this.",
-                "I cancelled lunch with my accountant for this?",
-                "This made me miss family dinner. Unforgivable.",
-                "Next time, just send me a brochure and save us both the effort.",
-                "Even my GPS asked me why I came here.",
-                "This is a ghost town. I need to go home...",          
-                "I don't want to be here...",
-                "Are you kidding me? Is this the great desert tour?",
-                "This is called The Great Reserve? My garden has more animals than this! kkkkkkkk",
-                "Bro I came to see animals, not to finance your comeback story...",
-                "Why am I the only one investing in this place?"
+             "I’d rather be home listening to my wife’s book club recap than be here.",
+             "Honestly, traffic was more exciting than this.",
+             "I cancelled lunch with my accountant for this?",
+             "This made me miss family dinner. Unforgivable.",
+             "Next time, just send me a brochure and save us both the effort.",
+             "Even my GPS asked me why I came here.",
+             "This is a ghost town. I need to go home...",
+             "I don't want to be here...",
+             "Are you kidding me? Is this the great desert tour?",
+             "This is called The Great Reserve? My garden has more animals than this! kkkkkkkk",
+             "Bro I came to see animals, not to finance your comeback story...",
+             "Why am I the only one investing in this place?"
 
-            };
+         };
 
             string rareRoast = ghostTown[Random.Range(0, ghostTown.Length)];
             MessageBoxUI.Instance.ShowMessage($"{currentCelebrity}: {rareRoast}");
@@ -172,17 +205,17 @@ public class CelebrityJeepFollower : MonoBehaviour
         else if (totalAnimals < 4)
         {
             string[] boring = {
-                "Where are the animals? Is this a prank?",
-                "Two squirrels and a rock? Really?",
-                "This feels like budget wildlife.",
-                "Did everyone call in sick today?",
-                "Are the animals on strike or something?",
-                "This tour needs a search party.",
-                "Even the silence is bored.",
-                "I’ve seen bus stops with more excitement.",
-                "This park should come with a warning label: empty.",
-                "Honestly, I thought this was the loading screen."
-            };
+             "Where are the animals? Is this a prank?",
+             "Two squirrels and a rock? Really?",
+             "This feels like budget wildlife.",
+             "Did everyone call in sick today?",
+             "Are the animals on strike or something?",
+             "This tour needs a search party.",
+             "Even the silence is bored.",
+             "I’ve seen bus stops with more excitement.",
+             "This park should come with a warning label: empty.",
+             "Honestly, I thought this was the loading screen."
+         };
 
             message = boring[Random.Range(0, boring.Length)];
             earnings = 0;
@@ -190,68 +223,68 @@ public class CelebrityJeepFollower : MonoBehaviour
         else if (herbivores == 0 && carnivores > 0)
         {
             string[] danger = {
-                "This tour comes with teeth.",
-                "All bite, no balance.",
-                "Did I just pay to get hunted?",
-                "Feels less like a tour, more like bait.",
-                "Everyone’s a predator. Including the tour guide?",
-                "I blinked and lost eye contact... with five of them.",
-                "Pretty sure something just growled at me.",
-                "Am I part of the food chain now?",
-                "This park needs more fences.",
-                "If this was a movie, I’d be the first to go."
-            };
+             "This tour comes with teeth.",
+             "All bite, no balance.",
+             "Did I just pay to get hunted?",
+             "Feels less like a tour, more like bait.",
+             "Everyone’s a predator. Including the tour guide?",
+             "I blinked and lost eye contact... with five of them.",
+             "Pretty sure something just growled at me.",
+             "Am I part of the food chain now?",
+             "This park needs more fences.",
+             "If this was a movie, I’d be the first to go."
+         };
 
             message = danger[Random.Range(0, danger.Length)];
         }
         else if (carnivores == 0 && herbivores > 0)
         {
             string[] soft = {
-                "Fluffy, friendly, and... that’s it.",
-                "No drama, just munching.",
-                "Felt like a slow petting zoo.",
-                "It’s calm. A little too calm.",
-                "This park runs on salad and silence.",
-                "Very gentle. Like a nature nap.",
-                "All bark, zero bite.",
-                "That was cute. I guess.",
-                "A chill vibe... maybe too chill.",
-                "It's peaceful. I almost fell asleep."
-            };
+             "Fluffy, friendly, and... that’s it.",
+             "No drama, just munching.",
+             "Felt like a slow petting zoo.",
+             "It’s calm. A little too calm.",
+             "This park runs on salad and silence.",
+             "Very gentle. Like a nature nap.",
+             "All bark, zero bite.",
+             "That was cute. I guess.",
+             "A chill vibe... maybe too chill.",
+             "It's peaceful. I almost fell asleep."
+         };
 
             message = soft[Random.Range(0, soft.Length)];
         }
         else if (herbivores >= 4 && carnivores >= 4)
         {
             string[] wow = {
-                $"That’s wild. ${earnings} well earned.",
-                $"Loved the chaos. Take ${earnings}.",
-                $"Great combo. Sending ${earnings}.",
-                $"Now we’re talking. ${earnings} is yours.",
-                $"Peak safari. You earned every cent of that ${earnings}.",
-                $"That’s what I flew in for. ${earnings} approved.",
-                $"Perfect mix of cute and dangerous. ${earnings} delivered.",
-                $"This shot’s going viral. ${earnings} well deserved.",
-                $"Finally, something exciting. ${earnings} paid.",
-                $"This park’s got style. Here’s ${earnings}."
-            };
+             $"That’s wild. ${earnings} well earned.",
+             $"Loved the chaos. Take ${earnings}.",
+             $"Great combo. Sending ${earnings}.",
+             $"Now we’re talking. ${earnings} is yours.",
+             $"Peak safari. You earned every cent of that ${earnings}.",
+             $"That’s what I flew in for. ${earnings} approved.",
+             $"Perfect mix of cute and dangerous. ${earnings} delivered.",
+             $"This shot’s going viral. ${earnings} well deserved.",
+             $"Finally, something exciting. ${earnings} paid.",
+             $"This park’s got style. Here’s ${earnings}."
+         };
 
             message = wow[Random.Range(0, wow.Length)];
         }
         else
         {
             string[] ok = {
-                $"Not bad. ${earnings} coming your way.",
-                $"Could be worse. Here’s ${earnings}.",
-                $"Okay-ish. You get ${earnings}.",
-                $"Seen better, but fine. ${earnings}.",
-                $"Mildly interesting. Pocketing ${earnings}.",
-                $"Solid effort. I’ll allow ${earnings}.",
-                $"Expected more, settled for this. ${earnings}.",
-                $"Somewhere between boring and decent. ${earnings}.",
-                $"Alright... this works. ${earnings}.",
-                $"Took a photo just in case. ${earnings}."
-            };
+             $"Not bad. ${earnings} coming your way.",
+             $"Could be worse. Here’s ${earnings}.",
+             $"Okay-ish. You get ${earnings}.",
+             $"Seen better, but fine. ${earnings}.",
+             $"Mildly interesting. Pocketing ${earnings}.",
+             $"Solid effort. I’ll allow ${earnings}.",
+             $"Expected more, settled for this. ${earnings}.",
+             $"Somewhere between boring and decent. ${earnings}.",
+             $"Alright... this works. ${earnings}.",
+             $"Took a photo just in case. ${earnings}."
+         };
 
             message = ok[Random.Range(0, ok.Length)];
         }
@@ -266,4 +299,3 @@ public class CelebrityJeepFollower : MonoBehaviour
 
 
 }
-
