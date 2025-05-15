@@ -86,7 +86,6 @@ public class ShopScript : MonoBehaviour
         jeepsPanel.SetActive(panelName == "jeeps");
         terrarianPanel.SetActive(panelName == "terrarian");
         humansPanel.SetActive(panelName == "humans");
-
     }
 
     //Adds "value" amount of money to the players balance

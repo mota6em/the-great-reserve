@@ -46,7 +46,7 @@ public class GameEndScript : MonoBehaviour
         int animalCount = GameObject.FindGameObjectsWithTag("Herbivore").Length +
                           GameObject.FindGameObjectsWithTag("Carnivore").Length;
 
-        Debug.Log("Current Money: " + currentMoney + " Animal count: " + animalCount);
+        //Debug.Log("Current Money: " + currentMoney + " Animal count: " + animalCount);
         if (currentMoney >= requiredMoney && animalCount >= requiredAnimals)
         {
             Debug.Log("You win! Game over.");
