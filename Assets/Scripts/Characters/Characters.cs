@@ -3,11 +3,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 
-public abstract class Animal : MonoBehaviour
+public abstract class Characters : MonoBehaviour
 {
-    protected string animalName;
+    protected string characterName;
     protected int age;
-    protected int visionRange;
+    protected float visionRange;
+    protected float shootRange;
 
     //if current thirst is zero, the animal will die
     protected int maxThirst;
@@ -33,19 +34,23 @@ public abstract class Animal : MonoBehaviour
 
     protected float hungerTimer = 0f;
     protected float hungerInterval = 1f;
+    protected float thirstTimer = 0f;
+    protected float thirstInterval = 1f;
+    protected int thirstThreshold = 20;
 
-    private UIManager uiManager;
+    protected UIManager uiManager;
     // Start is called before the first frame update
     void Start()
     {
         FindGameArea();
-        InitializeAnimal();
+        InitializeCharacter();
         FindUIManager();
     }
 
     protected void Update()
     {
         HandleHunger();
+        HandleThirst();
         HandleMovementAndStanding();
     }
 
@@ -57,7 +62,8 @@ public abstract class Animal : MonoBehaviour
             Debug.LogError("UIManager not found in the scene.");
         }
     }
-    protected virtual void FindGameArea()
+    //Finds the GameArea object in the scene and assigns its Collider2D component to gameAreaCollider
+    public virtual void FindGameArea()
     {
         GameObject gameArea = GameObject.FindGameObjectWithTag("GameArea");
         if (gameArea != null)
@@ -145,12 +151,6 @@ public abstract class Animal : MonoBehaviour
     // Checks if the new position is within the bounds of the game area
     private bool IsPositionInBounds(Vector2 position)
     {
-        if (gameAreaCollider == null)
-        {
-            Debug.LogWarning("gameAreaCollider is null in " + gameObject.name + ". Position bounds check skipped.");
-            return true;
-        }
-
         Bounds bounds = gameAreaCollider.bounds;
         return position.x > bounds.min.x && position.x < bounds.max.x &&
                position.y > bounds.min.y && position.y < bounds.max.y;
@@ -165,30 +165,99 @@ public abstract class Animal : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, location, step);
     }
 
-    public void DeleteAnimal()
+    public void DeleteCharacter()
     {
-        if (Application.isPlaying)
-            Destroy(gameObject);
-        else
-            DestroyImmediate(gameObject);
+        Destroy(gameObject);
     }
 
-    private void OnMouseDown()
+    public void HandleThirst()
     {
-        if (uiManager != null)
+        thirstTimer += Time.deltaTime;
+        if (thirstTimer >= thirstInterval)
         {
-            uiManager.OpenAnimalDataPanel();
-            uiManager.SelectAnimal(this);
+            thirstTimer = 0f;
+
+            if (currentThirst > 0)
+            {
+                currentThirst--;
+            }
+
+            if (currentThirst == 0)
+            {
+                if (currentHealth > 0)
+                {
+                    currentHealth--;
+                    Debug.Log($"{characterName} is dehydrated! Health decreased to {currentHealth}.");
+                }
+                else
+                {
+                    DeleteCharacter();
+                    Debug.Log($"{characterName} died from dehydration!");
+                    return;
+                }
+            }
+
+            if (currentThirst <= thirstThreshold)
+            {
+                MoveToClosestLakeAndDrink();
+            }
+        }
+    }
+
+    private void MoveToClosestLakeAndDrink()
+    {
+        GameObject[] lakes = GameObject.FindGameObjectsWithTag("Lake");
+        if (lakes.Length == 0)
+            return;
+
+        GameObject closestLake = null;
+        float minDistance = float.MaxValue;
+        Vector2 myPosition = transform.position;
+
+        foreach (GameObject lake in lakes)
+        {
+            float dist = Vector2.Distance(myPosition, lake.transform.position);
+            if (dist < minDistance)
+            {
+                minDistance = dist;
+                closestLake = lake;
+            }
+        }
+
+        if (closestLake != null)
+        {
+            Collider2D lakeCollider = closestLake.GetComponent<Collider2D>();
+            Vector2 targetPoint;
+            if (lakeCollider != null)
+            {
+                Vector2 lakeCenter = lakeCollider.bounds.center;
+                Vector2 direction = (lakeCenter - myPosition).normalized;
+                targetPoint = lakeCenter - direction * (lakeCollider.bounds.extents.magnitude - 0.1f);
+            }
+            else
+            {
+                targetPoint = closestLake.transform.position;
+            }
+
+            if (Vector2.Distance(myPosition, targetPoint) < 0.1f)
+            {
+                currentThirst = maxThirst;
+                Debug.Log($"{characterName} drank water and replenished thirst!");
+            }
+            else
+            {
+                MoveToLocation(targetPoint);
+            }
         }
     }
 
     protected abstract void OnTargetReached();
     protected abstract void HandleHunger();
-    protected abstract void InitializeAnimal();
+    protected abstract void InitializeCharacter();
 
-    public string GetAnimalName() { return animalName; }
+    public string GetCharacterName() { return characterName; }
     public int GetAge() { return age; }
-    public int GetVisionRange() { return visionRange; }
+    public float GetVisionRange() { return visionRange; }
     public int GetMaxThirst() { return maxThirst; }
     public int GetCurrentThirst() { return currentThirst; }
     public int GetMaxHealth() { return maxHealth; }
@@ -196,4 +265,5 @@ public abstract class Animal : MonoBehaviour
     public int GetMaxHunger() { return maxHunger; }
     public int GetCurrentHunger() { return currentHunger; }
     public float GetMoveSpeed() { return moveSpeed; }
+    public void deleteCharacter() { Destroy(gameObject); }
 }

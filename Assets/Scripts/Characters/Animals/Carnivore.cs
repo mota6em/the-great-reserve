@@ -31,7 +31,7 @@ public abstract class Carnivore : Animal
 
                 currentHunger = maxHunger;
                 PausePerlinNoiseMovement(standDuration);
-                Debug.Log($"{animalName} has eaten {herbivoreAnimal.GetAnimalName()} and refilled its hunger.");
+                Debug.Log($"{characterName} has eaten {herbivoreAnimal.GetAnimalName()} and refilled its hunger.");
             }
             targetHerbivore = null;
         }
@@ -56,12 +56,12 @@ public abstract class Carnivore : Animal
                 if (currentHealth > 0)
                 {
                     currentHealth--;
-                    Debug.Log($"{animalName} is starving! Health decreased to {currentHealth}.");
+                    Debug.Log($"{characterName} is starving! Health decreased to {currentHealth}.");
                 }
                 else
                 {
                     DeleteAnimal();
-                    Debug.Log($"{animalName} died from starvation!");
+                    Debug.Log($"{characterName} died from starvation!");
                 }
             }
             // Ha az éhség nagyobb, mint a küszöbérték, növeljük az életerõt
@@ -70,7 +70,7 @@ public abstract class Carnivore : Animal
                 if (currentHealth < maxHealth)
                 {
                     currentHealth++;
-                    Debug.Log($"{animalName} is well-fed! Health increased to {currentHealth}.");
+                    Debug.Log($"{characterName} is well-fed! Health increased to {currentHealth}.");
                 }
             }
             // Ha az éhség kisebb vagy egyenlõ a küszöbértékkel, keressünk növényevõt

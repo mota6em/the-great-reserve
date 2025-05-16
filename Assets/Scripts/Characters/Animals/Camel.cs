@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Camel : Herbivore
 {
-    protected override void InitializeAnimal()
+    protected override void InitializeCharacter()
     {
-        animalName = "Camel";
+        characterName = "Camel";
         age = 1;
         visionRange = 10;
         maxThirst = 150;
@@ -24,7 +24,7 @@ public class Camel : Herbivore
         timeBetweenStopsTimer = 0f;
         timeBetweenStops = 7f;
 
-       // MoveToClosestConsumablePlant();
-       // Debug.Log(FindClosestConsumablePlant());
+        // MoveToClosestConsumablePlant();
+        // Debug.Log(FindClosestConsumablePlant());
     }
 }

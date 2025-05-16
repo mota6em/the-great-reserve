@@ -9,6 +9,7 @@ public class ShopScript : MonoBehaviour
     public GameObject animalsPanel;
     public GameObject jeepsPanel;
     public GameObject terrarianPanel;
+    public GameObject humansPanel;
     public GameObject money;
     private int currentMoney = 0;
     private float timer = 0f;
@@ -40,6 +41,10 @@ public class ShopScript : MonoBehaviour
         //terrarian
         { "River", 200 },
         { "Mountain", 200 },
+
+        //humans
+        { "Ranger", 400 },
+        { "Poacher", 500 }
     };
 
     private Dictionary<string, Button> itemButtons = new Dictionary<string, Button>();
@@ -80,6 +85,7 @@ public class ShopScript : MonoBehaviour
         animalsPanel.SetActive(panelName == "animals");
         jeepsPanel.SetActive(panelName == "jeeps");
         terrarianPanel.SetActive(panelName == "terrarian");
+        humansPanel.SetActive(panelName == "humans");
     }
 
     //Adds "value" amount of money to the players balance
@@ -141,6 +147,7 @@ public class ShopScript : MonoBehaviour
         InitializeButtonsInPanel(animalsPanel);
         InitializeButtonsInPanel(jeepsPanel);
         InitializeButtonsInPanel(terrarianPanel);
+        InitializeButtonsInPanel(humansPanel);
     }
 
     //Puts all the buttons in the panel to the itemButtons dictionary
@@ -191,5 +198,10 @@ public class ShopScript : MonoBehaviour
             }
         }
 
+    }
+
+    public int GetMoney()
+    {
+        return currentMoney;
     }
 }

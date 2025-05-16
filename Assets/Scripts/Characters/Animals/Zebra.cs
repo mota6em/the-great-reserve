@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Zebra : Herbivore
 {
-    protected override void InitializeAnimal()
+    protected override void InitializeCharacter()
     {
-        animalName = "Zebra";
+        characterName = "Zebra";
         age = 1;
         visionRange = 10;
         maxThirst = 150;

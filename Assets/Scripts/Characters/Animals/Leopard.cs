@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Leopard : Carnivore
 {
-    protected override void InitializeAnimal()
+    protected override void InitializeCharacter()
     {
-        animalName = "Leopard";
+        characterName = "Leopard";
         age = 1;
         visionRange = 10;
         maxThirst = 150;
