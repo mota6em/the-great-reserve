@@ -13,13 +13,11 @@ public class AnimalTest
     [SetUp]
     public void SetUp()
     {
-        // Create game area with collider
         gameAreaObject = new GameObject("GameArea");
         gameAreaObject.tag = "GameArea";
         gameAreaCollider = gameAreaObject.AddComponent<BoxCollider2D>();
         gameAreaCollider.size = new Vector2(100, 100);
 
-        // Create the animal
         animalObject = new GameObject("TestAnimal");
         mockAnimal = animalObject.AddComponent<AnimalTestMockAnimal>();
     }
@@ -118,13 +116,11 @@ public void InitializeAnimal_SetsCorrectInitialValues()
         Vector2 currentPos = animalObject.transform.position;
         Assert.AreNotEqual(startPos, currentPos);
 
-        // Vector should be moving towards target
         Vector2 directionVector = (targetPos - startPos).normalized;
         Vector2 movementVector = (currentPos - startPos).normalized;
 
-        // Check if movement is in approximately the right direction
         float dotProduct = Vector2.Dot(directionVector, movementVector);
-        Assert.Greater(dotProduct, 0.9f); // Movement should be in roughly the same direction
+        Assert.Greater(dotProduct, 0.9f);
     }
 
     [UnityTest]
@@ -154,10 +150,9 @@ public void InitializeAnimal_SetsCorrectInitialValues()
         mockAnimal.TestInitializeAnimal();
         Vector2 startPos = new Vector2(0, 0);
         animalObject.transform.position = startPos;
-        mockAnimal.PausePerlinNoiseMovement(0.1f); // Very short duration
+        mockAnimal.PausePerlinNoiseMovement(0.1f); 
 
-        // Act & fast-forward time
-        mockAnimal.SetStandTimer(0.2f); // Beyond the stand duration
+        mockAnimal.SetStandTimer(0.2f); 
         mockAnimal.TestHandleMovementAndStanding();
 
         yield return null;
@@ -236,13 +231,11 @@ public void InitializeAnimal_SetsCorrectInitialValues()
 // Mock implementation of the abstract Animal class for testing
 public class AnimalTestMockAnimal : Animal
 {
-    // Extra field to store the game area collider for testing
     private Collider2D mockGameAreaCollider;
 
-    // Properties to expose private fields for testing
     public bool IsMovingToTarget()
     {
-        var field = typeof(Animal).GetField("isMovingToTarget",
+        var field = typeof(Characters).GetField("isMovingToTarget",
                     System.Reflection.BindingFlags.NonPublic |
                     System.Reflection.BindingFlags.Instance);
         return (bool)field.GetValue(this);
@@ -250,7 +243,7 @@ public class AnimalTestMockAnimal : Animal
 
     public bool IsStanding()
     {
-        var field = typeof(Animal).GetField("isStanding",
+        var field = typeof(Characters).GetField("isStanding",
                     System.Reflection.BindingFlags.NonPublic |
                     System.Reflection.BindingFlags.Instance);
         return (bool)field.GetValue(this);
@@ -260,7 +253,6 @@ public class AnimalTestMockAnimal : Animal
     public Vector2 GetTargetPosition() { return targetPosition; }
     public Collider2D GetGameAreaCollider() { return mockGameAreaCollider; }
 
-    // For modifying protected fields in tests
     public void SetStandTimer(float value) { standTimer = value; }
 
     private new void Start()
@@ -295,7 +287,6 @@ public class AnimalTestMockAnimal : Animal
         timeBetweenStops = 5f;
     }
 
-    // Override FindGameArea to capture the collider for testing
     public override void FindGameArea()
     {
         GameObject gameArea = GameObject.FindGameObjectWithTag("GameArea");
@@ -306,7 +297,6 @@ public class AnimalTestMockAnimal : Animal
     }
     public void TestInitializeAnimal()
     {
-        // Clear any existing values to ensure clean testing state
         characterName = null;
         age = 0;
         visionRange = 0;
@@ -319,16 +309,13 @@ public class AnimalTestMockAnimal : Animal
         hungerThreshold = 0;
         moveSpeed = 0f;
 
-        // Use reflection to call the method
-        typeof(AnimalTestMockAnimal).GetMethod("InitializeAnimal",
-                          System.Reflection.BindingFlags.NonPublic |
-                          System.Reflection.BindingFlags.Instance)
-                         .Invoke(this, null);
+        InitializeCharacter();
+
+        TestFindGameArea();
     }
     public void TestFindGameArea()
     {
         base.FindGameArea();
-        // Store the collider for testing
         GameObject gameArea = GameObject.FindGameObjectWithTag("GameArea");
         if (gameArea != null)
         {
@@ -346,11 +333,9 @@ public class AnimalTestMockAnimal : Animal
         MoveWithPerlinNoise();
     }
 
-    // Since we can't call the private IsPositionInBounds method directly,
-    // we need to create a public wrapper for it that we can test
+
     public bool TestIsPositionInBounds(Vector2 position)
     {
-        // The bounds check logic from the original IsPositionInBounds method
         if (mockGameAreaCollider == null)
         {
             return true;

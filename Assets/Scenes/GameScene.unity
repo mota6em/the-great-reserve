@@ -12376,8 +12376,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2047914462}
         m_TargetAssemblyTypeName: TimeManager, Scripts
-        m_MethodName: SetGameSpeedPreset
-        m_Mode: 4
+        m_MethodName: PauseGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
