@@ -17,8 +17,9 @@
 - **Engine:** Unity  
 - **UI/UX:** Modern interface design  
 - **Project Artifacts:** Wireframes, UML diagrams, use cases
-  
+- 
 ## My Role
 
-Worked on full game implementation with @JarmezeiFerenc
+Contributed to full game implementation as part of a **university team project** alongside @JarmezeiFerenc.
+
 
