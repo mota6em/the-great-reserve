@@ -1,4 +1,4 @@
-# Szafari
+# Safari
 
 **Szafari** is a single-player, tycoon-style real-time safari park simulator. Players manage an African safari park as the director, balancing **animal care**, **visitor satisfaction**, and **financial stability**. The game features dynamic events such as poachers, infrastructure management, and park expansion, requiring strategic planning.
 
